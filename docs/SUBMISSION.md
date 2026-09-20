@@ -2,6 +2,8 @@
 
 상태: 개인 출품을 위한 작성 초안이며 제출 폼에는 등록하지 않았습니다.
 
+공개 서비스: [https://naeil-ai-championship-2026.vercel.app/](https://naeil-ai-championship-2026.vercel.app/)
+
 ## 과제명
 
 NAEIL — 제조·소상공인 현장 데이터와 청년 Physical AI 직무를 잇는 운영 제품
@@ -53,7 +55,9 @@ NAEIL은 제조와 소상공인을 한 제품 안의 두 현장으로 연결합�
 
 브라우저 UI는 이 서버 함수에 연결되어 있습니다. 키가 없는 환경에서는 503 응답을 오류로 표시하고 성공 신호를 저장하지 않으며 독립 검수 제출도 비활성 상태로 유지하는 흐름을 확인했고, 별도의 API 테스트는 mocked upstream을 사용해 strict 응답 스키마와 `decisionAuthority: human` 계약을 검증합니다.
 
-승인된 로컬 서버 키와 `manufacturing-inspection-synthetic.png`를 사용한 실모델 호출에서는 HTTP 200과 모델 `gpt-5-mini-2025-08-07`을 확인했습니다. 해당 한 건의 구조화 응답은 `decisionAuthority=human`, `recommendation=ready_for_human_review`, `task_match/lighting/framing/blur=good`, `privacy_risk=possible`이었습니다. 이는 합성 이미지 한 건에 대한 로컬 연결 성공 증거일 뿐 성능·정확도 측정이나 production 배포의 성공 증거가 아니며, production live model call은 아직 검증하지 않았습니다.
+승인된 로컬 서버 키와 `manufacturing-inspection-synthetic.png`를 사용한 실모델 호출에서는 HTTP 200과 모델 `gpt-5-mini-2025-08-07`을 확인했습니다. 해당 한 건의 구조화 응답은 `decisionAuthority=human`, `recommendation=ready_for_human_review`, `task_match/lighting/framing/blur=good`, `privacy_risk=possible`이었습니다.
+
+최종 production alias에서도 합성 이미지 한 건의 `POST /api/analyze`가 HTTP 200을 반환했고, `model=gpt-5-mini-2025-08-07`, `decisionAuthority=human`, `recommendation=ready_for_human_review`, `Cache-Control: no-store`를 확인했습니다. 이 결과는 로컬 및 production 연결과 사람 최종판단 계약에 대한 단일 합성 예시 실행 증거이며, 성능·정확도나 실제 사용자·고용 성과의 측정 결과가 아닙니다.
 
 ### 제출 대표 화면
 
@@ -65,9 +69,11 @@ NAEIL은 제조와 소상공인을 한 제품 안의 두 현장으로 연결합�
 4. [소상공인 홈](../assets/submission/wanted-ai-championship-2026/04-small-business-home.png)
 5. [청년 경력 증거](../assets/submission/wanted-ai-championship-2026/05-youth-career-evidence.png)
 
-### 빌드와 배포 준비
+### 빌드와 production 검증
 
-`npm run build`는 명시적 공개 허용목록과 자산 매니페스트에 포함된 합성 이미지 3개만 `dist`에 복사하고 파일별 SHA-256 보고서를 만듭니다. 테스트는 문서·테스트·스크립트·환경파일이 배포 산출물에 섞이지 않는지 확인합니다. `npm run deploy:prepare`는 전체 검증 뒤 공개 파일, `api/analyze.mjs`, 최소 `package.json`, `vercel.json`만 임시 배포 소스에 모으지만 실제 production 배포를 실행하지 않습니다.
+`npm run build`는 명시적 공개 허용목록과 자산 매니페스트에 포함된 합성 이미지 3개만 `dist`에 복사하고 파일별 SHA-256 보고서를 만듭니다. 테스트는 문서·테스트·스크립트·환경파일이 배포 산출물에 섞이지 않는지 확인합니다. `npm run deploy:prepare`는 전체 검증 뒤 공개 파일, `api/analyze.mjs`, 최소 `package.json`, `vercel.json`만 임시 배포 소스에 모으며 그 명령 자체는 배포하지 않습니다.
+
+이 준비 결과의 14개 허용목록 파일을 Vercel production에 배포했습니다. 최종 alias에서 `/`, `/app.mjs`, `/assets/synthetic-workcell.svg`는 모두 HTTP 200이었고, `GET /api/analyze`는 의도한 HTTP 405와 `Allow: POST`, `Cache-Control: no-store`를 반환했습니다. Chromium 검증은 1440×810 제조·운영 코디네이터와 390×844 소상공인·데이터 오퍼레이터에서 진행했으며, 두 경로 모두 `scrollWidth=innerWidth`, `workcellLoaded=true`, 콘솔 오류·경고 0건이었습니다.
 
 ### 구현하지 않은 범위
 
@@ -100,4 +106,4 @@ NAEIL은 제조와 소상공인을 한 제품 안의 두 현장으로 연결합�
 npm run check
 ```
 
-최종 제출 전에는 production AI 실호출 여부, 자산별 권리, 비밀정보·개인정보 부재, 제출 폼의 공개 범위를 사람이 다시 확인해야 합니다.
+최종 제출 전에는 공개 URL의 현재 상태, 자산별 권리, 비밀정보·개인정보 부재, 제출 폼의 공개 범위를 사람이 다시 확인해야 합니다.

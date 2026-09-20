@@ -8,7 +8,7 @@ NAEIL은 제조와 소상공인을 별도 서비스로 나누지 않고, 하나�
 
 ## 현재 구현
 
-저장소에는 반응형 단일 페이지 UI, 서버 함수, 결정적 데이터 카탈로그, 합성 이미지 3개, 명시적 공개 파일 빌드와 배포 준비 검증이 구현되어 있습니다.
+저장소에는 반응형 단일 페이지 UI, 서버 함수, 결정적 데이터 카탈로그, 합성 이미지 3개, 명시적 공개 파일 빌드와 production 배포 검증이 구현되어 있습니다. 공개 서비스는 [https://naeil-ai-championship-2026.vercel.app/](https://naeil-ai-championship-2026.vercel.app/)에서 확인할 수 있습니다.
 
 - 데스크톱 사이드바와 모바일 드로어를 사용하는 반응형 UI
 - 제조 ↔ 소상공인 현장 전환과 역할별 시작 화면·탐색·행동·문구
@@ -16,7 +16,7 @@ NAEIL은 제조와 소상공인을 별도 서비스로 나누지 않고, 하나�
 - 현장 동의, 교육, 안전, 작업 범위, 보상조건 확인의 다섯 gate
 - 수집 기록 → AI 보조 신호 → 독립 사람 검수 → 권리 표시 데이터셋 버전 → 경력 증거 → 제조 사고·재수집 상태 전이
 - `POST /api/analyze` 이미지 품질 분석 서버 함수
-- 공개 허용목록과 SHA-256 보고서를 사용하는 정적 빌드·Vercel 소스 배포 준비
+- 공개 허용목록과 SHA-256 보고서를 사용하는 정적 빌드 및 14개 허용목록 파일의 Vercel production 배포
 
 역할 선택은 브라우저 UX 필터이며 인증이나 서버 권한이 아닙니다. 화면 상태는 현장별로 `localStorage`에 분리해 보관하는 데모 기록이고, 영구 서버 저장이나 실제 지급 기록이 아닙니다.
 
@@ -24,9 +24,13 @@ NAEIL은 제조와 소상공인을 별도 서비스로 나누지 않고, 하나�
 
 브라우저의 `AI 보조 분석 실행`은 선택한 이미지 또는 내장 합성 예시를 메모리에서 data URL로 변환해 same-origin `POST /api/analyze`에 전송합니다. 서버 함수는 크기 제한 안의 JPEG·PNG·WebP와 작업 맥락을 검증하고, 서버 실행 환경에 `OPENAI_API_KEY`가 설정된 경우에만 OpenAI Responses API를 호출합니다. 키가 없으면 유료 호출 없이 503을 반환하며 브라우저는 준비되지 않았다는 오류를 표시하고 독립 검수 제출을 비활성 상태로 유지합니다. 성공 응답도 승인·공개·보상 권한을 갖지 않고 `decisionAuthority: human`이어야만 보조 신호로 저장됩니다.
 
-검증 범위는 세 층으로 구분합니다. 키가 없는 환경에서는 브라우저가 503을 처리하는 실패 경로를 확인했고, 자동 테스트에서는 mocked upstream으로 엄격한 응답 스키마와 사람 최종판단 경계를 확인했습니다. 별도로 승인된 로컬 서버 키와 `manufacturing-inspection-synthetic.png`를 사용한 실제 호출은 HTTP 200을 받았고, 응답 모델은 `gpt-5-mini-2025-08-07`, `decisionAuthority=human`, `recommendation=ready_for_human_review`, `task_match/lighting/framing/blur=good`, `privacy_risk=possible`이었습니다.
+검증 범위는 층별로 구분합니다. 키가 없는 환경에서는 브라우저가 503을 처리하는 실패 경로를 확인했고, 자동 테스트에서는 mocked upstream으로 엄격한 응답 스키마와 사람 최종판단 경계를 확인했습니다. 별도로 승인된 로컬 서버 키와 `manufacturing-inspection-synthetic.png`를 사용한 실제 호출은 HTTP 200을 받았고, 응답 모델은 `gpt-5-mini-2025-08-07`, `decisionAuthority=human`, `recommendation=ready_for_human_review`, `task_match/lighting/framing/blur=good`, `privacy_risk=possible`이었습니다.
 
-이 결과는 합성 이미지 한 건에 대한 로컬 실모델 연결 성공 증거이며 성능·정확도 측정이나 production 배포의 실호출 성공 증거가 아닙니다. production live model call은 아직 검증하지 않았습니다.
+최종 production alias에서도 합성 이미지 한 건을 `POST /api/analyze`로 전송해 HTTP 200, `model=gpt-5-mini-2025-08-07`, `decisionAuthority=human`, `recommendation=ready_for_human_review`, `Cache-Control: no-store`를 확인했습니다. 이는 production 연결과 사람 최종판단 계약을 확인한 한 건의 실행 증거일 뿐, 성능·정확도 측정이나 실제 사용자·고용 성과를 뜻하지 않습니다.
+
+### Production 브라우저 검증
+
+최종 alias에서 `/`, `/app.mjs`, `/assets/synthetic-workcell.svg`는 모두 HTTP 200을 반환했습니다. `GET /api/analyze`는 의도대로 HTTP 405와 `Allow: POST`, `Cache-Control: no-store`를 반환했습니다. Chromium에서는 1440×810 제조·운영 코디네이터와 390×844 소상공인·데이터 오퍼레이터 경로를 확인했으며, 두 화면 모두 `scrollWidth=innerWidth`, `workcellLoaded=true`, 콘솔 오류·경고 0건이었습니다.
 
 ## 대표 화면
 
@@ -72,7 +76,7 @@ KAMP AI, AI Hub, data.go.kr은 모두 `External catalog link` 상태의 후보�
 npm run check
 ```
 
-`npm run check`는 공개 허용목록 빌드 후 전체 Node 테스트를 실행합니다. 테스트는 반응형 UI 계약과 상태 전이, API 입력·같은 출처·엄격한 응답 스키마, JSON 결정성, 합성·권리 경계, PII·비밀 패턴 부재, 배포 준비 결과의 허용 파일·해시를 확인합니다. `npm run deploy:prepare`는 이 검증 뒤 정적 공개 파일, 단일 서버 함수, 최소 설정만 별도 임시 디렉터리에 모으며 실제 배포를 수행하지 않습니다.
+`npm run check`는 공개 허용목록 빌드 후 전체 Node 테스트를 실행합니다. 테스트는 반응형 UI 계약과 상태 전이, API 입력·같은 출처·엄격한 응답 스키마, JSON 결정성, 합성·권리 경계, PII·비밀 패턴 부재, 배포 준비 결과의 허용 파일·해시를 확인합니다. `npm run deploy:prepare`는 이 검증 뒤 정적 공개 파일, 단일 서버 함수, 최소 설정만 별도 임시 디렉터리에 모으며 그 명령 자체는 실제 배포를 수행하지 않습니다. 위 공개 URL의 production 배포와 런타임 검증은 이 준비 단계 이후 별도로 수행했습니다.
 
 ## 클린룸 작성 범위
 
