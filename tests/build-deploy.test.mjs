@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import { lstat, mkdir, mkdtemp, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
-import { buildPublic, requiredPublicPaths, resolvePublicAllowlist } from '../scripts/build.mjs';
+import { buildPublic, bundledDependencyAssets, requiredPublicPaths, resolvePublicAllowlist } from '../scripts/build.mjs';
 import { prepareDeployment } from '../scripts/prepare-deploy.mjs';
 
 const syntheticAssets = [
@@ -97,8 +97,10 @@ test('build resolves only required public files and manifest-referenced assets',
 
   const distDir = path.join(context.root, 'dist');
   const report = await buildPublic({ publicDir: context.publicDir, distDir, writeLatestReport: false });
-  assert.deepEqual(await walk(distDir), allowlist);
-  assert.equal(report.fileCount, allowlist.length);
+  const bundledPaths = bundledDependencyAssets.map(({ path: bundledPath }) => bundledPath);
+  assert.deepEqual(await walk(distDir), [...allowlist, ...bundledPaths].sort());
+  assert.equal(report.fileCount, allowlist.length + bundledPaths.length);
+  assert.ok(bundledPaths.every((bundledPath) => report.files.some(({ path: reportPath }) => reportPath === bundledPath)));
   assert.ok(report.files.every(({ sha256 }) => /^[a-f0-9]{64}$/.test(sha256)));
   assert.equal((await walk(distDir)).includes('.env'), false);
   assert.equal((await walk(distDir)).includes('private-notes.md'), false);
@@ -157,6 +159,7 @@ test('deployment source contains only allowlisted public files, one API and mini
   const allowlist = await resolvePublicAllowlist({ publicDir: context.publicDir });
   const expected = [
     ...allowlist.map((entry) => `public/${entry}`),
+    ...bundledDependencyAssets.map(({ path: bundledPath }) => `public/${bundledPath}`),
     'api/analyze.mjs',
     'package.json',
     'vercel.json',
@@ -183,7 +186,7 @@ test('deployment source contains only allowlisted public files, one API and mini
   assert.ok(paths.includes('public/assets/field-orbit.svg'));
   assert.ok(paths.includes('public/assets/synthetic-workcell.svg'));
   assert.ok(completedAssets.every((asset) => paths.includes(`public/${asset}`)));
-  assert.equal(report.fileCount, 35);
+  assert.equal(report.fileCount, 37);
 
   const workcellSource = await readFile(path.join(context.publicDir, 'assets/synthetic-workcell.svg'));
   const workcellDeployed = await readFile(path.join(report.directory, 'public/assets/synthetic-workcell.svg'));

@@ -29,6 +29,17 @@ export const requiredPublicPaths = Object.freeze([
   'assets/asset-manifest.json',
 ]);
 
+export const bundledDependencyAssets = Object.freeze([
+  {
+    path: 'assets/fonts/PretendardVariable.woff2',
+    source: 'node_modules/pretendard/dist/web/variable/woff2/PretendardVariable.woff2',
+  },
+  {
+    path: 'assets/fonts/Pretendard-LICENSE.txt',
+    source: 'node_modules/pretendard/dist/LICENSE.txt',
+  },
+]);
+
 export const secretPattern = /OPENAI_API_KEY\s*=\s*\S+|sk-[A-Za-z0-9_-]{20,}|SUPABASE_SERVICE_ROLE_KEY|sb_secret_|sbp_[A-Za-z0-9]{20,}|postgres(?:ql)?:\/\/|-----BEGIN [^-]*PRIVATE KEY-----/;
 
 function normalizeManifestAsset(raw) {
@@ -132,6 +143,15 @@ export async function buildPublic({
       await mkdir(path.dirname(target), { recursive: true });
       await copyFile(source, target);
       files.push(fileRecord(relativePath, content));
+    }
+    for (const entry of bundledDependencyAssets) {
+      const source = await requireRegularFile(projectRoot, entry.source);
+      const content = await readFile(source);
+      assertSafeContent(entry.path, content);
+      const target = path.join(staging, entry.path);
+      await mkdir(path.dirname(target), { recursive: true });
+      await copyFile(source, target);
+      files.push(fileRecord(entry.path, content));
     }
     await rm(distDir, { recursive: true, force: true });
     await rename(staging, distDir);
