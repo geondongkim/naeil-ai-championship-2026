@@ -49,13 +49,13 @@ NAEIL은 제조와 소상공인을 별도 서비스로 나누지 않고, 하나�
 
 ## 대표 화면
 
-아래 제출용 화면은 모두 1440×810 PNG이며, 구현된 역할·현장·검수 흐름을 보여 줍니다.
+아래 제출용 화면은 모두 현재 production UI에서 다시 캡처한 1440×810 PNG이며, 구현된 역할·현장·검수 흐름을 보여 줍니다.
 
 1. [제조 홈](assets/submission/wanted-ai-championship-2026/01-manufacturing-home.png)
 2. [실제 AI 보조검수](assets/submission/wanted-ai-championship-2026/02-live-ai-review.png)
 3. [독립 사람 검수](assets/submission/wanted-ai-championship-2026/03-independent-human-review.png)
-4. [소상공인 홈](assets/submission/wanted-ai-championship-2026/04-small-business-home.png)
-5. [청년 경력 증거](assets/submission/wanted-ai-championship-2026/05-youth-career-evidence.png)
+4. [소상공인 확장 운영 시뮬레이션](assets/submission/wanted-ai-championship-2026/04-small-business-home.png)
+5. [청년 경력 증거와 추적 가능한 기여](assets/submission/wanted-ai-championship-2026/05-youth-career-evidence.png)
 
 ### 구현하지 않은 범위
 

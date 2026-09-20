@@ -77,13 +77,13 @@ NAEIL은 제조와 소상공인을 한 제품 안의 두 현장으로 연결합�
 
 ### 제출 대표 화면
 
-다음 5개 1440×810 PNG는 현재 구현을 기록한 제출용 화면입니다.
+다음 5개 1440×810 PNG는 현재 production UI에서 역할·현장·검수 상태를 재현해 기록한 제출용 화면입니다.
 
 1. [제조 홈](../assets/submission/wanted-ai-championship-2026/01-manufacturing-home.png)
 2. [실제 AI 보조검수](../assets/submission/wanted-ai-championship-2026/02-live-ai-review.png)
 3. [독립 사람 검수](../assets/submission/wanted-ai-championship-2026/03-independent-human-review.png)
-4. [소상공인 홈](../assets/submission/wanted-ai-championship-2026/04-small-business-home.png)
-5. [청년 경력 증거](../assets/submission/wanted-ai-championship-2026/05-youth-career-evidence.png)
+4. [소상공인 확장 운영 시뮬레이션](../assets/submission/wanted-ai-championship-2026/04-small-business-home.png)
+5. [청년 경력 증거와 추적 가능한 기여](../assets/submission/wanted-ai-championship-2026/05-youth-career-evidence.png)
 
 ### 현재 로컬 검증과 마지막 production snapshot
 
