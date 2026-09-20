@@ -24,12 +24,15 @@ test('raw image data remains memory-only while structured analysis is persisted'
   assert.match(source, /recollection_guidance:\s*""/);
 });
 
-test('success requires human decision authority and renders every bounded result field', () => {
+test('success requires human decision authority and renders user-facing bounded result fields', () => {
   assert.match(source, /payload\?\.decisionAuthority !== "human"/);
   assert.match(source, /ai\.status === "complete" && ai\.decisionAuthority === "human"/);
-  for (const field of ['model', 'summary', 'task_match', 'lighting', 'framing', 'blur', 'privacy_risk', 'recommendation', 'reason', 'recollection_guidance']) {
+  assert.match(source, /model: payload\.model\.trim\(\)/);
+  for (const field of ['summary', 'task_match', 'lighting', 'framing', 'blur', 'privacy_risk', 'recommendation', 'reason', 'recollection_guidance']) {
     assert.match(source, new RegExp(`ai\\.${field}`), `missing rendered ${field}`);
   }
+  assert.doesNotMatch(source, /<dt>모델<\/dt>/);
+  assert.match(source, /visibleLabel\(ai\.recommendation\)/);
   assert.match(source, /AI는 승인·게시·보상 결정을 하지 않습니다/);
 });
 

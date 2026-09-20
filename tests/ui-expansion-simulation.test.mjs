@@ -66,8 +66,9 @@ test('detailed mock and implementation notice appears only from an execution att
 
 test('simulation lab is limited to planning roles and keeps the source label visible', () => {
   assert.match(source, /if \(!\["coordinator", "fde"\]\.includes\(state\.role\)\) return ""/);
-  assert.match(source, /badge\("AI-generated synthetic example"\)/);
+  assert.match(source, /badge\(syntheticSourceLabel\)/);
+  assert.match(source, /const syntheticSourceLabel = "AI 생성 합성 예시"/);
   assert.match(source, /확장 운영 시뮬레이션/);
-  assert.match(source, /필드별 75개, 총 150개 합성 운영값/);
+  assert.match(source, /현장별 75개, 총 150개 합성 운영값/);
   assert.match(source, /상세 목데이터 15개 보기/);
 });

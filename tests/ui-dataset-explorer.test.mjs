@@ -100,15 +100,14 @@ test('observation output is capped and paginated for mobile-safe rendering', () 
 
 test('downloads and loading, parse-fetch error, and empty-filter states remain explicitly synthetic', () => {
   assert.match(appSource, /download>\$\{escapeHtml\(label\)\} 다운로드<\/a>/);
-  assert.match(appSource, /합성·prototype JSON/);
+  assert.match(appSource, /합성 데이터 원본/);
   assert.match(appSource, /합성 데이터 탐색기를 불러오는 중입니다/);
   assert.match(appSource, /합성 데이터 탐색기를 표시할 수 없습니다/);
   assert.match(appSource, /선택한 조건에 맞는 합성 관찰값이 없습니다/);
-  assert.match(appSource, /Live API 또는 승인 데이터 상태가 아닙니다/);
-  assert.match(appSource, /서버 export, 영구 저장 또는 Live API가 아닙니다/);
-  assert.match(appSource, /coverage\.sourceType/);
-  assert.match(appSource, /coverage\.status/);
-  assert.match(appSource, /coverage\.rights\?\.status/);
+  assert.match(appSource, /로딩 상태는 실제 연동 또는 승인 데이터 상태가 아닙니다/);
+  assert.match(appSource, /서버 내보내기, 영구 저장 또는 실제 연동이 아닙니다/);
+  assert.match(appSource, /syntheticSourceLabel/);
+  assert.match(appSource, /프로젝트 시연 범위/);
   assert.match(appSource, /coverage\.usageBoundary/);
 });
 

@@ -45,7 +45,7 @@ test('needs-changes creates an explicit recollection boundary before downstream 
 test('manufacturing-only FDE behavior falls back safely on the small-business field', () => {
   assert.match(source, /const roleAllowed = role => role !== "fde" \|\| state\.field === "manufacturing"/);
   assert.match(source, /if \(!roleAllowed\(state\.role\)\) \{[\s\S]*state\.role = "coordinator"/);
-  assert.match(source, /소상공인 MVP에는 현장 적용 전문가 역할이 없어 운영 코디네이터로 전환했습니다/);
+  assert.match(source, /현재 소상공인 화면에는 현장 적용 전문가 역할이 없어 운영 코디네이터로 전환했습니다/);
   assert.match(source, /if \(state\.field !== "manufacturing"\)[\s\S]*제조 현장에서만 제공되는 흐름입니다/);
   assert.match(source, /\.filter\(\(\[id\]\) => id !== "incident" \|\| state\.field === "manufacturing"\)/);
 });
@@ -55,7 +55,7 @@ test('restored and direct-link states fail closed instead of creating protected 
   assert.match(source, /savedAi\.status === "loading" \? base\.ai/);
   assert.match(source, /const viewId = renderers\[requested\] \? requested : starts\[state\.role\]/);
   assert.match(source, /roleHasDatasetNavigation/);
-  assert.match(source, /deep link는 공개 합성 메타데이터를 읽기 전용으로만 보여 주며 승인·게시 권한을 추가하지 않습니다/);
+  assert.match(source, /직접 주소로 들어온 이 화면은 공개 합성 메타데이터를 읽기 전용으로만 보여 주며 승인·게시 권한을 추가하지 않습니다/);
 });
 
 test('rate-limit and incomplete success responses converge on a non-submittable AI error state', () => {
@@ -69,9 +69,9 @@ test('rate-limit and incomplete success responses converge on a non-submittable 
 
 test('dataset fetch or parse failure stays explicit and retry performs a fresh canonical load', () => {
   assert.match(source, /if \(!response\.ok\) throw new Error\(`\$\{label\}을 불러오지 못했습니다\. \(\$\{response\.status\}\)`\)/);
-  assert.match(source, /throw new Error\(`\$\{label\}의 JSON 형식을 확인할 수 없습니다\.`\)/);
+  assert.match(source, /throw new Error\(`\$\{label\}의 데이터 형식을 확인할 수 없습니다\.`\)/);
   assert.match(source, /datasetExplorer\.data = null;[\s\S]*datasetExplorer\.status = "error"/);
   assert.match(source, /if \(action === "retry-dataset-explorer"\) \{[\s\S]*datasetExplorer\.status = "idle";[\s\S]*datasetExplorer\.error = "";[\s\S]*void loadDatasetExplorer\(\)/);
   assert.match(source, /합성 데이터 탐색기를 표시할 수 없습니다/);
-  assert.match(source, /Live API, 생성 완료 또는 승인 학습 데이터로 해석하지 않습니다/);
+  assert.match(source, /실제 연동, 생성 완료 또는 승인 학습 데이터를 뜻하지 않습니다/);
 });

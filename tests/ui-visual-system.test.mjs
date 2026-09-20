@@ -24,6 +24,16 @@ test('work, review, dataset, and career views expose visual context without chan
   assert.match(app, /class="empty review-empty"/);
   assert.match(app, /class="dataset-spotlight"/);
   assert.match(app, /class="career-intro"/);
-  assert.match(app, /AI-generated synthetic example · 실제 수집 데이터 아님/);
+  assert.match(app, /AI 생성 합성 예시/);
   assert.match(app, /수집자는 자신의 기록을 검수할 수 없습니다/);
+});
+
+test('visible presentation copy avoids decorative English, raw model names, and version strings', () => {
+  const html = app.match(/function renderHome\(\)[\s\S]*?const renderers/)?.[0] || '';
+  for (const phrase of ['ONE PRODUCT', 'LIVE BROWSER STATE', 'SESSION STATE', 'LIVE API SIGNAL', 'PROVENANCE', 'CAREER EVIDENCE']) {
+    assert.doesNotMatch(html, new RegExp(phrase));
+  }
+  assert.doesNotMatch(html, /<dt>모델<\/dt>|dataset\.version|d\.version|현재\(\)\.dataset\.version/);
+  assert.match(html, /syntheticSourceLabel/);
+  assert.match(html, /검수 결과 게시/);
 });
