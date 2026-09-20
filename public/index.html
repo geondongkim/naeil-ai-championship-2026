@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' blob: data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <meta name="description" content="현장 데이터 운영과 청년 Physical AI 직무 증거를 연결하는 NAEIL 브라우저 프로토타입">
-    <meta name="theme-color" content="#101936">
+    <meta name="theme-color" content="#ffffff">
     <title>NAEIL · 현장의 AI와 청년의 내일을 잇다</title>
     <link rel="icon" href="./assets/naeil-mark.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./app.css">
@@ -48,6 +48,23 @@
         <div id="view" aria-live="polite"></div>
       </main>
     </div>
+    <dialog class="boundary-dialog" id="simulation-boundary-dialog" aria-labelledby="simulation-boundary-title">
+      <form method="dialog">
+        <p class="eyebrow" id="simulation-boundary-code">SIMULATION BOUNDARY</p>
+        <h2 id="simulation-boundary-title">실행 전 확인</h2>
+        <div class="notice warning" id="simulation-boundary-source">AI-generated synthetic example</div>
+        <section class="boundary-detail" aria-labelledby="simulation-boundary-reason-title">
+          <h3 id="simulation-boundary-reason-title">현재 실행하지 않는 이유</h3>
+          <p id="simulation-boundary-reason"></p>
+        </section>
+        <section class="boundary-detail" aria-labelledby="simulation-boundary-requirement-title">
+          <h3 id="simulation-boundary-requirement-title">실제 연결에 필요한 조건</h3>
+          <p id="simulation-boundary-requirement"></p>
+        </section>
+        <p class="boundary-safety">이 확인창은 제품 상태를 변경하지 않으며 외부 장비·학습·채용·계약·데이터 시스템을 호출하지 않습니다.</p>
+        <button class="button primary" type="submit">확인하고 돌아가기</button>
+      </form>
+    </dialog>
     <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
     <script type="module" src="./app.mjs"></script>
   </body>

@@ -24,6 +24,7 @@
 | MFG-ACCESS-02 | access requested | 운영 코디네이터 | 제조 | 브라우저 접근 기록 승인 | 허용 | access `requested`→`granted` | 마지막 ordered 단계에서만 granted; 브라우저 기록이며 서버 권한이 아님. **A/B** |
 | MFG-FDE-01 | 제조, incident none | 현장 적용 전문가 | 제조 | 실패 조건 기록 후 재수집 과제 생성 | 순차 허용 | `none`→`logged`→`recollection` | 설명과 기록된 사고가 있어야 `MF-RECOLLECT-01` 생성, dataset version·제한 범위 연결. **A/B** |
 | MFG-CAR-01 | gate 5/5, human approved, browser dataset published | 검수자→운영 코디네이터 | 제조 | 검수된 모의 작업과 교육 확인을 경력 증거에서 추적 | 읽기 허용 | 사람 승인 전 미확인→승인 뒤 품질 확인→게시 뒤 기여 `v1.0-demo` 확인 | 교육·범위·안전·사람 검수·제조 모의 현장 1건·브라우저 게시본이 연결되며 `localStorage 모의 기록`과 비증명 경계가 함께 표시됨. **B** |
+| MFG-SIM-01 | 초기, coordinator home | 운영 코디네이터 | 제조 | 로봇·학습·배치·사업·현장 데이터 합성 운영값 탐색 후 실행 시도 | 읽기 허용, 외부 실행 거부 | 제품 workflow·localStorage 상태 변화 없음 | 제조 5개 카드와 75개 세부 항목 표시. 로봇 실행 시도에서 목데이터·미구현 사유·실연동 조건 dialog 표시. **A/B** |
 | SMB-REQ-01 | dataset published | 요청자 | 소상공인 | 데모 접근 신청 | 허용 | access→`requested` | 실제 인증 권한이 아닌 브라우저 기록. **A** |
 | SMB-PRO-01 | 초기 | 현장 제공자 | 소상공인 | 동의·안전·범위 확인 | 세 gate만 허용 | 0/5 → 최대 3/5 | 현장 제공자 권한 경계를 제조와 동일하게 유지. **A** |
 | SMB-COL-01 | gate 5/5 | 데이터 오퍼레이터 | 소상공인 | 합성 입력 기록 후 AI 보조검수 진입 | 허용 | records 증가, AI 실행 전 | 합성 예시·검수 전 라벨 유지. **A/B** |
@@ -31,6 +32,7 @@
 | SMB-COO-01 | coordinator, dataset route | 운영 코디네이터 | 소상공인 | canonical 합성 데이터 탐색 | 읽기 허용 | 제품 workflow 상태 변경 없음 | 전체 120/12/8/28, 현재 필드 60건, 첫 페이지 12건, same-origin 다운로드. **B** |
 | SMB-FDE-01 | manufacturing에서 fde 선택 | 현장 적용 전문가 | 소상공인으로 전환 | 제조 전용 역할로 소상공인 진입 시도 | 거부·회복 | role→`coordinator`, role 시작 화면으로 이동 | FDE 선택지·incident 탐색 비노출, 안내 toast; direct `#incident`도 action 0개. **A/B** |
 | SMB-CAR-01 | gate 5/5, human approved, dataset draft | 품질·안전 검수자 | 소상공인 | 완료 교육과 독립 검수된 모의 작업의 경력 증거 확인 | 읽기 허용 | 교육·품질·모의 현장 확인, 추적 가능한 기여는 미확인 유지 | 소상공인 모의 현장 1건과 사람 검수 기록은 표시되지만 게시 전 기여는 확인되지 않으며 성과·자격·지급 증명이 아님. **B** |
+| SMB-SIM-01 | 초기, coordinator home | 운영 코디네이터 | 소상공인 | 보조기기·학습·채용·상권·파트너 데이터 합성 운영값 탐색 후 실행 시도 | 읽기 허용, 외부 실행 거부 | field/role 외 workflow 상태 변화 없음 | 소상공인 5개 카드와 75개 세부 항목 표시. 채용·자격 확정 시도에서 상세 경계 dialog, `scrollWidth=390`, console 0. **A/B** |
 
 ## 부정·오류·회복 시나리오
 
@@ -69,6 +71,7 @@
 10. **Manufacturing incident → scoped recollection 및 small-business 차단:** 빈 `localStorage`의 제조 desktop 1440×900에서 FDE 선택 시 start route는 `#incident`, nav는 사고·재수집/버전·출처/현장 경험이었다. 초기 state는 `none`, create button disabled였고 빈 description의 log는 “관찰된 실패 조건을 입력” 안내와 함께 `none`을 유지했다. 테스트용으로 disabled를 해제해 create handler를 직접 호출해도 “기록된 사고 조건이 필요” 안내와 함께 skip이 차단되었다. “합성 반사면 예시에서 측면 조명 변화 후 경계 판독 불안정”을 기록한 뒤에만 `logged`, create enabled가 되었고 기준 `v0.1-draft`, 재수집 ID 생성 전, 새 범위 미정이 보였다. 다음 click에서만 `recollection`, `MF-RECOLLECT-01`, “변경 조명 조건의 반사면 샘플만”으로 바뀌었으며 화면은 모델·장비를 제어하지 않고 브라우저 계보만 기록한다고 명시하고 실제 배정·로봇 제어 문구는 없었다. 이어서 mobile 390×844로 resize하고 소상공인으로 전환하자 role은 coordinator로 fallback, FDE option·incident nav·incident action이 사라졌고, direct `#incident`도 제조 전환 안내와 action 0개만 표시했다. 제조 recollection state와 소상공인 `none` state는 분리되었고 양 viewport에서 `scrollWidth=innerWidth`, console error/warning 0이었다.
 11. **Reviewed work → career evidence, 제조 desktop 1440×900:** 빈 상태에서 provider의 consent/safety/scope와 collector의 training/compensation을 실제 control로 확인해 5/5를 만들고, AI-generated synthetic example 1건을 기록했다. Playwright가 same-origin POST에 `model=deterministic-career-stub-v1`, `decisionAuthority=human`, `recommendation=ready_for_human_review`인 완전한 200 JSON을 반환했으며 collector에게 승인·보완 control은 없었다. 독립 reviewer가 이유를 남겨 승인한 직후 reviewer의 `검수 증거`에는 교육·허용 범위·안전·사람 승인·`제조 모의 현장 · 1개 기록`이 확인되고 게시 전 `추적 가능한 기여`는 미확인으로 남았다. coordinator만 브라우저 데모 버전을 게시한 뒤 `직무 증거`의 마지막 항목이 `v1.0-demo`로 바뀌었다. 화면에는 `localStorage 모의 기록` badge와 공인 교육·자격증·채용·고용 성과·임금·실제 지급을 증명하지 않는다는 안내가 함께 있었고, 실제 수집·파트너 데이터·영구 기록 문구는 없었다. role switch마다 requester `#task`, reviewer `#review`, coordinator `#home` 시작 화면과 역할별 nav가 적용되었고, `scrollWidth=innerWidth=1440`, POST 200, console error/warning 0이었다.
 12. **Reviewed work → career evidence 및 negative role, 소상공인 mobile 390×844:** 별도 빈 상태에서 provider 3개·collector 2개 gate를 확인하고 소상공인 합성 예시 1건, 같은 deterministic AI 200 신호, collector 제출, independent reviewer의 사유 있는 승인을 순서대로 수행했다. reviewer의 `검수 증거`에는 교육·범위·안전·사람 승인·`소상공인 모의 현장 · 1개 기록`이 확인되었지만 dataset을 게시하지 않아 `추적 가능한 기여`는 미확인으로 유지되었다. 현장 제공자로 전환하면 시작 화면은 `#task`, nav는 역할 홈/현장 조건/권리 조건으로 복귀하고 경력 메뉴가 없었다. direct `#career`는 읽기 화면만 열었으며 protected control 0개, `localStorage 모의 기록` 및 비증명 안내를 유지해 제공자가 새 완료·승인·게시 상태를 만들 수 없었다. 모든 단계에서 `scrollWidth=innerWidth=390`, POST 200, console error/warning 0이었다.
+13. **Expansion simulation attempt boundary:** 제조 desktop 1440×900 운영 코디네이터 홈에서 로봇·학습·배치·사업·현장 데이터 5개 합성 카드를 확인했다. `로봇 제어 실행`을 선택한 뒤에만 실물 로봇·제어기·안전 PLC·실행 권한 미연결 사유와 실제 연결 조건 dialog가 열렸고, 클릭 전후 `localStorage`는 비어 있어 제품 상태 변화가 없었다. 이어 소상공인 mobile 390×844에서 별도 5개 카드와 `채용·자격 확정` dialog를 확인했으며 `scrollWidth=390`, console error/warning 0이었다. 데이터 오퍼레이터로 전환하면 시뮬레이션 섹션은 사라지고 역할 시작 화면 `#collect`로 이동했다.
 
 재현 도구: `playwright_cli.sh --session <name> open http://127.0.0.1:4173`, viewport resize, role/field select, hash 이동, DOM 상태·`document.documentElement.scrollWidth` 평가, `requests`, `console warning` 확인. 이 증거는 로컬 브라우저 동작만 말하며 인증이나 영구 저장을 검증하지 않는다.
 
@@ -80,4 +83,4 @@
 - reviewed work·training→career evidence는 제조 desktop과 소상공인 mobile에서 실제 Chromium으로 확인했다. 게시 전 기여 미확인과 게시 뒤 `v1.0-demo` 전이가 분리되며, 권한 없는 역할은 direct link에서도 읽기만 가능했다.
 - **다음 큰 in-scope 시나리오 위험:** 핵심 제품 brief 여정은 브라우저 관찰을 마쳤지만 이 증거는 여전히 수동 Playwright 세션이다. role×field×state 전환과 경력 증거의 비증명 문구를 실제 브라우저에서 반복 실행하는 CI suite가 없어 DOM·라우팅 회귀를 자동 차단하지 못한다.
 - 완전 교차 canonical 데이터는 현재 필터 조합에서 자연스러운 빈 결과를 만들기 어려워 helper 수준으로만 확인했다.
-- 이번 배치에서 재현된 high-impact 제품 결함은 없어 `public/app.mjs`와 `public/app.css`는 수정하지 않았다.
+- 확장 운영 시뮬레이션은 외부 실행을 의도적으로 막는 목데이터 UX이며 실제 장비·학습·채용·계약·파트너 데이터 연결 증거가 아니다. 실제 연결 전에는 해당 실행 버튼이 제품 상태를 변경해서는 안 된다.

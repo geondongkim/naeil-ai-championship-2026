@@ -98,6 +98,194 @@ const careerPaths = [
   ["재수집 운영자", "실패 원인을 범위가 정해진 새 과제로 변환", "06"],
 ];
 
+export const simulationCatalog = Object.freeze({
+  manufacturing: [
+    {
+      id: "robot-control",
+      code: "SIM-MFG-RBT-01",
+      title: "로봇 제어 준비 큐",
+      summary: "정지된 모의 셀에서 승인 순서와 비상정지 확인 항목을 검토합니다.",
+      metric: "12개 가상 명령",
+      mockRows: [
+        ["프레스 셀 A", "가상 명령 12건", "사람 승인 대기 4건"],
+        ["CNC 적재 셀 B", "가상 명령 10건", "안전 정지 예행 10/10"],
+        ["용접 셀 C", "가상 경로 8건", "접근 금지 구역 3곳"],
+        ["검사 셀 D", "가상 자세 15건", "interlock 점검 15/15"],
+        ["포장 셀 E", "가상 이동 20건", "충돌 회피 예행 20/20"],
+      ],
+      actionLabel: "로봇 제어 실행",
+      reason: "실물 로봇, 제어기, 안전 PLC, 현장 네트워크와 실행 권한이 연결되어 있지 않습니다.",
+      requirement: "장비별 안전 인증, 현장 책임자 승인, 격리된 시험 셀과 실시간 정지 회로 검증이 필요합니다.",
+    },
+    {
+      id: "model-training",
+      code: "SIM-MFG-TRN-01",
+      title: "결함 분류 학습 후보",
+      summary: "검수 완료를 가정한 합성 샘플의 학습 전 데이터 구성을 비교합니다.",
+      metric: "96개 합성 후보",
+      mockRows: [
+        ["표면 결함 후보", "합성 샘플 96건", "학습 승인 0건"],
+        ["용접 비드 후보", "합성 샘플 80건", "모의 라벨 합의율 92%"],
+        ["조립 누락 후보", "합성 샘플 72건", "hard negative 18건"],
+        ["센서 이상 후보", "합성 샘플 64건", "가상 분포 변화 4종"],
+        ["보호구 후보", "합성 샘플 88건", "가상 마스킹 88/88"],
+      ],
+      actionLabel: "모델 학습 시작",
+      reason: "학습 파이프라인, 연산 자원, 모델 레지스트리와 학습 승인 데이터셋이 연결되어 있지 않습니다.",
+      requirement: "권리 검토를 통과한 실제 학습 데이터, 재현 가능한 학습 설정, 성능·안전 평가와 배포 승인이 필요합니다.",
+    },
+    {
+      id: "youth-placement",
+      code: "SIM-MFG-JOB-01",
+      title: "청년 직무 배치 보드",
+      summary: "합성 프로필을 교육·검수·권리 직무 요구사항과 연결합니다.",
+      metric: "18개 합성 프로필",
+      mockRows: [
+        ["현장 코디네이터", "합성 프로필 18개", "교육 준비 12개"],
+        ["데이터 오퍼레이터", "합성 프로필 24개", "모의 실습 완료 16개"],
+        ["품질·안전 검수자", "합성 프로필 14개", "자기검수 차단 14/14"],
+        ["데이터 권리 관리자", "합성 프로필 10개", "모의 증빙 30개"],
+        ["현장 적용·재수집", "합성 프로필 12개", "모의 포트폴리오 36개"],
+      ],
+      actionLabel: "배치·자격 확정",
+      reason: "실제 지원자 신원, 고용주 채용 절차, 근로계약과 공인 자격 발급기관이 연결되어 있지 않습니다.",
+      requirement: "본인 동의, 채용 주체의 검증, 근로조건 합의, 자격기관 심사와 결과 이의제기 절차가 필요합니다.",
+    },
+    {
+      id: "business-outcomes",
+      code: "SIM-MFG-BIZ-01",
+      title: "사업 성과 시뮬레이션",
+      summary: "가상 도입 단계와 비용 항목으로 운영 가설을 비교합니다.",
+      metric: "4개 가상 파이프라인",
+      mockRows: [
+        ["도입 검토", "가상 제안 7건", "실계약 0건"],
+        ["비용 구조", "합성 비용 항목 15개", "실영수증 0건"],
+        ["가치 가설", "검증 전 가설 5개", "실측 성과 0건"],
+        ["파트너 제안", "가상 제휴안 6건", "공개 동의 0건"],
+        ["정산 흐름", "합성 정산안 8건", "실거래 0건"],
+      ],
+      actionLabel: "계약·매출 확정",
+      reason: "실제 고객, 계약서, 결제·회계 시스템, 매출 증빙과 파트너 확인 자료가 없습니다.",
+      requirement: "실명 계약 주체, 서명된 계약, 청구·입금 증빙, 회계 처리와 파트너의 공개 동의가 필요합니다.",
+    },
+    {
+      id: "partner-data",
+      code: "SIM-MFG-DAT-01",
+      title: "현장 데이터 연결 후보",
+      summary: "제조 6개 시나리오의 canonical 합성 레코드를 연결 화면으로 탐색합니다.",
+      metric: "60개 합성 관찰값",
+      mockRows: [
+        ["관찰 레코드", "합성 데이터 60건", "제조 시나리오 6개"],
+        ["대표 이미지", "합성 이미지 5개", "provenance complete 5/5"],
+        ["외부 카탈로그", "링크 후보 3곳", "실시간 연결 0곳"],
+        ["권리 버전", "가상 버전 6개", "승인 캐시 0개"],
+        ["재수집 큐", "합성 과제 24건", "사람 검수 예시 연결 24/24"],
+      ],
+      actionLabel: "현장 데이터 동기화",
+      reason: "실제 사업장·파트너 계약, 수집 동의, 원본 저장소와 실시간 데이터 커넥터가 연결되어 있지 않습니다.",
+      requirement: "목적별 동의, 데이터 처리 계약, 보존·철회 정책, 접근 통제와 실제 호출 증거가 필요합니다.",
+    },
+  ],
+  smallBusiness: [
+    {
+      id: "robot-control",
+      code: "SIM-SMB-RBT-01",
+      title: "매장 보조기기 제어 큐",
+      summary: "고객이 없는 가상 구역에서 이동·정지 명령의 승인 순서를 검토합니다.",
+      metric: "10개 가상 명령",
+      mockRows: [
+        ["주방 이동 구역", "가상 명령 10건", "사람 승인 대기 3건"],
+        ["진열 보조 구역", "가상 명령 12건", "통행 우선 규칙 12/12"],
+        ["창고 운반 구역", "가상 경로 8건", "접근 금지 구역 6곳"],
+        ["폐점 청소 구역", "가상 동작 14건", "안전 정지 예행 14/14"],
+        ["픽업 대기 구역", "가상 이동 9건", "고객 부재 조건 9/9"],
+      ],
+      actionLabel: "보조기기 제어 실행",
+      reason: "실물 기기, 안전 센서, 매장 네트워크와 현장 실행 권한이 연결되어 있지 않습니다.",
+      requirement: "영업 외 시간 시험, 제조사 안전 규격, 현장 책임자 승인과 즉시 정지 절차 검증이 필요합니다.",
+    },
+    {
+      id: "model-training",
+      code: "SIM-SMB-TRN-01",
+      title: "작업 장면 학습 후보",
+      summary: "식기·진열·계량 장면의 합성 품질 조합을 학습 전 단계로 비교합니다.",
+      metric: "96개 합성 후보",
+      mockRows: [
+        ["식기 분류 후보", "합성 샘플 96건", "학습 승인 0건"],
+        ["진열 상태 후보", "합성 샘플 84건", "모의 라벨 합의율 91%"],
+        ["계량 장면 후보", "합성 샘플 72건", "범위 이탈 16건"],
+        ["포장 누락 후보", "합성 샘플 68건", "hard negative 20건"],
+        ["안전 구역 후보", "합성 샘플 80건", "가상 마스킹 80/80"],
+      ],
+      actionLabel: "모델 학습 시작",
+      reason: "학습 파이프라인과 모델 레지스트리가 없고 현재 데이터는 승인 학습 데이터가 아닌 합성 예시입니다.",
+      requirement: "권리·개인정보 검토, 실제 목적에 맞는 데이터 수집, 기준 모델과 독립 평가 및 배포 승인이 필요합니다.",
+    },
+    {
+      id: "youth-placement",
+      code: "SIM-SMB-JOB-01",
+      title: "청년 직무 매칭 보드",
+      summary: "합성 프로필을 데이터 운영·검수·권리 직무의 모의 요구사항과 연결합니다.",
+      metric: "18개 합성 프로필",
+      mockRows: [
+        ["매장 데이터 코디네이터", "합성 프로필 18개", "교육 준비 13개"],
+        ["현장 데이터 오퍼레이터", "합성 프로필 22개", "모의 실습 완료 15개"],
+        ["품질·안전 검수자", "합성 프로필 14개", "자기검수 차단 14/14"],
+        ["데이터 권리 관리자", "합성 프로필 11개", "모의 증빙 33개"],
+        ["재수집 운영자", "합성 프로필 15개", "모의 포트폴리오 45개"],
+      ],
+      actionLabel: "채용·자격 확정",
+      reason: "실제 구직자, 사업주 채용 의사, 근로계약과 공인 자격 인증 절차가 연결되어 있지 않습니다.",
+      requirement: "참여자 본인 동의, 고용 조건 확인, 채용 주체 검증, 자격기관 평가와 개인정보 보호가 필요합니다.",
+    },
+    {
+      id: "business-outcomes",
+      code: "SIM-SMB-BIZ-01",
+      title: "상권 성과 시뮬레이션",
+      summary: "가상 업종별 도입 단계와 운영비 가설을 비교합니다.",
+      metric: "5개 가상 파이프라인",
+      mockRows: [
+        ["외식업 도입", "가상 제안 9건", "실계약 0건"],
+        ["소매업 도입", "가상 제안 8건", "실고객 0곳"],
+        ["생활서비스 도입", "검증 전 가설 6개", "실측 성과 0건"],
+        ["지역 파트너", "가상 제휴안 7건", "공개 동의 0건"],
+        ["비용·정산", "합성 비용 항목 18개", "실거래 0건"],
+      ],
+      actionLabel: "고객·매출 확정",
+      reason: "실제 고객, 매장 계약, 결제·회계 자료, 매출 증빙과 파트너십 확인이 없습니다.",
+      requirement: "사업자·계약 주체 확인, 서명 계약, 실제 거래 증빙, 성과 산식과 공개 범위 합의가 필요합니다.",
+    },
+    {
+      id: "partner-data",
+      code: "SIM-SMB-DAT-01",
+      title: "매장 데이터 연결 후보",
+      summary: "소상공인 6개 시나리오의 canonical 합성 레코드를 연결 화면으로 탐색합니다.",
+      metric: "60개 합성 관찰값",
+      mockRows: [
+        ["관찰 레코드", "합성 데이터 60건", "소상공인 시나리오 6개"],
+        ["대표 이미지", "합성 이미지 3개", "provenance complete 3/3"],
+        ["외부 카탈로그", "링크 후보 3곳", "실시간 연결 0곳"],
+        ["권리 버전", "가상 버전 6개", "승인 캐시 0개"],
+        ["재수집 큐", "합성 과제 24건", "사람 검수 예시 연결 24/24"],
+      ],
+      actionLabel: "파트너 데이터 동기화",
+      reason: "실제 매장·파트너 동의, 데이터 처리 계약, 원본 저장소와 API 커넥터가 연결되어 있지 않습니다.",
+      requirement: "촬영·수집 동의, 비식별화, 목적 제한, 보존·철회 정책과 실제 API 호출 검증이 필요합니다.",
+    },
+  ],
+});
+
+export function simulationBoundary(fieldId, simulationId) {
+  const simulation = simulationCatalog[fieldId]?.find(item => item.id === simulationId);
+  if (!simulation) return null;
+  return {
+    ...simulation,
+    sourceType: "AI-generated synthetic example",
+    implemented: false,
+    changesProductState: false,
+  };
+}
+
 const navByRole = {
   requester: [["task", "과제 정의"], ["dataset", "데이터셋·이용"]],
   provider: [["task", "현장 조건"], ["dataset", "권리 조건"]],
@@ -354,13 +542,40 @@ function renderHome() {
   return `${pageHead(`${f.short.toUpperCase()} FIELD · ${roles[state.role].name}`, `${f.name} 역할 홈`, roles[state.role].summary)}
     <section class="hero"><div class="hero-copy"><p class="eyebrow">ONE PRODUCT · TWO FIELDS</p><h2>${roleCopy[0]}</h2><p>${roleCopy[1]}</p><div class="hero-actions"><a class="button primary" href="#${roleCopy[3]}">${roleCopy[2]}</a><a class="button secondary" href="#career">신직무 경로 보기</a></div></div><figure class="hero-visual"><img src="${syntheticAsset()}" alt="${syntheticAlt()}"><figcaption>AI-generated synthetic example · 실제 수집/승인 학습 데이터 아님</figcaption></figure></section>
     <section class="section"><div class="section-heading"><div><p class="eyebrow">LIVE BROWSER STATE</p><h2>현재 데모 흐름</h2></div><p>이 브라우저의 localStorage에만 저장됩니다.</p></div><div class="grid four">${metrics.map(([label, value, detail]) => `<article class="card compact metric"><span>${label}</span><strong>${escapeHtml(value)}</strong><small>${escapeHtml(detail)}</small></article>`).join("")}</div></section>
-    <section class="section card"><div class="section-heading"><div><p class="eyebrow">LIFECYCLE</p><h2>요청에서 재수집까지</h2></div></div>${flowSteps()}</section>`;
+    <section class="section card"><div class="section-heading"><div><p class="eyebrow">LIFECYCLE</p><h2>요청에서 재수집까지</h2></div></div>${flowSteps()}</section>
+    ${renderSimulationLab()}`;
 }
 
 function flowSteps() {
   return `<ol class="flow-steps">${[
     ["요청·범위", "목적과 현장 조건"], ["준비·수집", "다섯 gate"], ["AI 신호", "승인 권한 없음"], ["사람 검수", "독립 결정·사유"], ["권리·재수집", "버전과 실패 연결"],
   ].map(([title, detail], index) => `<li><span class="step-no">${index + 1}</span><strong>${title}</strong><span>${detail}</span></li>`).join("")}</ol>`;
+}
+
+function renderSimulationLab() {
+  if (!["coordinator", "fde"].includes(state.role)) return "";
+  const cards = simulationCatalog[state.field].map(item => `<article class="card simulation-card">
+    <div class="card-top"><div><p class="eyebrow">${escapeHtml(item.code)}</p><h3>${escapeHtml(item.title)}</h3></div>${badge("AI-generated synthetic example")}</div>
+    <p>${escapeHtml(item.summary)}</p>
+    <strong class="simulation-metric">${escapeHtml(item.metric)}</strong>
+    <ul class="simulation-facts">${item.mockRows[0].map(fact => `<li>${escapeHtml(fact)}</li>`).join("")}</ul>
+    <details class="simulation-details"><summary>상세 목데이터 15개 보기</summary><div class="simulation-table-wrap"><table><thead><tr><th>세그먼트</th><th>합성 규모</th><th>가상 상태</th></tr></thead><tbody>${item.mockRows.map(row => `<tr>${row.map(value => `<td>${escapeHtml(value)}</td>`).join("")}</tr>`).join("")}</tbody></table></div></details>
+    <div class="actions">${button(item.actionLabel, "open-simulation-boundary", "secondary", `data-simulation-id="${escapeHtml(item.id)}"`)}</div>
+  </article>`).join("");
+  return `<section class="section simulation-lab"><div class="section-heading"><div><p class="eyebrow">EXPANSION SIMULATION</p><h2>확장 운영 시뮬레이션</h2></div><p>필드별 75개, 총 150개 합성 운영값으로 다음 단계의 화면과 판단 구조를 미리 탐색합니다.</p></div><div class="grid simulation-grid">${cards}</div></section>`;
+}
+
+function showSimulationBoundary(simulationId) {
+  const simulation = simulationBoundary(state.field, simulationId);
+  if (!simulation) return;
+  const dialog = $("#simulation-boundary-dialog");
+  $("#simulation-boundary-code").textContent = simulation.code;
+  $("#simulation-boundary-title").textContent = `${simulation.actionLabel} 전 확인`;
+  $("#simulation-boundary-reason").textContent = simulation.reason;
+  $("#simulation-boundary-requirement").textContent = simulation.requirement;
+  $("#simulation-boundary-source").textContent = `${simulation.sourceType} · 화면의 수치와 프로필은 제품 흐름 확인용 목데이터입니다.`;
+  if (typeof dialog.showModal === "function") dialog.showModal();
+  else dialog.setAttribute("open", "");
 }
 
 function canToggleGate(key) {
@@ -641,6 +856,10 @@ document.addEventListener("click", async event => {
   const action = event.target.closest("[data-action]")?.dataset.action;
   if (!action) return;
   const f = current();
+  if (action === "open-simulation-boundary") {
+    showSimulationBoundary(event.target.closest("[data-simulation-id]")?.dataset.simulationId || "");
+    return;
+  }
   if (action === "retry-dataset-explorer") {
     datasetExplorer.status = "idle";
     datasetExplorer.error = "";
