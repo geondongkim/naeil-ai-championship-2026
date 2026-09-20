@@ -22,6 +22,7 @@ async function fixture() {
     'app.mjs': 'document.documentElement.dataset.app = "naeil";',
     'assets/naeil-mark.svg': '<svg xmlns="http://www.w3.org/2000/svg"/>',
     'assets/field-orbit.svg': '<svg xmlns="http://www.w3.org/2000/svg"/>',
+    'assets/synthetic-workcell.svg': '<svg xmlns="http://www.w3.org/2000/svg"><title>Synthetic workcell</title></svg>',
     'data/catalog.json': '{"product":"NAEIL"}\n',
     'assets/asset-manifest.json': `${JSON.stringify({ assets: syntheticAssets.map((asset) => ({ path: asset })) }, null, 2)}\n`,
     ...Object.fromEntries(syntheticAssets.map((asset, index) => [asset, Buffer.from([0x89, 0x50, 0x4e, 0x47, index])])),
@@ -54,6 +55,8 @@ test('build resolves only required public files and manifest-referenced assets',
   await writeFile(path.join(context.publicDir, '.env'), 'must not deploy');
   const allowlist = await resolvePublicAllowlist({ publicDir: context.publicDir });
   assert.deepEqual(allowlist, [...new Set([...requiredPublicPaths, ...syntheticAssets])].sort());
+  assert.ok(allowlist.includes('assets/field-orbit.svg'));
+  assert.ok(allowlist.includes('assets/synthetic-workcell.svg'));
 
   const distDir = path.join(context.root, 'dist');
   const report = await buildPublic({ publicDir: context.publicDir, distDir, writeLatestReport: false });
@@ -99,6 +102,15 @@ test('deployment source contains only allowlisted public files, one API and mini
   assert.equal(paths.filter((entry) => entry.endsWith('-synthetic.png')).length, 3);
   assert.ok(paths.includes('public/data/catalog.json'));
   assert.ok(paths.includes('public/assets/asset-manifest.json'));
+  assert.ok(paths.includes('public/assets/field-orbit.svg'));
+  assert.ok(paths.includes('public/assets/synthetic-workcell.svg'));
+  assert.equal(report.fileCount, 14);
+
+  const workcellSource = await readFile(path.join(context.publicDir, 'assets/synthetic-workcell.svg'));
+  const workcellDeployed = await readFile(path.join(report.directory, 'public/assets/synthetic-workcell.svg'));
+  const workcellRecord = report.files.find(({ path: recordPath }) => recordPath === 'public/assets/synthetic-workcell.svg');
+  assert.deepEqual(workcellDeployed, workcellSource);
+  assert.equal(workcellRecord.sha256, createHash('sha256').update(workcellSource).digest('hex'));
 
   for (const record of report.files) {
     const target = path.join(report.directory, record.path);

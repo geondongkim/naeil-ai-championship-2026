@@ -11,6 +11,7 @@ export const requiredPublicPaths = Object.freeze([
   'app.mjs',
   'assets/naeil-mark.svg',
   'assets/field-orbit.svg',
+  'assets/synthetic-workcell.svg',
   'data/catalog.json',
   'assets/asset-manifest.json',
 ]);
