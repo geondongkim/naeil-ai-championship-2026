@@ -1,0 +1,574 @@
+{
+  "schemaVersion": "1.0.0",
+  "catalogId": "naeil-synthetic-training-catalog-v1",
+  "version": "1.0.0",
+  "seed": "naeil-synthetic-observations-v1",
+  "sourceCatalogRef": "public/data/catalog.json",
+  "sourceType": "AI-generated synthetic example",
+  "status": "proposed-demonstration-curriculum-not-completion",
+  "proposedRoleCount": 6,
+  "moduleCount": 18,
+  "proposedRoles": [
+    {
+      "roleId": "occ-001-field-data-coordinator",
+      "name": "현장 데이터 코디네이터",
+      "englishName": "field data coordinator",
+      "status": "proposed-occupation-path-not-employment-outcome"
+    },
+    {
+      "roleId": "occ-002-physical-ai-data-operator",
+      "name": "Physical AI 데이터 오퍼레이터",
+      "englishName": "Physical AI data operator",
+      "status": "proposed-occupation-path-not-employment-outcome"
+    },
+    {
+      "roleId": "occ-003-quality-safety-reviewer",
+      "name": "데이터 품질·안전 검수자",
+      "englishName": "data quality and safety reviewer",
+      "status": "proposed-occupation-path-not-employment-outcome"
+    },
+    {
+      "roleId": "occ-004-data-rights-steward",
+      "name": "데이터 권리 관리자",
+      "englishName": "data rights steward",
+      "status": "proposed-occupation-path-not-employment-outcome"
+    },
+    {
+      "roleId": "occ-005-field-deployment-specialist",
+      "name": "현장 적용 전문가",
+      "englishName": "field deployment specialist",
+      "status": "proposed-occupation-path-not-employment-outcome"
+    },
+    {
+      "roleId": "occ-006-recollection-operator",
+      "name": "재수집 운영자",
+      "englishName": "recollection operator",
+      "status": "proposed-occupation-path-not-employment-outcome"
+    }
+  ],
+  "competencyCatalog": [
+    {
+      "code": "competency-consent",
+      "name": "현장 동의 경계",
+      "description": "실제 수집 전 동의 상태와 철회 조건을 구분함"
+    },
+    {
+      "code": "competency-scope",
+      "name": "허용 작업 범위",
+      "description": "승인된 대상·행동·구역 밖으로 작업을 확장하지 않음"
+    },
+    {
+      "code": "competency-compensation",
+      "name": "보상 인지 분리",
+      "description": "보상 인지 기록과 품질·검수 결정을 분리함"
+    },
+    {
+      "code": "competency-safety",
+      "name": "안전 우선 판단",
+      "description": "수집보다 위험 제거와 안전 gate 확인을 우선함"
+    },
+    {
+      "code": "competency-quality",
+      "name": "품질 관찰",
+      "description": "흐림·가림·중복·범위 이탈·라벨 불일치를 구분함"
+    },
+    {
+      "code": "competency-rights",
+      "name": "권리·이용 경계",
+      "description": "출처·이용조건·재사용·철회 경계를 기록함"
+    },
+    {
+      "code": "competency-independent-review",
+      "name": "독립 사람 검수",
+      "description": "AI 보조 신호와 사람 최종판단을 분리하고 self-review를 금지함"
+    },
+    {
+      "code": "competency-recollection",
+      "name": "재수집 설계",
+      "description": "issue를 범위가 정해진 안전한 재시도 계획으로 변환함"
+    }
+  ],
+  "completionBoundary": "모든 모듈은 제안된 합성 학습 설계이며 실제 교육 수료, 자격 또는 고용 성과가 아님",
+  "rights": {
+    "status": "clean-room-synthetic-demonstration-record",
+    "thirdPartyMediaUsed": false,
+    "codeLicenseApplies": false
+  },
+  "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+  "createdBySyntheticGenerator": {
+    "script": "scripts/generate-synthetic-dataset.mjs",
+    "seed": "naeil-synthetic-observations-v1",
+    "generatorVersion": "1.0.0",
+    "deterministic": true
+  },
+  "modules": [
+    {
+      "moduleId": "training-001-consent-coordination",
+      "targetRoleId": "occ-001-field-data-coordinator",
+      "title": "현장 동의와 철회 조건 조율",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights"
+      ],
+      "topics": [
+        "consent",
+        "rights"
+      ],
+      "learningObjective": "동의 확인과 이용 권리 확인을 별도 기록으로 구분함",
+      "evidenceMode": "synthetic-scenario-demonstration-only",
+      "completionClaim": "not-completed-no-real-learner",
+      "certificationClaim": false,
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-demonstration-training-module",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "training-002-scope-boundaries",
+      "targetRoleId": "occ-001-field-data-coordinator",
+      "title": "작업 범위와 제한구역 정의",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety"
+      ],
+      "topics": [
+        "task-scope",
+        "safety"
+      ],
+      "learningObjective": "허용 대상·행동·구역과 중단 조건을 정의함",
+      "evidenceMode": "synthetic-scenario-demonstration-only",
+      "completionClaim": "not-completed-no-real-learner",
+      "certificationClaim": false,
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-demonstration-training-module",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "training-003-compensation-awareness",
+      "targetRoleId": "occ-001-field-data-coordinator",
+      "title": "보상 인지와 상태축 분리",
+      "competencyCodes": [
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "topics": [
+        "compensation-awareness",
+        "review"
+      ],
+      "learningObjective": "보상 인지를 품질 승인이나 지급 결과로 오인하지 않음",
+      "evidenceMode": "synthetic-scenario-demonstration-only",
+      "completionClaim": "not-completed-no-real-learner",
+      "certificationClaim": false,
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-demonstration-training-module",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "training-004-five-gate-readiness",
+      "targetRoleId": "occ-002-physical-ai-data-operator",
+      "title": "5개 수집 gate 준비",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation"
+      ],
+      "topics": [
+        "consent",
+        "task-scope",
+        "compensation-awareness"
+      ],
+      "learningObjective": "모든 gate가 실제 수집 전에 필요함을 설명함",
+      "evidenceMode": "synthetic-scenario-demonstration-only",
+      "completionClaim": "not-completed-no-real-learner",
+      "certificationClaim": false,
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-demonstration-training-module",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "training-005-capture-quality",
+      "targetRoleId": "occ-002-physical-ai-data-operator",
+      "title": "합성 관찰 품질 판별",
+      "competencyCodes": [
+        "competency-quality"
+      ],
+      "topics": [
+        "quality"
+      ],
+      "learningObjective": "품질 taxonomy를 이용해 observable issue를 구분함",
+      "evidenceMode": "synthetic-scenario-demonstration-only",
+      "completionClaim": "not-completed-no-real-learner",
+      "certificationClaim": false,
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-demonstration-training-module",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "training-006-safety-stop",
+      "targetRoleId": "occ-002-physical-ai-data-operator",
+      "title": "안전 중단과 범위 준수",
+      "competencyCodes": [
+        "competency-safety",
+        "competency-scope"
+      ],
+      "topics": [
+        "safety",
+        "task-scope"
+      ],
+      "learningObjective": "위험 또는 범위 이탈 시 수집을 중단함",
+      "evidenceMode": "synthetic-scenario-demonstration-only",
+      "completionClaim": "not-completed-no-real-learner",
+      "certificationClaim": false,
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-demonstration-training-module",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "training-007-review-separation",
+      "targetRoleId": "occ-003-quality-safety-reviewer",
+      "title": "수집과 독립 검수 분리",
+      "competencyCodes": [
+        "competency-independent-review"
+      ],
+      "topics": [
+        "review"
+      ],
+      "learningObjective": "collector self-review를 금지하고 AI 신호를 참고로만 사용함",
+      "evidenceMode": "synthetic-scenario-demonstration-only",
+      "completionClaim": "not-completed-no-real-learner",
+      "certificationClaim": false,
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-demonstration-training-module",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "training-008-quality-taxonomy",
+      "targetRoleId": "occ-003-quality-safety-reviewer",
+      "title": "품질·안전 taxonomy 적용",
+      "competencyCodes": [
+        "competency-quality",
+        "competency-safety"
+      ],
+      "topics": [
+        "quality",
+        "safety"
+      ],
+      "learningObjective": "issue code와 관찰 근거를 연결함",
+      "evidenceMode": "synthetic-scenario-demonstration-only",
+      "completionClaim": "not-completed-no-real-learner",
+      "certificationClaim": false,
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-demonstration-training-module",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "training-009-recollection-reason",
+      "targetRoleId": "occ-003-quality-safety-reviewer",
+      "title": "이유가 있는 재수집 판단",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-independent-review"
+      ],
+      "topics": [
+        "review",
+        "recollection"
+      ],
+      "learningObjective": "재수집 disposition과 구체적 이유를 기록함",
+      "evidenceMode": "synthetic-scenario-demonstration-only",
+      "completionClaim": "not-completed-no-real-learner",
+      "certificationClaim": false,
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-demonstration-training-module",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "training-010-consent-usage",
+      "targetRoleId": "occ-004-data-rights-steward",
+      "title": "동의와 이용 목적 경계",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights"
+      ],
+      "topics": [
+        "consent",
+        "rights"
+      ],
+      "learningObjective": "동의가 이용 목적 전체를 자동 승인하지 않음을 설명함",
+      "evidenceMode": "synthetic-scenario-demonstration-only",
+      "completionClaim": "not-completed-no-real-learner",
+      "certificationClaim": false,
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-demonstration-training-module",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "training-011-license-boundary",
+      "targetRoleId": "occ-004-data-rights-steward",
+      "title": "자산 권리와 코드 라이선스 분리",
+      "competencyCodes": [
+        "competency-rights"
+      ],
+      "topics": [
+        "rights"
+      ],
+      "learningObjective": "래스터 자산·메타데이터·코드의 권리 범위를 구분함",
+      "evidenceMode": "synthetic-scenario-demonstration-only",
+      "completionClaim": "not-completed-no-real-learner",
+      "certificationClaim": false,
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-demonstration-training-module",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "training-012-access-retention",
+      "targetRoleId": "occ-004-data-rights-steward",
+      "title": "접근·보존·철회 상태 기록",
+      "competencyCodes": [
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "topics": [
+        "rights",
+        "review"
+      ],
+      "learningObjective": "접근 결정과 검수 결정을 분리해 기록함",
+      "evidenceMode": "synthetic-scenario-demonstration-only",
+      "completionClaim": "not-completed-no-real-learner",
+      "certificationClaim": false,
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-demonstration-training-module",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "training-013-controlled-handoff",
+      "targetRoleId": "occ-005-field-deployment-specialist",
+      "title": "통제된 현장 인계 경계",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety"
+      ],
+      "topics": [
+        "task-scope",
+        "safety"
+      ],
+      "learningObjective": "로봇 제어 없이 데이터·장비 버전의 인계 조건만 설명함",
+      "evidenceMode": "synthetic-scenario-demonstration-only",
+      "completionClaim": "not-completed-no-real-learner",
+      "certificationClaim": false,
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-demonstration-training-module",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "training-014-incident-quality-link",
+      "targetRoleId": "occ-005-field-deployment-specialist",
+      "title": "사고와 품질 issue 연결",
+      "competencyCodes": [
+        "competency-quality",
+        "competency-recollection"
+      ],
+      "topics": [
+        "quality",
+        "recollection"
+      ],
+      "learningObjective": "실패 조건을 데이터 issue와 재수집 필요성에 연결함",
+      "evidenceMode": "synthetic-scenario-demonstration-only",
+      "completionClaim": "not-completed-no-real-learner",
+      "certificationClaim": false,
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-demonstration-training-module",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "training-015-version-rights-check",
+      "targetRoleId": "occ-005-field-deployment-specialist",
+      "title": "버전과 이용 권리 확인",
+      "competencyCodes": [
+        "competency-rights",
+        "competency-safety"
+      ],
+      "topics": [
+        "rights",
+        "safety"
+      ],
+      "learningObjective": "버전·권리·안전 상태를 적용 승인과 구분함",
+      "evidenceMode": "synthetic-scenario-demonstration-only",
+      "completionClaim": "not-completed-no-real-learner",
+      "certificationClaim": false,
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-demonstration-training-module",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "training-016-issue-scoping",
+      "targetRoleId": "occ-006-recollection-operator",
+      "title": "issue 기반 재수집 범위화",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope"
+      ],
+      "topics": [
+        "recollection",
+        "task-scope"
+      ],
+      "learningObjective": "source observation issue만 포함하는 재수집 범위를 작성함",
+      "evidenceMode": "synthetic-scenario-demonstration-only",
+      "completionClaim": "not-completed-no-real-learner",
+      "certificationClaim": false,
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-demonstration-training-module",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "training-017-gate-reconfirmation",
+      "targetRoleId": "occ-006-recollection-operator",
+      "title": "재수집 전 gate 재확인",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation"
+      ],
+      "topics": [
+        "consent",
+        "safety",
+        "compensation-awareness"
+      ],
+      "learningObjective": "재시도도 5개 gate를 다시 확인해야 함을 설명함",
+      "evidenceMode": "synthetic-scenario-demonstration-only",
+      "completionClaim": "not-completed-no-real-learner",
+      "certificationClaim": false,
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-demonstration-training-module",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "training-018-retry-lineage",
+      "targetRoleId": "occ-006-recollection-operator",
+      "title": "재시도 버전과 검수 계보",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "topics": [
+        "recollection",
+        "review",
+        "rights"
+      ],
+      "learningObjective": "source observation·review event·retry version의 계보를 보존함",
+      "evidenceMode": "synthetic-scenario-demonstration-only",
+      "completionClaim": "not-completed-no-real-learner",
+      "certificationClaim": false,
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-demonstration-training-module",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    }
+  ]
+}

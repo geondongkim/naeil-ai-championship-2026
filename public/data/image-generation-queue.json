@@ -1,0 +1,3369 @@
+{
+  "schemaVersion": "1.0.0",
+  "queueId": "naeil-synthetic-image-generation-queue-v1",
+  "version": "1.0.0",
+  "seed": "naeil-synthetic-observations-v1",
+  "sourceCatalogRef": "public/data/catalog.json",
+  "qualityTaxonomyRef": "public/data/quality-taxonomy.json",
+  "sourceObservationDatasetRef": "public/data/synthetic-observations.json",
+  "recollectionTasksRef": "public/data/recollection-tasks.json",
+  "completionLedgerRef": "public/data/image-generation-completions.json",
+  "rightsPolicyRef": "public/data/image-rights-policy.json",
+  "assetManifestRef": "public/assets/asset-manifest.json",
+  "sourceType": "AI-generated synthetic example",
+  "status": "mixed-generated-and-planned-synthetic-images",
+  "scenarioCount": 12,
+  "variationsPerScenario": 3,
+  "itemCount": 36,
+  "plannedItemCount": 28,
+  "generatedItemCount": 8,
+  "rightsApprovedItemCount": 8,
+  "rights": {
+    "status": "mixed-pending-generation-and-project-use-granted",
+    "thirdPartyMediaUsed": false,
+    "codeLicenseApplies": false
+  },
+  "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+  "createdBySyntheticGenerator": {
+    "script": "scripts/generate-synthetic-dataset.mjs",
+    "seed": "naeil-synthetic-observations-v1",
+    "generatorVersion": "1.0.0",
+    "deterministic": true,
+    "performsImageGeneration": false
+  },
+  "items": [
+    {
+      "promptId": "imgprompt-mfg-001-component-surface-baseline-accepted",
+      "scenarioId": "syn-mfg-001-component-surface",
+      "field": "manufacturing",
+      "variationType": "baseline-accepted",
+      "linkedIssueCodes": [
+        "normal"
+      ],
+      "linkedObservationIds": [
+        "obs-mfg-001-001"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-mfg-001-component-surface-baseline-accepted.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-baseline-quality-demonstration",
+      "fullPrompt": "Use case: photorealistic-natural\nAsset type: NAEIL synthetic dataset representative image\nPrimary request: Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 소형 가공 부품 표면 상태 예시; task type: component-surface-inspection.\nScene/backdrop: generic unbranded indoor inspection workbench that cannot identify any real place\nSubject: only synthetic machined metal components, with component surfaces and edges as the clear inspection area\nStyle/medium: polished realistic industrial photography, clearly staged as a synthetic demonstration\nComposition/framing: wide 16:9 landscape, sharp complete inspection area, no cropping of primary parts\nLighting/mood: even neutral inspection lighting, safe and orderly\nConstraints: baseline accepted-quality frame; no visible safety risk; synthetic candidate for independent human review, not approved data; no people, faces, hands, body parts, logos, branding, readable text, letters, numbers, store names, contact details, addresses, maps, coordinates, private location clues, license plates, identity documents, recognizable real premises, watermarks, or signatures; do not depict actual youth work or a real partner site\nAvoid: clutter, blur, occlusion, duplicate objects that confuse inspection, out-of-scope background",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "generated-human-reviewed-for-prototype-use",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "project-use-granted",
+      "permittedUses": [
+        "NAEIL prototype illustration",
+        "NAEIL competition-submission illustration"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection",
+        "claiming youth work or partner-site data",
+        "claiming approved model-training data",
+        "identifying or representing a real person, customer, or business site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "fbb1fdaf96a455bb7e8c8b78dcc69a8e3055fe8dc57b3ea722cabdd16f2dfce3",
+        "generatorTool": "OpenAI image_gen",
+        "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+        "generatorOutputId": "exec-2653c066-dc75-4163-8119-26ea186c70b8.png",
+        "fileSha256": "d05625cad53b626bbd87b48eb06ce377ca92de92424b63de2592868d6da2a562",
+        "byteLength": 1792417,
+        "dimensions": {
+          "pixelWidth": 1672,
+          "pixelHeight": 941
+        },
+        "captureStatus": "complete-human-reviewed-prototype-use"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "baseline-accepted의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "human-review-completed-for-prototype-use",
+      "rights": {
+        "status": "project-use-granted",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "prototype illustration 용도로만 사람 검수되었으며 실제 수집, 청년 수행, 파트너 현장 자료 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0",
+      "completionId": "completion-mfg-001-component-surface-baseline-accepted-v1",
+      "generatedAssetId": "asset-mfg-001-component-surface-baseline-accepted",
+      "filePath": "public/assets/generated/syn-mfg-001-component-surface-baseline-accepted.png",
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      }
+    },
+    {
+      "promptId": "imgprompt-mfg-001-component-surface-visible-issue",
+      "scenarioId": "syn-mfg-001-component-surface",
+      "field": "manufacturing",
+      "variationType": "visible-issue",
+      "linkedIssueCodes": [
+        "blur"
+      ],
+      "linkedObservationIds": [
+        "obs-mfg-001-002"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-mfg-001-component-surface-visible-issue.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-visible-quality-issue-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 소형 가공 부품 표면 상태 예시; task type: component-surface-inspection. Show only 합성 가공 부품, with 부품 표면과 가장자리 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Deliberately demonstrate the quality issue blur: 대상 경계 또는 상태 근거가 움직임·초점 문제로 판독 불가. Keep the issue visually evident without adding any person, identity, brand, or real-site detail. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "4df70a8b4527da1dd1ae2e317a5af4931c5ba4e73f7e647c25d1833856c834fc",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "visible-issue의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-mfg-001-component-surface-corrected-recollection",
+      "scenarioId": "syn-mfg-001-component-surface",
+      "field": "manufacturing",
+      "variationType": "corrected-recollection",
+      "linkedIssueCodes": [
+        "blur"
+      ],
+      "linkedObservationIds": [
+        "obs-mfg-001-002"
+      ],
+      "linkedRecollectionTaskIds": [
+        "recollect-mfg-001-002"
+      ],
+      "intendedFilename": "syn-mfg-001-component-surface-corrected-recollection.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-recollection-correction-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 소형 가공 부품 표면 상태 예시; task type: component-surface-inspection. Show only 합성 가공 부품, with 부품 표면과 가장자리 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Render a corrected recollection candidate that resolves blur by following this guidance: 카메라를 고정하고 초점을 대상에 맞춘 뒤 다시 촬영. The frame must be sharp, complete, unique, safely in scope, and still require independent human review. The linked deterministic recollection plan is recollect-mfg-001-002; do not render this identifier or any other readable text in the image. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "ad5d77c0fc95d524a701ceaf799bc0117cdea2afa7b10b79e652753fa9953562",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "corrected-recollection의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-mfg-002-fastener-tray-baseline-accepted",
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "field": "manufacturing",
+      "variationType": "baseline-accepted",
+      "linkedIssueCodes": [
+        "normal"
+      ],
+      "linkedObservationIds": [
+        "obs-mfg-002-001"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-mfg-002-fastener-tray-baseline-accepted.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-baseline-quality-demonstration",
+      "fullPrompt": "Use case: photorealistic-natural\nAsset type: NAEIL synthetic dataset representative image\nPrimary request: Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 체결부품 트레이 배열 예시; task type: fastener-tray-arrangement.\nScene/backdrop: generic unbranded indoor inspection workbench that cannot identify any real place\nSubject: only a synthetic modular tray of generic bolts, nuts, washers, and fasteners, with tray compartments and orderly part arrangement as the clear inspection area\nStyle/medium: polished realistic industrial photography, clearly staged as a synthetic demonstration\nComposition/framing: wide 16:9 landscape, top-down three-quarter view, sharp complete tray, every primary compartment visible\nLighting/mood: even neutral inspection lighting, safe and orderly\nConstraints: baseline accepted-quality frame; no visible safety risk; synthetic candidate for independent human review, not approved data; no people, faces, hands, body parts, logos, branding, readable text, letters, numbers, store names, contact details, addresses, maps, coordinates, private location clues, license plates, identity documents, recognizable real premises, watermarks, or signatures; do not depict actual youth work or a real partner site\nAvoid: clutter, blur, occlusion, missing tray edges, mixed unrelated objects, out-of-scope background",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "generated-human-reviewed-for-prototype-use",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "project-use-granted",
+      "permittedUses": [
+        "NAEIL prototype illustration",
+        "NAEIL competition-submission illustration"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection",
+        "claiming youth work or partner-site data",
+        "claiming approved model-training data",
+        "identifying or representing a real person, customer, or business site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "a3b7a0495ab8fb0f5f171046e952a253c0dd9d4e3b2730ed78db60cea492528a",
+        "generatorTool": "OpenAI image_gen",
+        "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+        "generatorOutputId": "exec-6a006a34-ef4e-4792-948f-5f762304e5fc.png",
+        "fileSha256": "583e1bf0d3a5493d70831947c18f6c98e02c464a7d23e7021c9524aefd9a43a9",
+        "byteLength": 2340409,
+        "dimensions": {
+          "pixelWidth": 1672,
+          "pixelHeight": 941
+        },
+        "captureStatus": "complete-human-reviewed-prototype-use"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "baseline-accepted의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "human-review-completed-for-prototype-use",
+      "rights": {
+        "status": "project-use-granted",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "prototype illustration 용도로만 사람 검수되었으며 실제 수집, 청년 수행, 파트너 현장 자료 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0",
+      "completionId": "completion-mfg-002-fastener-tray-baseline-accepted-v1",
+      "generatedAssetId": "asset-mfg-002-fastener-tray-baseline-accepted",
+      "filePath": "public/assets/generated/syn-mfg-002-fastener-tray-baseline-accepted.png",
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      }
+    },
+    {
+      "promptId": "imgprompt-mfg-002-fastener-tray-visible-issue",
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "field": "manufacturing",
+      "variationType": "visible-issue",
+      "linkedIssueCodes": [
+        "occlusion"
+      ],
+      "linkedObservationIds": [
+        "obs-mfg-002-003"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-mfg-002-fastener-tray-visible-issue.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-visible-quality-issue-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 체결부품 트레이 배열 예시; task type: fastener-tray-arrangement. Show only 합성 체결부품 트레이, with 트레이 칸과 부품 배열 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Deliberately demonstrate the quality issue occlusion: 핵심 대상 또는 판정 영역 일부가 손·도구·용기 등으로 가려짐. Keep the issue visually evident without adding any person, identity, brand, or real-site detail. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "4d459875dd3cd77267a02e880657c4d8ecc55bb2dc9d034444fbc2d49480126a",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "visible-issue의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-mfg-002-fastener-tray-corrected-recollection",
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "field": "manufacturing",
+      "variationType": "corrected-recollection",
+      "linkedIssueCodes": [
+        "occlusion"
+      ],
+      "linkedObservationIds": [
+        "obs-mfg-002-003"
+      ],
+      "linkedRecollectionTaskIds": [
+        "recollect-mfg-002-003"
+      ],
+      "intendedFilename": "syn-mfg-002-fastener-tray-corrected-recollection.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-recollection-correction-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 체결부품 트레이 배열 예시; task type: fastener-tray-arrangement. Show only 합성 체결부품 트레이, with 트레이 칸과 부품 배열 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Render a corrected recollection candidate that resolves occlusion by following this guidance: 안전하게 가림 요소를 제거하고 동일 범위를 다시 촬영. The frame must be sharp, complete, unique, safely in scope, and still require independent human review. The linked deterministic recollection plan is recollect-mfg-002-003; do not render this identifier or any other readable text in the image. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "f7fe7c5477f6d5ba40dc161df6ea45dd5bc1496e8e1ea8b928a87873d3361dff",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "corrected-recollection의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-mfg-003-safety-zone-baseline-accepted",
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "field": "manufacturing",
+      "variationType": "baseline-accepted",
+      "linkedIssueCodes": [
+        "normal"
+      ],
+      "linkedObservationIds": [
+        "obs-mfg-003-001"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-mfg-003-safety-zone-baseline-accepted.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-baseline-quality-demonstration",
+      "fullPrompt": "Use case: photorealistic-natural\nAsset type: NAEIL synthetic dataset representative image\nPrimary request: Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 안전구역 바닥 표시 예시; task type: safety-zone-marking-check.\nScene/backdrop: generic unbranded indoor industrial aisle that cannot identify any real place\nSubject: only synthetic floor safety-zone markings, aisle boundaries, and a clear empty walkway, with the boundary geometry as the inspection area\nStyle/medium: polished realistic industrial photography, clearly staged as a synthetic demonstration\nComposition/framing: wide 16:9 landscape, low three-quarter perspective, full path and boundary markings visible without cropping\nLighting/mood: even neutral indoor lighting, clean and safe\nConstraints: baseline accepted-quality frame; no visible hazard or obstruction; synthetic candidate for independent human review, not approved data; no people, faces, hands, body parts, logos, branding, readable text, letters, numbers, store names, contact details, addresses, maps, coordinates, private location clues, license plates, identity documents, recognizable real premises, watermarks, or signatures; do not depict actual youth work or a real partner site\nAvoid: emergency signage with text, arrows containing labels, clutter, blur, occlusion, blocked walkway, real company colors or branding",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "generated-human-reviewed-for-prototype-use",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "project-use-granted",
+      "permittedUses": [
+        "NAEIL prototype illustration",
+        "NAEIL competition-submission illustration"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection",
+        "claiming youth work or partner-site data",
+        "claiming approved model-training data",
+        "identifying or representing a real person, customer, or business site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "484b18822d089f8e3fc4c7395b8615f356d96cb413129abbc81ac07ffac6bce2",
+        "generatorTool": "OpenAI image_gen",
+        "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+        "generatorOutputId": "exec-e0cf027b-90c3-461b-a5bf-1e74f4df0ce1.png",
+        "fileSha256": "0b76fd9f8410f59296b315e2e7fd3b931029b7decf5658da675ef092e28be225",
+        "byteLength": 1904266,
+        "dimensions": {
+          "pixelWidth": 1672,
+          "pixelHeight": 941
+        },
+        "captureStatus": "complete-human-reviewed-prototype-use"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "baseline-accepted의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "human-review-completed-for-prototype-use",
+      "rights": {
+        "status": "project-use-granted",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "prototype illustration 용도로만 사람 검수되었으며 실제 수집, 청년 수행, 파트너 현장 자료 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0",
+      "completionId": "completion-mfg-003-safety-zone-baseline-accepted-v1",
+      "generatedAssetId": "asset-mfg-003-safety-zone-baseline-accepted",
+      "filePath": "public/assets/generated/syn-mfg-003-safety-zone-baseline-accepted.png",
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      }
+    },
+    {
+      "promptId": "imgprompt-mfg-003-safety-zone-visible-issue",
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "field": "manufacturing",
+      "variationType": "visible-issue",
+      "linkedIssueCodes": [
+        "duplicate"
+      ],
+      "linkedObservationIds": [
+        "obs-mfg-003-004"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-mfg-003-safety-zone-visible-issue.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-visible-quality-issue-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 안전구역 바닥 표시 예시; task type: safety-zone-marking-check. Show only 합성 안전구역 표시, with 통로 경계와 바닥 표시 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Deliberately demonstrate the quality issue duplicate: 동일 시나리오의 기존 관찰과 구도·대상 상태가 실질적으로 같음. Keep the issue visually evident without adding any person, identity, brand, or real-site detail. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "b35ef7dd51b6b9bf24400eff47f84913dbeea796c44ea206ced6fff1cac9411a",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "visible-issue의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-mfg-003-safety-zone-corrected-recollection",
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "field": "manufacturing",
+      "variationType": "corrected-recollection",
+      "linkedIssueCodes": [
+        "duplicate"
+      ],
+      "linkedObservationIds": [
+        "obs-mfg-003-004"
+      ],
+      "linkedRecollectionTaskIds": [
+        "recollect-mfg-003-004"
+      ],
+      "intendedFilename": "syn-mfg-003-safety-zone-corrected-recollection.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-recollection-correction-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 안전구역 바닥 표시 예시; task type: safety-zone-marking-check. Show only 합성 안전구역 표시, with 통로 경계와 바닥 표시 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Render a corrected recollection candidate that resolves duplicate by following this guidance: 사람 검수자가 중복 여부를 확인하고 필요한 경우 다른 상태를 수집. The frame must be sharp, complete, unique, safely in scope, and still require independent human review. The linked deterministic recollection plan is recollect-mfg-003-004; do not render this identifier or any other readable text in the image. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "8e5a5633fedc00f928ef04d70e54265057995b4605c5707ce66f4a275546884a",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "corrected-recollection의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-mfg-004-packaging-check-baseline-accepted",
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "field": "manufacturing",
+      "variationType": "baseline-accepted",
+      "linkedIssueCodes": [
+        "normal"
+      ],
+      "linkedObservationIds": [
+        "obs-mfg-004-001"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-mfg-004-packaging-check-baseline-accepted.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-baseline-quality-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 부품 포장 상태 확인 예시; task type: component-packaging-check. Show only 합성 부품 포장, with 밀봉부와 완충재 배치 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Render a sharp, evenly lit, complete, unique, in-scope baseline frame with no visible safety risk; it remains a synthetic candidate for independent human review, not approved data. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "generated-human-reviewed-for-prototype-use",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "project-use-granted",
+      "permittedUses": [
+        "NAEIL prototype illustration",
+        "NAEIL competition-submission illustration"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection",
+        "claiming youth work or partner-site data",
+        "claiming approved model-training data",
+        "identifying or representing a real person, customer, or business site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "f6743023b5add6a47c9c9e18d26edd1b86918d4787ac37ca3b06b82c457963fe",
+        "generatorTool": "OpenAI image_gen",
+        "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+        "generatorOutputId": "exec-ff3f473b-4aca-42c8-983f-54fc7eb03615.png",
+        "fileSha256": "d832d0e5f779921436021a814cfc556c5bcb2d3378749339a7031ae162373b44",
+        "byteLength": 2547600,
+        "dimensions": {
+          "pixelWidth": 1672,
+          "pixelHeight": 941
+        },
+        "captureStatus": "complete-human-reviewed-prototype-use"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "baseline-accepted의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "human-review-completed-for-prototype-use",
+      "rights": {
+        "status": "project-use-granted",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "prototype illustration 용도로만 사람 검수되었으며 실제 수집, 청년 수행, 파트너 현장 자료, 승인 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0",
+      "completionId": "completion-mfg-004-packaging-check-baseline-accepted-v1",
+      "generatedAssetId": "asset-mfg-004-packaging-check-baseline-accepted",
+      "filePath": "public/assets/generated/syn-mfg-004-packaging-check-baseline-accepted.png",
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      }
+    },
+    {
+      "promptId": "imgprompt-mfg-004-packaging-check-visible-issue",
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "field": "manufacturing",
+      "variationType": "visible-issue",
+      "linkedIssueCodes": [
+        "out-of-scope"
+      ],
+      "linkedObservationIds": [
+        "obs-mfg-004-005"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-mfg-004-packaging-check-visible-issue.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-visible-quality-issue-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 부품 포장 상태 확인 예시; task type: component-packaging-check. Show only 합성 부품 포장, with 밀봉부와 완충재 배치 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Deliberately demonstrate the quality issue out-of-scope: 승인된 작업 대상 밖의 배경·행동·정보가 포함됨. Keep the issue visually evident without adding any person, identity, brand, or real-site detail. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "857afacfb3b9b7c4ec38997f3a1b510ca4173e31e7c9ea0c1e87c03534d6f35f",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "visible-issue의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-mfg-004-packaging-check-corrected-recollection",
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "field": "manufacturing",
+      "variationType": "corrected-recollection",
+      "linkedIssueCodes": [
+        "out-of-scope"
+      ],
+      "linkedObservationIds": [
+        "obs-mfg-004-005"
+      ],
+      "linkedRecollectionTaskIds": [
+        "recollect-mfg-004-005"
+      ],
+      "intendedFilename": "syn-mfg-004-packaging-check-corrected-recollection.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-recollection-correction-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 부품 포장 상태 확인 예시; task type: component-packaging-check. Show only 합성 부품 포장, with 밀봉부와 완충재 배치 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Render a corrected recollection candidate that resolves out-of-scope by following this guidance: 허용 작업 범위만 포함하도록 구도와 작업 경계를 다시 설정. The frame must be sharp, complete, unique, safely in scope, and still require independent human review. The linked deterministic recollection plan is recollect-mfg-004-005; do not render this identifier or any other readable text in the image. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "63aea299d3e7ba0033cdd6d975d5bb14fc163ced936c32504675950347cf850d",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "corrected-recollection의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-mfg-005-bin-label-baseline-accepted",
+      "scenarioId": "syn-mfg-005-bin-label",
+      "field": "manufacturing",
+      "variationType": "baseline-accepted",
+      "linkedIssueCodes": [
+        "normal"
+      ],
+      "linkedObservationIds": [
+        "obs-mfg-005-001"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-mfg-005-bin-label-baseline-accepted.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-baseline-quality-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 부품 보관함 라벨 정합 예시; task type: parts-bin-label-verification. Show only 합성 부품 보관함, with 보관함 위치와 비식별 범주 라벨 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Render a sharp, evenly lit, complete, unique, in-scope baseline frame with no visible safety risk; it remains a synthetic candidate for independent human review, not approved data. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "generated-human-reviewed-for-prototype-use",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "project-use-granted",
+      "permittedUses": [
+        "NAEIL prototype illustration",
+        "NAEIL competition-submission illustration"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection",
+        "claiming youth work or partner-site data",
+        "claiming approved model-training data",
+        "identifying or representing a real person, customer, or business site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "4e62144865e40f31575b378f25a6b3e24fab6d1e11583358cc1bfbe27d2ad538",
+        "generatorTool": "OpenAI image_gen",
+        "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+        "generatorOutputId": "exec-c52fe9c6-c5c4-49a2-905e-dbc8081e917a.png",
+        "fileSha256": "9796442ed142f32f3ddaaf760ddce80758433c07838e953c0288146d4c5e6f51",
+        "byteLength": 1909981,
+        "dimensions": {
+          "pixelWidth": 1672,
+          "pixelHeight": 941
+        },
+        "captureStatus": "complete-human-reviewed-prototype-use"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "baseline-accepted의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "human-review-completed-for-prototype-use",
+      "rights": {
+        "status": "project-use-granted",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "prototype illustration 용도로만 사람 검수되었으며 실제 수집, 청년 수행, 파트너 현장 자료, 승인 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0",
+      "completionId": "completion-mfg-005-bin-label-baseline-accepted-v1",
+      "generatedAssetId": "asset-mfg-005-bin-label-baseline-accepted",
+      "filePath": "public/assets/generated/syn-mfg-005-bin-label-baseline-accepted.png",
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      }
+    },
+    {
+      "promptId": "imgprompt-mfg-005-bin-label-visible-issue",
+      "scenarioId": "syn-mfg-005-bin-label",
+      "field": "manufacturing",
+      "variationType": "visible-issue",
+      "linkedIssueCodes": [
+        "safety-risk"
+      ],
+      "linkedObservationIds": [
+        "obs-mfg-005-006"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-mfg-005-bin-label-visible-issue.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-visible-quality-issue-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 부품 보관함 라벨 정합 예시; task type: parts-bin-label-verification. Show only 합성 부품 보관함, with 보관함 위치와 비식별 범주 라벨 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Deliberately demonstrate the quality issue safety-risk: 접근 금지, 보호조치 누락 또는 위험 동작이 합성 관찰에 표현됨. Keep the issue visually evident without adding any person, identity, brand, or real-site detail. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "aab70f83e941dd6f2d77ed29a8d390c30c8ae82a236b3fca16c310806ef7622a",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "visible-issue의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-mfg-005-bin-label-corrected-recollection",
+      "scenarioId": "syn-mfg-005-bin-label",
+      "field": "manufacturing",
+      "variationType": "corrected-recollection",
+      "linkedIssueCodes": [
+        "safety-risk"
+      ],
+      "linkedObservationIds": [
+        "obs-mfg-005-006"
+      ],
+      "linkedRecollectionTaskIds": [
+        "recollect-mfg-005-006"
+      ],
+      "intendedFilename": "syn-mfg-005-bin-label-corrected-recollection.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-recollection-correction-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 부품 보관함 라벨 정합 예시; task type: parts-bin-label-verification. Show only 합성 부품 보관함, with 보관함 위치와 비식별 범주 라벨 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Render a corrected recollection candidate that resolves safety-risk by following this guidance: 수집보다 안전 조치를 우선하고 안전 담당 확인 후 새 세션으로 시작. The frame must be sharp, complete, unique, safely in scope, and still require independent human review. The linked deterministic recollection plan is recollect-mfg-005-006; do not render this identifier or any other readable text in the image. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "fb5eaa597ebe867515375d91b6efc709c8d09db9593db22f0205329b81731733",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "corrected-recollection의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-mfg-006-cobot-clearance-baseline-accepted",
+      "scenarioId": "syn-mfg-006-cobot-clearance",
+      "field": "manufacturing",
+      "variationType": "baseline-accepted",
+      "linkedIssueCodes": [
+        "normal"
+      ],
+      "linkedObservationIds": [
+        "obs-mfg-006-001"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-mfg-006-cobot-clearance-baseline-accepted.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-baseline-quality-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 코봇 인계구역 여유 공간 예시; task type: cobot-handoff-clearance-check. Show only 합성 코봇 인계구역, with 코봇 주변 여유 공간과 인계 지점 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Render a sharp, evenly lit, complete, unique, in-scope baseline frame with no visible safety risk; it remains a synthetic candidate for independent human review, not approved data. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "e78ab9f455eb78bc7b4fbbbb6241f6ee1f4ba0f1a51abb1d22cc649d9b462ed8",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "baseline-accepted의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-mfg-006-cobot-clearance-visible-issue",
+      "scenarioId": "syn-mfg-006-cobot-clearance",
+      "field": "manufacturing",
+      "variationType": "visible-issue",
+      "linkedIssueCodes": [
+        "label-mismatch"
+      ],
+      "linkedObservationIds": [
+        "obs-mfg-006-008"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-mfg-006-cobot-clearance-visible-issue.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-visible-quality-issue-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 코봇 인계구역 여유 공간 예시; task type: cobot-handoff-clearance-check. Show only 합성 코봇 인계구역, with 코봇 주변 여유 공간과 인계 지점 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Deliberately demonstrate the quality issue label-mismatch: 관찰된 대상·상태가 지정 taskType 또는 기대 라벨과 맞지 않음. Keep the issue visually evident without adding any person, identity, brand, or real-site detail. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "b2d4f49dc17671b0dd75074cfcd5578c2aa0ca95952b202c91ded921f6ec4a19",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "visible-issue의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-mfg-006-cobot-clearance-corrected-recollection",
+      "scenarioId": "syn-mfg-006-cobot-clearance",
+      "field": "manufacturing",
+      "variationType": "corrected-recollection",
+      "linkedIssueCodes": [
+        "label-mismatch"
+      ],
+      "linkedObservationIds": [
+        "obs-mfg-006-008"
+      ],
+      "linkedRecollectionTaskIds": [
+        "recollect-mfg-006-008"
+      ],
+      "intendedFilename": "syn-mfg-006-cobot-clearance-corrected-recollection.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-recollection-correction-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 코봇 인계구역 여유 공간 예시; task type: cobot-handoff-clearance-check. Show only 합성 코봇 인계구역, with 코봇 주변 여유 공간과 인계 지점 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Render a corrected recollection candidate that resolves label-mismatch by following this guidance: 사람 검수자가 라벨 수정과 재수집 중 적절한 조치를 결정. The frame must be sharp, complete, unique, safely in scope, and still require independent human review. The linked deterministic recollection plan is recollect-mfg-006-008; do not render this identifier or any other readable text in the image. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "72c69f934591730c351212cf4cb5935f62a573ce2c22961655525aecce186f77",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "corrected-recollection의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-smb-001-bakery-shelf-baseline-accepted",
+      "scenarioId": "syn-smb-001-bakery-shelf",
+      "field": "small-business",
+      "variationType": "baseline-accepted",
+      "linkedIssueCodes": [
+        "normal"
+      ],
+      "linkedObservationIds": [
+        "obs-smb-007-001"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-smb-001-bakery-shelf-baseline-accepted.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-baseline-quality-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 제과점 진열대 정리 예시; task type: bakery-shelf-arrangement. Show only 합성 제과 진열대, with 빵 진열 간격과 트레이 위치 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Render a sharp, evenly lit, complete, unique, in-scope baseline frame with no visible safety risk; it remains a synthetic candidate for independent human review, not approved data. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "3e7328474cf1f729279b543809419a08d1f06772a6cc8549f97ead0467c91206",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "baseline-accepted의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-smb-001-bakery-shelf-visible-issue",
+      "scenarioId": "syn-smb-001-bakery-shelf",
+      "field": "small-business",
+      "variationType": "visible-issue",
+      "linkedIssueCodes": [
+        "blur"
+      ],
+      "linkedObservationIds": [
+        "obs-smb-007-002"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-smb-001-bakery-shelf-visible-issue.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-visible-quality-issue-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 제과점 진열대 정리 예시; task type: bakery-shelf-arrangement. Show only 합성 제과 진열대, with 빵 진열 간격과 트레이 위치 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Deliberately demonstrate the quality issue blur: 대상 경계 또는 상태 근거가 움직임·초점 문제로 판독 불가. Keep the issue visually evident without adding any person, identity, brand, or real-site detail. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "457b4416259fc6180074953730aaa4ce60c4dbc8d2e73c0983aaa4778f0901dd",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "visible-issue의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-smb-001-bakery-shelf-corrected-recollection",
+      "scenarioId": "syn-smb-001-bakery-shelf",
+      "field": "small-business",
+      "variationType": "corrected-recollection",
+      "linkedIssueCodes": [
+        "blur"
+      ],
+      "linkedObservationIds": [
+        "obs-smb-007-002"
+      ],
+      "linkedRecollectionTaskIds": [
+        "recollect-smb-007-002"
+      ],
+      "intendedFilename": "syn-smb-001-bakery-shelf-corrected-recollection.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-recollection-correction-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 제과점 진열대 정리 예시; task type: bakery-shelf-arrangement. Show only 합성 제과 진열대, with 빵 진열 간격과 트레이 위치 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Render a corrected recollection candidate that resolves blur by following this guidance: 카메라를 고정하고 초점을 대상에 맞춘 뒤 다시 촬영. The frame must be sharp, complete, unique, safely in scope, and still require independent human review. The linked deterministic recollection plan is recollect-smb-007-002; do not render this identifier or any other readable text in the image. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "16e32bedeb53c6cf9500a01889cb6f1ba88800554edcac83981bdbd7db412876",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "corrected-recollection의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-smb-002-cafe-tray-baseline-accepted",
+      "scenarioId": "syn-smb-002-cafe-tray",
+      "field": "small-business",
+      "variationType": "baseline-accepted",
+      "linkedIssueCodes": [
+        "normal"
+      ],
+      "linkedObservationIds": [
+        "obs-smb-008-001"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-smb-002-cafe-tray-baseline-accepted.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-baseline-quality-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 카페 빈 컵과 트레이 정리 예시; task type: cafe-cup-tray-sorting. Show only 합성 컵과 트레이, with 컵 분류와 트레이 적재 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Render a sharp, evenly lit, complete, unique, in-scope baseline frame with no visible safety risk; it remains a synthetic candidate for independent human review, not approved data. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "c9b5e803565369a9df799b733094a705fb5c2e4dcc1a3c536f7320675523a0a3",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "baseline-accepted의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-smb-002-cafe-tray-visible-issue",
+      "scenarioId": "syn-smb-002-cafe-tray",
+      "field": "small-business",
+      "variationType": "visible-issue",
+      "linkedIssueCodes": [
+        "occlusion"
+      ],
+      "linkedObservationIds": [
+        "obs-smb-008-003"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-smb-002-cafe-tray-visible-issue.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-visible-quality-issue-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 카페 빈 컵과 트레이 정리 예시; task type: cafe-cup-tray-sorting. Show only 합성 컵과 트레이, with 컵 분류와 트레이 적재 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Deliberately demonstrate the quality issue occlusion: 핵심 대상 또는 판정 영역 일부가 손·도구·용기 등으로 가려짐. Keep the issue visually evident without adding any person, identity, brand, or real-site detail. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "111a18732b45ca8c5ba1d2a17244db48fb205f5ccf0037f72578d852bc6c6ab6",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "visible-issue의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-smb-002-cafe-tray-corrected-recollection",
+      "scenarioId": "syn-smb-002-cafe-tray",
+      "field": "small-business",
+      "variationType": "corrected-recollection",
+      "linkedIssueCodes": [
+        "occlusion"
+      ],
+      "linkedObservationIds": [
+        "obs-smb-008-003"
+      ],
+      "linkedRecollectionTaskIds": [
+        "recollect-smb-008-003"
+      ],
+      "intendedFilename": "syn-smb-002-cafe-tray-corrected-recollection.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-recollection-correction-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 카페 빈 컵과 트레이 정리 예시; task type: cafe-cup-tray-sorting. Show only 합성 컵과 트레이, with 컵 분류와 트레이 적재 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Render a corrected recollection candidate that resolves occlusion by following this guidance: 안전하게 가림 요소를 제거하고 동일 범위를 다시 촬영. The frame must be sharp, complete, unique, safely in scope, and still require independent human review. The linked deterministic recollection plan is recollect-smb-008-003; do not render this identifier or any other readable text in the image. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "d5f09ecd5e3f9ebed2a8e32a40865d351ff7707c2aa5f5b87c450dbc6e826603",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "corrected-recollection의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-smb-003-produce-weighing-baseline-accepted",
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "field": "small-business",
+      "variationType": "baseline-accepted",
+      "linkedIssueCodes": [
+        "normal"
+      ],
+      "linkedObservationIds": [
+        "obs-smb-009-001"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-smb-003-produce-weighing-baseline-accepted.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-baseline-quality-demonstration",
+      "fullPrompt": "Use case: photorealistic-natural\nAsset type: NAEIL synthetic dataset representative image\nPrimary request: Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 청과물 계량 작업 예시; task type: produce-weighing-check.\nScene/backdrop: generic unbranded indoor produce work counter that cannot identify any real place\nSubject: only synthetic apples and citrus arranged around a plain digital scale, with the weighing plate and neutral display state as the clear inspection area\nStyle/medium: polished realistic small-business photography, clearly staged as a synthetic demonstration\nComposition/framing: wide 16:9 landscape, three-quarter tabletop view, full scale and produce groups visible without cropping\nLighting/mood: soft even daylight-balanced lighting, clean and orderly\nConstraints: baseline accepted-quality frame; display may be blank or abstract non-readable segments only; no visible safety risk; synthetic candidate for independent human review, not approved data; no people, faces, hands, body parts, logos, branding, readable text, letters, numbers, price labels, store names, contact details, addresses, maps, coordinates, private location clues, recognizable real premises, watermarks, or signatures; do not depict actual youth work or a real partner site\nAvoid: real branded packaging, price signage, clutter, blur, occlusion, spoiled produce, identifiable storefronts",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "generated-human-reviewed-for-prototype-use",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "project-use-granted",
+      "permittedUses": [
+        "NAEIL prototype illustration",
+        "NAEIL competition-submission illustration"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection",
+        "claiming youth work or partner-site data",
+        "claiming approved model-training data",
+        "identifying or representing a real person, customer, or business site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "1a2afa81abee36a3c7303aafc76ed58e15fa79c173fb547f000a2a0d6ed18f32",
+        "generatorTool": "OpenAI image_gen",
+        "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+        "generatorOutputId": "exec-dd5ebc61-72eb-492e-b2dd-fb9b6267aeec.png",
+        "fileSha256": "6e34ec21ba506e2bc2d0d2e249c76277e763563dc6f38ce2d571c1cbf1c70168",
+        "byteLength": 2012846,
+        "dimensions": {
+          "pixelWidth": 1672,
+          "pixelHeight": 941
+        },
+        "captureStatus": "complete-human-reviewed-prototype-use"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "baseline-accepted의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "human-review-completed-for-prototype-use",
+      "rights": {
+        "status": "project-use-granted",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "prototype illustration 용도로만 사람 검수되었으며 실제 수집, 청년 수행, 파트너 현장 자료 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0",
+      "completionId": "completion-smb-003-produce-weighing-baseline-accepted-v1",
+      "generatedAssetId": "asset-smb-003-produce-weighing-baseline-accepted",
+      "filePath": "public/assets/generated/syn-smb-003-produce-weighing-baseline-accepted.png",
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      }
+    },
+    {
+      "promptId": "imgprompt-smb-003-produce-weighing-visible-issue",
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "field": "small-business",
+      "variationType": "visible-issue",
+      "linkedIssueCodes": [
+        "duplicate"
+      ],
+      "linkedObservationIds": [
+        "obs-smb-009-004"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-smb-003-produce-weighing-visible-issue.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-visible-quality-issue-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 청과물 계량 작업 예시; task type: produce-weighing-check. Show only 합성 청과물과 저울, with 계량 접시와 표시 상태 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Deliberately demonstrate the quality issue duplicate: 동일 시나리오의 기존 관찰과 구도·대상 상태가 실질적으로 같음. Keep the issue visually evident without adding any person, identity, brand, or real-site detail. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "dd974fed272c450cc5f4802d7c604e7d4f2351ccd07f558719ed7ec7f77b4687",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "visible-issue의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-smb-003-produce-weighing-corrected-recollection",
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "field": "small-business",
+      "variationType": "corrected-recollection",
+      "linkedIssueCodes": [
+        "duplicate"
+      ],
+      "linkedObservationIds": [
+        "obs-smb-009-004"
+      ],
+      "linkedRecollectionTaskIds": [
+        "recollect-smb-009-004"
+      ],
+      "intendedFilename": "syn-smb-003-produce-weighing-corrected-recollection.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-recollection-correction-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 청과물 계량 작업 예시; task type: produce-weighing-check. Show only 합성 청과물과 저울, with 계량 접시와 표시 상태 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Render a corrected recollection candidate that resolves duplicate by following this guidance: 사람 검수자가 중복 여부를 확인하고 필요한 경우 다른 상태를 수집. The frame must be sharp, complete, unique, safely in scope, and still require independent human review. The linked deterministic recollection plan is recollect-smb-009-004; do not render this identifier or any other readable text in the image. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "747d2eb5362d6232d1039e7a879f8b2977373ed641a609156fc7add0bd1498de",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "corrected-recollection의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-smb-004-florist-wrapping-baseline-accepted",
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "field": "small-business",
+      "variationType": "baseline-accepted",
+      "linkedIssueCodes": [
+        "normal"
+      ],
+      "linkedObservationIds": [
+        "obs-smb-010-001"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-smb-004-florist-wrapping-baseline-accepted.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-baseline-quality-demonstration",
+      "fullPrompt": "Use case: photorealistic-natural\nAsset type: NAEIL synthetic dataset representative image\nPrimary request: Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 꽃집 포장 단계 예시; task type: florist-wrapping-stage-check.\nScene/backdrop: generic unbranded indoor florist worktable that cannot identify any real place\nSubject: only a synthetic bouquet in progress, neutral wrapping paper, ribbon, and safe blunt floral tools arranged to show folding and tying stages\nStyle/medium: polished realistic small-business photography, clearly staged as a synthetic demonstration\nComposition/framing: wide 16:9 landscape, three-quarter tabletop view, full bouquet and wrapping folds visible without cropping\nLighting/mood: soft even daylight-balanced lighting, clean and orderly\nConstraints: baseline accepted-quality frame; no visible safety risk; synthetic candidate for independent human review, not approved data; no people, faces, hands, body parts, logos, branding, readable text, letters, numbers, price labels, store names, contact details, addresses, private location clues, recognizable real premises, watermarks, or signatures; do not depict actual youth work or a real partner site\nAvoid: branded paper, printed ribbons, greeting cards with text, clutter, blur, occlusion, identifiable storefronts",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "generated-human-reviewed-for-prototype-use",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "project-use-granted",
+      "permittedUses": [
+        "NAEIL prototype illustration",
+        "NAEIL competition-submission illustration"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection",
+        "claiming youth work or partner-site data",
+        "claiming approved model-training data",
+        "identifying or representing a real person, customer, or business site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "c486c0c21633faa407f441b90dd8b86a011fa440fdc1a4d9d1ecacfcb2b1ef9d",
+        "generatorTool": "OpenAI image_gen",
+        "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+        "generatorOutputId": "exec-c91b04ca-59f4-4ee3-adc3-9a173e27fcdb.png",
+        "fileSha256": "553871d54ec3d44e3968c2ec6816555dacd44836ead159a321a5c69a43c65f1a",
+        "byteLength": 2267940,
+        "dimensions": {
+          "pixelWidth": 1672,
+          "pixelHeight": 941
+        },
+        "captureStatus": "complete-human-reviewed-prototype-use"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "baseline-accepted의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "human-review-completed-for-prototype-use",
+      "rights": {
+        "status": "project-use-granted",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "prototype illustration 용도로만 사람 검수되었으며 실제 수집, 청년 수행, 파트너 현장 자료, 안전 인증 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0",
+      "completionId": "completion-smb-004-florist-wrapping-baseline-accepted-v1",
+      "generatedAssetId": "asset-smb-004-florist-wrapping-baseline-accepted",
+      "filePath": "public/assets/generated/syn-smb-004-florist-wrapping-baseline-accepted.png",
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "stationaryBluntFloralToolsOnly": true,
+          "prototypeIllustrationSuitable": true
+        }
+      }
+    },
+    {
+      "promptId": "imgprompt-smb-004-florist-wrapping-visible-issue",
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "field": "small-business",
+      "variationType": "visible-issue",
+      "linkedIssueCodes": [
+        "out-of-scope"
+      ],
+      "linkedObservationIds": [
+        "obs-smb-010-005"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-smb-004-florist-wrapping-visible-issue.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-visible-quality-issue-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 꽃집 포장 단계 예시; task type: florist-wrapping-stage-check. Show only 합성 꽃다발 포장, with 포장지 접힘과 묶음 단계 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Deliberately demonstrate the quality issue out-of-scope: 승인된 작업 대상 밖의 배경·행동·정보가 포함됨. Keep the issue visually evident without adding any person, identity, brand, or real-site detail. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "af8ec40fa7d702c113d305adebc8cecb86425f7a1691d413ffd92afff50392b6",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "visible-issue의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-smb-004-florist-wrapping-corrected-recollection",
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "field": "small-business",
+      "variationType": "corrected-recollection",
+      "linkedIssueCodes": [
+        "out-of-scope"
+      ],
+      "linkedObservationIds": [
+        "obs-smb-010-005"
+      ],
+      "linkedRecollectionTaskIds": [
+        "recollect-smb-010-005"
+      ],
+      "intendedFilename": "syn-smb-004-florist-wrapping-corrected-recollection.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-recollection-correction-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 꽃집 포장 단계 예시; task type: florist-wrapping-stage-check. Show only 합성 꽃다발 포장, with 포장지 접힘과 묶음 단계 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Render a corrected recollection candidate that resolves out-of-scope by following this guidance: 허용 작업 범위만 포함하도록 구도와 작업 경계를 다시 설정. The frame must be sharp, complete, unique, safely in scope, and still require independent human review. The linked deterministic recollection plan is recollect-smb-010-005; do not render this identifier or any other readable text in the image. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "9fe7440e33a36d52167301708d7e796fa589d684d43b3fa6e3861ef2610b06fd",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "corrected-recollection의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-smb-005-shelf-label-baseline-accepted",
+      "scenarioId": "syn-smb-005-shelf-label",
+      "field": "small-business",
+      "variationType": "baseline-accepted",
+      "linkedIssueCodes": [
+        "normal"
+      ],
+      "linkedObservationIds": [
+        "obs-smb-011-001"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-smb-005-shelf-label-baseline-accepted.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-baseline-quality-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 소매 진열 라벨 정렬 예시; task type: retail-shelf-label-alignment. Show only 합성 소매 진열대, with 상품 자리와 비식별 범주 라벨 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Render a sharp, evenly lit, complete, unique, in-scope baseline frame with no visible safety risk; it remains a synthetic candidate for independent human review, not approved data. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "6d9c63be5ce20bcdfa47efaba79117bfbf1ad59b3761ea76e9d926d987ad9c73",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "baseline-accepted의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-smb-005-shelf-label-visible-issue",
+      "scenarioId": "syn-smb-005-shelf-label",
+      "field": "small-business",
+      "variationType": "visible-issue",
+      "linkedIssueCodes": [
+        "safety-risk"
+      ],
+      "linkedObservationIds": [
+        "obs-smb-011-006"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-smb-005-shelf-label-visible-issue.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-visible-quality-issue-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 소매 진열 라벨 정렬 예시; task type: retail-shelf-label-alignment. Show only 합성 소매 진열대, with 상품 자리와 비식별 범주 라벨 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Deliberately demonstrate the quality issue safety-risk: 접근 금지, 보호조치 누락 또는 위험 동작이 합성 관찰에 표현됨. Keep the issue visually evident without adding any person, identity, brand, or real-site detail. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "3801e3281c3d5b6dadd3ea9e38baa942ad986365e9768b809995e6eadc1401b8",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "visible-issue의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-smb-005-shelf-label-corrected-recollection",
+      "scenarioId": "syn-smb-005-shelf-label",
+      "field": "small-business",
+      "variationType": "corrected-recollection",
+      "linkedIssueCodes": [
+        "safety-risk"
+      ],
+      "linkedObservationIds": [
+        "obs-smb-011-006"
+      ],
+      "linkedRecollectionTaskIds": [
+        "recollect-smb-011-006"
+      ],
+      "intendedFilename": "syn-smb-005-shelf-label-corrected-recollection.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-recollection-correction-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 소매 진열 라벨 정렬 예시; task type: retail-shelf-label-alignment. Show only 합성 소매 진열대, with 상품 자리와 비식별 범주 라벨 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Render a corrected recollection candidate that resolves safety-risk by following this guidance: 수집보다 안전 조치를 우선하고 안전 담당 확인 후 새 세션으로 시작. The frame must be sharp, complete, unique, safely in scope, and still require independent human review. The linked deterministic recollection plan is recollect-smb-011-006; do not render this identifier or any other readable text in the image. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "806cd8e76b766feac3c5e298dc86864a572e9b366f97ca3afed9cf32e5355a76",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "corrected-recollection의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-smb-006-ingredient-bin-baseline-accepted",
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "field": "small-business",
+      "variationType": "baseline-accepted",
+      "linkedIssueCodes": [
+        "normal"
+      ],
+      "linkedObservationIds": [
+        "obs-smb-012-001"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-smb-006-ingredient-bin-baseline-accepted.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-baseline-quality-demonstration",
+      "fullPrompt": "Use case: photorealistic-natural\nAsset type: NAEIL synthetic dataset representative image\nPrimary request: Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 주방 재료통 분류 예시; task type: ingredient-bin-sorting.\nScene/backdrop: generic unbranded commercial kitchen prep shelf that cannot identify any real place\nSubject: only transparent and stainless ingredient bins containing visually distinct dry ingredients, arranged in a clean grid with color-coded blank geometric markers and no words\nStyle/medium: polished realistic small-business photography, clearly staged as a synthetic demonstration\nComposition/framing: wide 16:9 landscape, frontal three-quarter view, all primary bins and their arrangement fully visible\nLighting/mood: even neutral food-prep lighting, clean and orderly\nConstraints: baseline accepted-quality frame; all containers closed or safely covered; no visible safety risk; synthetic candidate for independent human review, not approved data; no people, faces, hands, body parts, logos, branding, readable text, letters, numbers, labels, store names, contact details, addresses, private location clues, recognizable real premises, watermarks, or signatures; do not depict actual youth work or a real partner site\nAvoid: handwritten labels, branded packaging, allergen claims, spoiled ingredients, clutter, blur, occlusion, identifiable restaurant interiors",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "generated-human-reviewed-for-prototype-use",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "project-use-granted",
+      "permittedUses": [
+        "NAEIL prototype illustration",
+        "NAEIL competition-submission illustration"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection",
+        "claiming youth work or partner-site data",
+        "claiming approved model-training data",
+        "identifying or representing a real person, customer, or business site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "64642e5f354547b7936ddd29fe08933fcc27a3b5915d049598ba82e21db41be8",
+        "generatorTool": "OpenAI image_gen",
+        "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+        "generatorOutputId": "exec-066c7c42-1471-4426-a29d-6c50059def4a.png",
+        "fileSha256": "0f7bb7cddc0c497042d861d9e714f291795e967b9608c2db5a6dfe0bcbd2d844",
+        "byteLength": 2751818,
+        "dimensions": {
+          "pixelWidth": 1672,
+          "pixelHeight": 941
+        },
+        "captureStatus": "complete-human-reviewed-prototype-use"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "baseline-accepted의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "human-review-completed-for-prototype-use",
+      "rights": {
+        "status": "project-use-granted",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "prototype illustration 용도로만 사람 검수되었으며 실제 수집, 청년 수행, 파트너 현장 자료 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0",
+      "completionId": "completion-smb-006-ingredient-bin-baseline-accepted-v1",
+      "generatedAssetId": "asset-smb-006-ingredient-bin-baseline-accepted",
+      "filePath": "public/assets/generated/syn-smb-006-ingredient-bin-baseline-accepted.png",
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      }
+    },
+    {
+      "promptId": "imgprompt-smb-006-ingredient-bin-visible-issue",
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "field": "small-business",
+      "variationType": "visible-issue",
+      "linkedIssueCodes": [
+        "label-mismatch"
+      ],
+      "linkedObservationIds": [
+        "obs-smb-012-008"
+      ],
+      "linkedRecollectionTaskIds": [],
+      "intendedFilename": "syn-smb-006-ingredient-bin-visible-issue.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-visible-quality-issue-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 주방 재료통 분류 예시; task type: ingredient-bin-sorting. Show only 합성 주방 재료통, with 재료통 배열과 비식별 범주 표시 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Deliberately demonstrate the quality issue label-mismatch: 관찰된 대상·상태가 지정 taskType 또는 기대 라벨과 맞지 않음. Keep the issue visually evident without adding any person, identity, brand, or real-site detail. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "4377773e82d5067af78cc32eede30de2460d8a4ae0ce0dccd30ac56bd8117139",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "visible-issue의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "promptId": "imgprompt-smb-006-ingredient-bin-corrected-recollection",
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "field": "small-business",
+      "variationType": "corrected-recollection",
+      "linkedIssueCodes": [
+        "label-mismatch"
+      ],
+      "linkedObservationIds": [
+        "obs-smb-012-008"
+      ],
+      "linkedRecollectionTaskIds": [
+        "recollect-smb-012-008"
+      ],
+      "intendedFilename": "syn-smb-006-ingredient-bin-corrected-recollection.png",
+      "targetAspectRatio": "16:9",
+      "targetUse": "synthetic-recollection-correction-demonstration",
+      "fullPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 주방 재료통 분류 예시; task type: ingredient-bin-sorting. Show only 합성 주방 재료통, with 재료통 배열과 비식별 범주 표시 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Render a corrected recollection candidate that resolves label-mismatch by following this guidance: 사람 검수자가 라벨 수정과 재수집 중 적절한 조치를 결정. The frame must be sharp, complete, unique, safely in scope, and still require independent human review. The linked deterministic recollection plan is recollect-smb-012-008; do not render this identifier or any other readable text in the image. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "negativePrompt": "people; faces; hands or body parts; readable text, letters, or numbers; logos, trademarks, or recognizable branding; store names or contact details; addresses, maps, coordinates, or private location clues; license plates or identity documents; real business exterior or recognizable real premises; watermarks or signatures",
+      "generationStatus": "planned-not-generated",
+      "sourceType": "AI-generated synthetic example",
+      "rightsStatus": "pending-generation",
+      "permittedUses": [
+        "NAEIL prototype synthetic illustration after provenance and rights review",
+        "quality and recollection workflow demonstration after provenance and rights review"
+      ],
+      "prohibitedUses": [
+        "claiming real field collection, youth work, or partner-site data",
+        "claiming approved model-training data",
+        "claiming rights approval before post-generation review",
+        "identifying or representing a real person, business, or private site"
+      ],
+      "containsNoPersonalData": true,
+      "containsNoPrivateSiteDetails": true,
+      "noFaces": true,
+      "noLogos": true,
+      "noReadableText": true,
+      "provenanceCapture": {
+        "promptHashAlgorithm": "sha256-utf8-fullPrompt-exact-bytes",
+        "promptSha256": "612a1a49dea33d1f9bffd55fb77665b76aec817428c903a60ea74793db782388",
+        "generatorTool": null,
+        "generatorSessionId": null,
+        "generatorOutputId": null,
+        "fileSha256": null,
+        "byteLength": null,
+        "dimensions": null,
+        "captureStatus": "awaiting-generation"
+      },
+      "reviewerChecklist": [
+        {
+          "checkId": "synthetic-boundary",
+          "requirement": "합성 예시이며 실제 수집·청년 수행·파트너 현장 자료가 아님을 확인",
+          "required": true
+        },
+        {
+          "checkId": "privacy-and-site",
+          "requirement": "개인정보와 사설 위치·사업장 식별 단서가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "faces-logos-text",
+          "requirement": "얼굴·신체·로고·상표·읽을 수 있는 글자가 없음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "scenario-scope",
+          "requirement": "canonical scenario의 대상과 허용 범위 안에 있음을 확인",
+          "required": true
+        },
+        {
+          "checkId": "variation-integrity",
+          "requirement": "corrected-recollection의 품질 상태가 연결된 taxonomy 및 observation과 일치함을 확인",
+          "required": true
+        },
+        {
+          "checkId": "provenance-complete",
+          "requirement": "output ID, 파일 sha256, byte length, dimensions 기록 전에는 생성 완료 또는 권리 승인으로 표시하지 않음",
+          "required": true
+        }
+      ],
+      "reviewExpectation": "independent-human-review-required-after-generation",
+      "rights": {
+        "status": "pending-generation",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyId": "naeil-synthetic-image-rights-policy-v1",
+  "version": "1.0.0",
+  "sourceType": "AI-generated synthetic example",
+  "status": "active-policy-for-planned-and-generated-synthetic-images",
+  "imageGenerationQueueRef": "public/data/image-generation-queue.json",
+  "assetManifestRef": "public/assets/asset-manifest.json",
+  "policyItemCount": 8,
+  "policyItems": [
+    {
+      "policyItemId": "image-policy-001-pre-generation-review",
+      "phase": "pre-generation",
+      "requirement": "scenario 범위, synthetic boundary, 개인정보·사설 위치·얼굴·로고·readable text 금지 조건을 독립 검토"
+    },
+    {
+      "policyItemId": "image-policy-002-prompt-hash",
+      "phase": "pre-generation",
+      "requirement": "fullPrompt UTF-8 exact bytes의 SHA-256을 생성 전 기록하고 변경 시 새 promptId 또는 version 사용"
+    },
+    {
+      "policyItemId": "image-policy-003-output-identity",
+      "phase": "post-generation",
+      "requirement": "실제 generator tool, session ID, output ID를 생성 응답 근거로 기록하며 추정값을 금지"
+    },
+    {
+      "policyItemId": "image-policy-004-file-integrity",
+      "phase": "post-generation",
+      "requirement": "실제 파일에서 SHA-256, byte length, pixel width, pixel height를 계산하여 기록"
+    },
+    {
+      "policyItemId": "image-policy-005-post-generation-review",
+      "phase": "post-generation",
+      "requirement": "prompt 준수, 금지 요소 부재, taxonomy variation 정합, 시각적 안전성을 독립 사람이 확인"
+    },
+    {
+      "policyItemId": "image-policy-006-rights-decision",
+      "phase": "post-generation",
+      "requirement": "출처와 허용 용도가 확인되기 전 pending-generation 상태를 유지하며 코드 라이선스와 이미지 권리를 분리"
+    },
+    {
+      "policyItemId": "image-policy-007-synthetic-boundary",
+      "phase": "publication",
+      "requirement": "실제 수집·청년 수행·파트너 자료·승인 학습 데이터로 표현하지 않고 AI-generated synthetic example 라벨 유지"
+    },
+    {
+      "policyItemId": "image-policy-008-removal-replacement",
+      "phase": "remediation",
+      "requirement": "금지 요소, 권리 불명확, provenance 누락, 파일 불일치 발견 시 제거·대체하고 이전 기록의 사유와 상태를 보존"
+    }
+  ],
+  "provenanceCaptureContract": {
+    "preGenerationRequired": [
+      "promptId",
+      "fullPrompt",
+      "negativePrompt",
+      "promptSha256",
+      "scenarioId",
+      "variationType"
+    ],
+    "postGenerationRequired": [
+      "generatorTool",
+      "generatorSessionId",
+      "generatorOutputId",
+      "fileSha256",
+      "byteLength",
+      "pixelWidth",
+      "pixelHeight"
+    ],
+    "promptHashRule": "SHA-256 over the exact UTF-8 bytes of fullPrompt; no normalization or whitespace change",
+    "fileHashRule": "SHA-256 over the generated file bytes",
+    "unknownValuesRule": "생성·검증 전 값은 null로 유지하고 추정하거나 기존 자산 값을 재사용하지 않음"
+  },
+  "preGenerationReview": {
+    "requiredStatus": "planned-not-generated",
+    "requiredRightsStatus": "pending-generation",
+    "checks": [
+      "scenario-scope",
+      "taxonomy-reference",
+      "privacy",
+      "private-site",
+      "faces",
+      "logos",
+      "readable-text",
+      "synthetic-boundary"
+    ],
+    "decisionAuthority": "independent-human-reviewer"
+  },
+  "postGenerationReview": {
+    "requiredEvidence": [
+      "generator-output-identity",
+      "file-integrity",
+      "dimensions",
+      "prompt-compliance",
+      "rights-basis"
+    ],
+    "decisionAuthority": "independent-human-reviewer",
+    "generatorMaySelfApprove": false,
+    "collectorMaySelfApprove": false,
+    "allowedNextStates": [
+      "rights-reviewed-project-use",
+      "rejected-remove-or-replace"
+    ]
+  },
+  "syntheticBoundary": {
+    "notFieldCollection": true,
+    "notYouthWork": true,
+    "notPartnerData": true,
+    "notApprovedTrainingData": true,
+    "notRealBusinessEvidence": true
+  },
+  "existingAssetHandling": {
+    "existingAssetCount": 11,
+    "partialProvenanceAssetCount": 3,
+    "completeProvenanceAssetCount": 8,
+    "manifestRemainsCanonical": true,
+    "queueGeneratorMayModifyManifest": false,
+    "queueGeneratorMayBackfillMissingPrompt": false,
+    "provenanceStatus": "preserve-three-partial-records-and-8-ledger-complete-records-honestly",
+    "boundary": "기존 3개 자산의 partial prompt provenance는 변경·추정하지 않고 completion ledger 자산 8건만 완전 provenance로 구분함"
+  },
+  "removalReplacementProcedure": {
+    "triggers": [
+      "personal-data-or-face",
+      "private-site-detail",
+      "logo-or-readable-text",
+      "rights-unclear",
+      "provenance-incomplete",
+      "hash-or-dimension-mismatch"
+    ],
+    "steps": [
+      "노출 및 사용을 중단하고 affected asset 또는 queue item을 rejected-remove-or-replace로 표시",
+      "관련 promptId, output ID, file hash와 검수 사유를 보존하되 금지 콘텐츠 자체를 재배포하지 않음",
+      "수정 prompt에는 새 version을 부여하고 재생성 후 독립 사람 검수를 반복",
+      "대체 파일의 새 output ID, SHA-256, byte length, dimensions와 권리 결정을 기록",
+      "이전 파일을 승인 자산으로 참조하지 않도록 manifest와 배포 allowlist 후보를 재검토"
+    ]
+  },
+  "rights": {
+    "status": "policy-metadata-clean-room-authored",
+    "thirdPartyMediaUsed": false,
+    "codeLicenseApplies": false
+  },
+  "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님"
+}

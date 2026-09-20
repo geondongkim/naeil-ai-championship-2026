@@ -1,0 +1,2475 @@
+{
+  "schemaVersion": "1.0.0",
+  "matrixId": "naeil-synthetic-role-task-matrix-v1",
+  "version": "1.0.0",
+  "seed": "naeil-synthetic-observations-v1",
+  "sourceCatalogRef": "public/data/catalog.json",
+  "trainingCatalogRef": "public/data/training-catalog.json",
+  "sourceType": "AI-generated synthetic example",
+  "status": "proposed-role-scenario-matrix",
+  "proposedRoleCount": 6,
+  "scenarioCount": 12,
+  "mappingCount": 72,
+  "rights": {
+    "status": "clean-room-synthetic-demonstration-record",
+    "thirdPartyMediaUsed": false,
+    "codeLicenseApplies": false
+  },
+  "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+  "createdBySyntheticGenerator": {
+    "script": "scripts/generate-synthetic-dataset.mjs",
+    "seed": "naeil-synthetic-observations-v1",
+    "generatorVersion": "1.0.0",
+    "deterministic": true
+  },
+  "mappings": [
+    {
+      "mappingId": "rolemap-001-mfg-001-component-surface",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "scenarioId": "syn-mfg-001-component-surface",
+      "field": "manufacturing",
+      "taskType": "component-surface-inspection",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "allowedContribution": "동의·범위·gate 상태를 합성 시나리오에서 조율하고 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-001-mfg-002-fastener-tray",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "field": "manufacturing",
+      "taskType": "fastener-tray-arrangement",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "allowedContribution": "동의·범위·gate 상태를 합성 시나리오에서 조율하고 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-001-mfg-003-safety-zone",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "field": "manufacturing",
+      "taskType": "safety-zone-marking-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "allowedContribution": "동의·범위·gate 상태를 합성 시나리오에서 조율하고 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-001-mfg-004-packaging-check",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "field": "manufacturing",
+      "taskType": "component-packaging-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "allowedContribution": "동의·범위·gate 상태를 합성 시나리오에서 조율하고 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-001-mfg-005-bin-label",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "scenarioId": "syn-mfg-005-bin-label",
+      "field": "manufacturing",
+      "taskType": "parts-bin-label-verification",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "allowedContribution": "동의·범위·gate 상태를 합성 시나리오에서 조율하고 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-001-mfg-006-cobot-clearance",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "scenarioId": "syn-mfg-006-cobot-clearance",
+      "field": "manufacturing",
+      "taskType": "cobot-handoff-clearance-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "allowedContribution": "동의·범위·gate 상태를 합성 시나리오에서 조율하고 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-001-smb-001-bakery-shelf",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "scenarioId": "syn-smb-001-bakery-shelf",
+      "field": "small-business",
+      "taskType": "bakery-shelf-arrangement",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "allowedContribution": "동의·범위·gate 상태를 합성 시나리오에서 조율하고 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-001-smb-002-cafe-tray",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "scenarioId": "syn-smb-002-cafe-tray",
+      "field": "small-business",
+      "taskType": "cafe-cup-tray-sorting",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "allowedContribution": "동의·범위·gate 상태를 합성 시나리오에서 조율하고 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-001-smb-003-produce-weighing",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "field": "small-business",
+      "taskType": "produce-weighing-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "allowedContribution": "동의·범위·gate 상태를 합성 시나리오에서 조율하고 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-001-smb-004-florist-wrapping",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "field": "small-business",
+      "taskType": "florist-wrapping-stage-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "allowedContribution": "동의·범위·gate 상태를 합성 시나리오에서 조율하고 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-001-smb-005-shelf-label",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "scenarioId": "syn-smb-005-shelf-label",
+      "field": "small-business",
+      "taskType": "retail-shelf-label-alignment",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "allowedContribution": "동의·범위·gate 상태를 합성 시나리오에서 조율하고 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-001-smb-006-ingredient-bin",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "field": "small-business",
+      "taskType": "ingredient-bin-sorting",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "allowedContribution": "동의·범위·gate 상태를 합성 시나리오에서 조율하고 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-002-mfg-001-component-surface",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "scenarioId": "syn-mfg-001-component-surface",
+      "field": "manufacturing",
+      "taskType": "component-surface-inspection",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "allowedContribution": "5개 gate 이후 합성 입력의 범위·안전·품질 관찰을 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-002-mfg-002-fastener-tray",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "field": "manufacturing",
+      "taskType": "fastener-tray-arrangement",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "allowedContribution": "5개 gate 이후 합성 입력의 범위·안전·품질 관찰을 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-002-mfg-003-safety-zone",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "field": "manufacturing",
+      "taskType": "safety-zone-marking-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "allowedContribution": "5개 gate 이후 합성 입력의 범위·안전·품질 관찰을 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-002-mfg-004-packaging-check",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "field": "manufacturing",
+      "taskType": "component-packaging-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "allowedContribution": "5개 gate 이후 합성 입력의 범위·안전·품질 관찰을 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-002-mfg-005-bin-label",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "scenarioId": "syn-mfg-005-bin-label",
+      "field": "manufacturing",
+      "taskType": "parts-bin-label-verification",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "allowedContribution": "5개 gate 이후 합성 입력의 범위·안전·품질 관찰을 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-002-mfg-006-cobot-clearance",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "scenarioId": "syn-mfg-006-cobot-clearance",
+      "field": "manufacturing",
+      "taskType": "cobot-handoff-clearance-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "allowedContribution": "5개 gate 이후 합성 입력의 범위·안전·품질 관찰을 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-002-smb-001-bakery-shelf",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "scenarioId": "syn-smb-001-bakery-shelf",
+      "field": "small-business",
+      "taskType": "bakery-shelf-arrangement",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "allowedContribution": "5개 gate 이후 합성 입력의 범위·안전·품질 관찰을 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-002-smb-002-cafe-tray",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "scenarioId": "syn-smb-002-cafe-tray",
+      "field": "small-business",
+      "taskType": "cafe-cup-tray-sorting",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "allowedContribution": "5개 gate 이후 합성 입력의 범위·안전·품질 관찰을 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-002-smb-003-produce-weighing",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "field": "small-business",
+      "taskType": "produce-weighing-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "allowedContribution": "5개 gate 이후 합성 입력의 범위·안전·품질 관찰을 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-002-smb-004-florist-wrapping",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "field": "small-business",
+      "taskType": "florist-wrapping-stage-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "allowedContribution": "5개 gate 이후 합성 입력의 범위·안전·품질 관찰을 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-002-smb-005-shelf-label",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "scenarioId": "syn-smb-005-shelf-label",
+      "field": "small-business",
+      "taskType": "retail-shelf-label-alignment",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "allowedContribution": "5개 gate 이후 합성 입력의 범위·안전·품질 관찰을 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-002-smb-006-ingredient-bin",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "field": "small-business",
+      "taskType": "ingredient-bin-sorting",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "allowedContribution": "5개 gate 이후 합성 입력의 범위·안전·품질 관찰을 기록함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-003-mfg-001-component-surface",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "scenarioId": "syn-mfg-001-component-surface",
+      "field": "manufacturing",
+      "taskType": "component-surface-inspection",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "allowedContribution": "수집자와 분리된 역할에서 품질·안전·재수집 필요성을 판단함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-003-mfg-002-fastener-tray",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "field": "manufacturing",
+      "taskType": "fastener-tray-arrangement",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "allowedContribution": "수집자와 분리된 역할에서 품질·안전·재수집 필요성을 판단함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-003-mfg-003-safety-zone",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "field": "manufacturing",
+      "taskType": "safety-zone-marking-check",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "allowedContribution": "수집자와 분리된 역할에서 품질·안전·재수집 필요성을 판단함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-003-mfg-004-packaging-check",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "field": "manufacturing",
+      "taskType": "component-packaging-check",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "allowedContribution": "수집자와 분리된 역할에서 품질·안전·재수집 필요성을 판단함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-003-mfg-005-bin-label",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "scenarioId": "syn-mfg-005-bin-label",
+      "field": "manufacturing",
+      "taskType": "parts-bin-label-verification",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "allowedContribution": "수집자와 분리된 역할에서 품질·안전·재수집 필요성을 판단함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-003-mfg-006-cobot-clearance",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "scenarioId": "syn-mfg-006-cobot-clearance",
+      "field": "manufacturing",
+      "taskType": "cobot-handoff-clearance-check",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "allowedContribution": "수집자와 분리된 역할에서 품질·안전·재수집 필요성을 판단함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-003-smb-001-bakery-shelf",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "scenarioId": "syn-smb-001-bakery-shelf",
+      "field": "small-business",
+      "taskType": "bakery-shelf-arrangement",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "allowedContribution": "수집자와 분리된 역할에서 품질·안전·재수집 필요성을 판단함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-003-smb-002-cafe-tray",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "scenarioId": "syn-smb-002-cafe-tray",
+      "field": "small-business",
+      "taskType": "cafe-cup-tray-sorting",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "allowedContribution": "수집자와 분리된 역할에서 품질·안전·재수집 필요성을 판단함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-003-smb-003-produce-weighing",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "field": "small-business",
+      "taskType": "produce-weighing-check",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "allowedContribution": "수집자와 분리된 역할에서 품질·안전·재수집 필요성을 판단함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-003-smb-004-florist-wrapping",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "field": "small-business",
+      "taskType": "florist-wrapping-stage-check",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "allowedContribution": "수집자와 분리된 역할에서 품질·안전·재수집 필요성을 판단함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-003-smb-005-shelf-label",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "scenarioId": "syn-smb-005-shelf-label",
+      "field": "small-business",
+      "taskType": "retail-shelf-label-alignment",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "allowedContribution": "수집자와 분리된 역할에서 품질·안전·재수집 필요성을 판단함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-003-smb-006-ingredient-bin",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "field": "small-business",
+      "taskType": "ingredient-bin-sorting",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "allowedContribution": "수집자와 분리된 역할에서 품질·안전·재수집 필요성을 판단함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-004-mfg-001-component-surface",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "scenarioId": "syn-mfg-001-component-surface",
+      "field": "manufacturing",
+      "taskType": "component-surface-inspection",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "allowedContribution": "합성 출처·동의·이용조건·철회 경계를 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-004-mfg-002-fastener-tray",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "field": "manufacturing",
+      "taskType": "fastener-tray-arrangement",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "allowedContribution": "합성 출처·동의·이용조건·철회 경계를 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-004-mfg-003-safety-zone",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "field": "manufacturing",
+      "taskType": "safety-zone-marking-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "allowedContribution": "합성 출처·동의·이용조건·철회 경계를 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-004-mfg-004-packaging-check",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "field": "manufacturing",
+      "taskType": "component-packaging-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "allowedContribution": "합성 출처·동의·이용조건·철회 경계를 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-004-mfg-005-bin-label",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "scenarioId": "syn-mfg-005-bin-label",
+      "field": "manufacturing",
+      "taskType": "parts-bin-label-verification",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "allowedContribution": "합성 출처·동의·이용조건·철회 경계를 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-004-mfg-006-cobot-clearance",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "scenarioId": "syn-mfg-006-cobot-clearance",
+      "field": "manufacturing",
+      "taskType": "cobot-handoff-clearance-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "allowedContribution": "합성 출처·동의·이용조건·철회 경계를 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-004-smb-001-bakery-shelf",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "scenarioId": "syn-smb-001-bakery-shelf",
+      "field": "small-business",
+      "taskType": "bakery-shelf-arrangement",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "allowedContribution": "합성 출처·동의·이용조건·철회 경계를 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-004-smb-002-cafe-tray",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "scenarioId": "syn-smb-002-cafe-tray",
+      "field": "small-business",
+      "taskType": "cafe-cup-tray-sorting",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "allowedContribution": "합성 출처·동의·이용조건·철회 경계를 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-004-smb-003-produce-weighing",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "field": "small-business",
+      "taskType": "produce-weighing-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "allowedContribution": "합성 출처·동의·이용조건·철회 경계를 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-004-smb-004-florist-wrapping",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "field": "small-business",
+      "taskType": "florist-wrapping-stage-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "allowedContribution": "합성 출처·동의·이용조건·철회 경계를 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-004-smb-005-shelf-label",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "scenarioId": "syn-smb-005-shelf-label",
+      "field": "small-business",
+      "taskType": "retail-shelf-label-alignment",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "allowedContribution": "합성 출처·동의·이용조건·철회 경계를 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-004-smb-006-ingredient-bin",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "field": "small-business",
+      "taskType": "ingredient-bin-sorting",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "allowedContribution": "합성 출처·동의·이용조건·철회 경계를 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-005-mfg-001-component-surface",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "scenarioId": "syn-mfg-001-component-surface",
+      "field": "manufacturing",
+      "taskType": "component-surface-inspection",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "allowedContribution": "통제된 합성 맥락에서 안전·품질·범위와 사고 연결을 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-005-mfg-002-fastener-tray",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "field": "manufacturing",
+      "taskType": "fastener-tray-arrangement",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "allowedContribution": "통제된 합성 맥락에서 안전·품질·범위와 사고 연결을 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-005-mfg-003-safety-zone",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "field": "manufacturing",
+      "taskType": "safety-zone-marking-check",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "allowedContribution": "통제된 합성 맥락에서 안전·품질·범위와 사고 연결을 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-005-mfg-004-packaging-check",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "field": "manufacturing",
+      "taskType": "component-packaging-check",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "allowedContribution": "통제된 합성 맥락에서 안전·품질·범위와 사고 연결을 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-005-mfg-005-bin-label",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "scenarioId": "syn-mfg-005-bin-label",
+      "field": "manufacturing",
+      "taskType": "parts-bin-label-verification",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "allowedContribution": "통제된 합성 맥락에서 안전·품질·범위와 사고 연결을 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-005-mfg-006-cobot-clearance",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "scenarioId": "syn-mfg-006-cobot-clearance",
+      "field": "manufacturing",
+      "taskType": "cobot-handoff-clearance-check",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "allowedContribution": "통제된 합성 맥락에서 안전·품질·범위와 사고 연결을 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-005-smb-001-bakery-shelf",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "scenarioId": "syn-smb-001-bakery-shelf",
+      "field": "small-business",
+      "taskType": "bakery-shelf-arrangement",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "allowedContribution": "통제된 합성 맥락에서 안전·품질·범위와 사고 연결을 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-005-smb-002-cafe-tray",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "scenarioId": "syn-smb-002-cafe-tray",
+      "field": "small-business",
+      "taskType": "cafe-cup-tray-sorting",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "allowedContribution": "통제된 합성 맥락에서 안전·품질·범위와 사고 연결을 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-005-smb-003-produce-weighing",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "field": "small-business",
+      "taskType": "produce-weighing-check",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "allowedContribution": "통제된 합성 맥락에서 안전·품질·범위와 사고 연결을 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-005-smb-004-florist-wrapping",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "field": "small-business",
+      "taskType": "florist-wrapping-stage-check",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "allowedContribution": "통제된 합성 맥락에서 안전·품질·범위와 사고 연결을 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-005-smb-005-shelf-label",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "scenarioId": "syn-smb-005-shelf-label",
+      "field": "small-business",
+      "taskType": "retail-shelf-label-alignment",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "allowedContribution": "통제된 합성 맥락에서 안전·품질·범위와 사고 연결을 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-005-smb-006-ingredient-bin",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "field": "small-business",
+      "taskType": "ingredient-bin-sorting",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "allowedContribution": "통제된 합성 맥락에서 안전·품질·범위와 사고 연결을 검토함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-006-mfg-001-component-surface",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "scenarioId": "syn-mfg-001-component-surface",
+      "field": "manufacturing",
+      "taskType": "component-surface-inspection",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "allowedContribution": "독립 검수 결과를 범위가 정해진 합성 재수집 계획으로 변환함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-006-mfg-002-fastener-tray",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "field": "manufacturing",
+      "taskType": "fastener-tray-arrangement",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "allowedContribution": "독립 검수 결과를 범위가 정해진 합성 재수집 계획으로 변환함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-006-mfg-003-safety-zone",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "field": "manufacturing",
+      "taskType": "safety-zone-marking-check",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "allowedContribution": "독립 검수 결과를 범위가 정해진 합성 재수집 계획으로 변환함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-006-mfg-004-packaging-check",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "field": "manufacturing",
+      "taskType": "component-packaging-check",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "allowedContribution": "독립 검수 결과를 범위가 정해진 합성 재수집 계획으로 변환함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-006-mfg-005-bin-label",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "scenarioId": "syn-mfg-005-bin-label",
+      "field": "manufacturing",
+      "taskType": "parts-bin-label-verification",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "allowedContribution": "독립 검수 결과를 범위가 정해진 합성 재수집 계획으로 변환함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-006-mfg-006-cobot-clearance",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "scenarioId": "syn-mfg-006-cobot-clearance",
+      "field": "manufacturing",
+      "taskType": "cobot-handoff-clearance-check",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "allowedContribution": "독립 검수 결과를 범위가 정해진 합성 재수집 계획으로 변환함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-006-smb-001-bakery-shelf",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "scenarioId": "syn-smb-001-bakery-shelf",
+      "field": "small-business",
+      "taskType": "bakery-shelf-arrangement",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "allowedContribution": "독립 검수 결과를 범위가 정해진 합성 재수집 계획으로 변환함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-006-smb-002-cafe-tray",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "scenarioId": "syn-smb-002-cafe-tray",
+      "field": "small-business",
+      "taskType": "cafe-cup-tray-sorting",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "allowedContribution": "독립 검수 결과를 범위가 정해진 합성 재수집 계획으로 변환함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-006-smb-003-produce-weighing",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "field": "small-business",
+      "taskType": "produce-weighing-check",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "allowedContribution": "독립 검수 결과를 범위가 정해진 합성 재수집 계획으로 변환함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-006-smb-004-florist-wrapping",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "field": "small-business",
+      "taskType": "florist-wrapping-stage-check",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "allowedContribution": "독립 검수 결과를 범위가 정해진 합성 재수집 계획으로 변환함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-006-smb-005-shelf-label",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "scenarioId": "syn-smb-005-shelf-label",
+      "field": "small-business",
+      "taskType": "retail-shelf-label-alignment",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "allowedContribution": "독립 검수 결과를 범위가 정해진 합성 재수집 계획으로 변환함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    },
+    {
+      "mappingId": "rolemap-006-smb-006-ingredient-bin",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "field": "small-business",
+      "taskType": "ingredient-bin-sorting",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "allowedContribution": "독립 검수 결과를 범위가 정해진 합성 재수집 계획으로 변환함",
+      "authorityBoundary": {
+        "selfReviewAllowed": false,
+        "aiApprovalAllowed": false,
+        "realFieldAssignment": false
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-mapping",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "version": "1.0.0"
+    }
+  ]
+}

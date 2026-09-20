@@ -1,4 +1,53 @@
 const STORAGE_KEY = "naeil.cleanroom.ui.v1";
+const BROWSER_READY = typeof window !== "undefined" && typeof document !== "undefined" && typeof localStorage !== "undefined";
+const DATASET_PAGE_SIZE = 12;
+const DATASET_ARTIFACTS = Object.freeze([
+  { key: "coverage", path: "./data/dataset-coverage.json", label: "합성 데이터 범위 JSON" },
+  { key: "observations", path: "./data/synthetic-observations.json", label: "합성 관찰값 JSON" },
+  { key: "queue", path: "./data/image-generation-queue.json", label: "합성 이미지 queue JSON" },
+]);
+
+export function filterDatasetObservations(records, { field, scenarioId = "all", issueCode = "all" } = {}) {
+  if (!Array.isArray(records) || !field) return [];
+  return records.filter(record => (
+    record?.field === field
+    && (scenarioId === "all" || record.scenarioId === scenarioId)
+    && (issueCode === "all" || record.issueCodes?.includes(issueCode))
+  ));
+}
+
+export function paginateDatasetObservations(records, requestedPage = 1, requestedPageSize = DATASET_PAGE_SIZE) {
+  const safeRecords = Array.isArray(records) ? records : [];
+  const pageSize = Math.min(25, Math.max(1, Number.parseInt(requestedPageSize, 10) || DATASET_PAGE_SIZE));
+  const totalPages = Math.max(1, Math.ceil(safeRecords.length / pageSize));
+  const page = Math.min(totalPages, Math.max(1, Number.parseInt(requestedPage, 10) || 1));
+  return {
+    items: safeRecords.slice((page - 1) * pageSize, page * pageSize),
+    page,
+    pageSize,
+    totalItems: safeRecords.length,
+    totalPages,
+  };
+}
+
+export function validateDatasetExplorerArtifacts(coverage, observations, queue) {
+  if (!coverage?.canonicalCounts || !Array.isArray(coverage.fieldCoverage) || !coverage?.plannedImageCoverage) {
+    throw new Error("데이터 범위 파일의 구조를 확인할 수 없습니다.");
+  }
+  if (!Array.isArray(observations?.records) || observations.records.length !== observations.recordCount) {
+    throw new Error("합성 관찰값 파일의 구조 또는 수량이 일치하지 않습니다.");
+  }
+  if (!Array.isArray(queue?.items) || queue.items.length !== queue.itemCount) {
+    throw new Error("합성 이미지 queue 파일의 구조 또는 수량이 일치하지 않습니다.");
+  }
+  if (coverage.canonicalCounts.observations !== observations.recordCount
+    || coverage.canonicalCounts.scenarios !== observations.scenarioCount
+    || coverage.plannedImageCoverage.generatedQueueOutputCount !== queue.generatedItemCount
+    || coverage.plannedImageCoverage.plannedNotGeneratedCount !== queue.plannedItemCount) {
+    throw new Error("canonical 데이터 파일 사이의 집계가 일치하지 않습니다.");
+  }
+  return { coverage, observations, queue };
+}
 
 const fields = {
   manufacturing: {
@@ -132,9 +181,15 @@ function mergeField(base, saved = {}) {
   };
 }
 
-let state = loadState();
+let state = BROWSER_READY ? loadState() : defaultState();
 let previewUrl = "";
 const imageDataByField = { manufacturing: "", smallBusiness: "" };
+const datasetExplorer = {
+  status: "idle",
+  data: null,
+  error: "",
+  filters: { scenarioId: "all", issueCode: "all", page: 1 },
+};
 let toastTimer;
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
@@ -147,6 +202,33 @@ const roleAllowed = role => role !== "fde" || state.field === "manufacturing";
 const save = () => localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
 const syntheticAsset = () => state.field === "manufacturing" ? "./assets/manufacturing-inspection-synthetic.png" : "./assets/cafe-cup-sorting-synthetic.png";
 const syntheticAlt = () => state.field === "manufacturing" ? "정밀 부품 외관을 검사하는 AI 생성 합성 예시" : "카페에서 컵과 트레이를 정리하는 AI 생성 합성 예시";
+
+async function fetchDatasetArtifact({ path, label }) {
+  const response = await fetch(path, { cache: "no-store" });
+  if (!response.ok) throw new Error(`${label}을 불러오지 못했습니다. (${response.status})`);
+  try {
+    return await response.json();
+  } catch {
+    throw new Error(`${label}의 JSON 형식을 확인할 수 없습니다.`);
+  }
+}
+
+async function loadDatasetExplorer() {
+  if (datasetExplorer.status !== "idle") return;
+  datasetExplorer.status = "loading";
+  if (location.hash === "#dataset") render();
+  try {
+    const [coverage, observations, queue] = await Promise.all(DATASET_ARTIFACTS.map(fetchDatasetArtifact));
+    datasetExplorer.data = validateDatasetExplorerArtifacts(coverage, observations, queue);
+    datasetExplorer.status = "ready";
+    datasetExplorer.error = "";
+  } catch (error) {
+    datasetExplorer.data = null;
+    datasetExplorer.status = "error";
+    datasetExplorer.error = error instanceof Error ? error.message : "canonical 합성 데이터를 불러오지 못했습니다.";
+  }
+  if (location.hash === "#dataset") render();
+}
 
 function blobToDataUrl(blob) {
   return new Promise((resolve, reject) => {
@@ -342,6 +424,67 @@ function renderReview() {
     <aside class="grid"><section class="card tint"><p class="eyebrow">DECISION SEPARATION</p><h2>분리된 상태 축</h2><dl class="definition-list"><dt>수집</dt><dd>${statusLabel(c.status)}</dd><dt>검수</dt><dd>${reviewLabel(review.status)}</dd><dt>접근</dt><dd>${accessLabel(current().dataset.access)}</dd><dt>보상</dt><dd>조건 확인만 · 실제 지급 없음</dd></dl></section>${notice("AI 결과만으로 승인할 수 없습니다. 보완 요청에는 사람이 작성한 이유가 필요합니다.")}</aside></div>`;
 }
 
+function canonicalFieldId() {
+  return state.field === "smallBusiness" ? "small-business" : "manufacturing";
+}
+
+function renderDatasetExplorer() {
+  if (datasetExplorer.status === "idle" || datasetExplorer.status === "loading") {
+    return `<section class="section card dataset-explorer" id="dataset-explorer" aria-busy="true"><p class="eyebrow">CANONICAL SYNTHETIC DATA</p><h2>합성 데이터 탐색기를 불러오는 중입니다</h2><p>same-origin 정적 JSON 3개를 확인하고 있습니다. 로딩 상태는 Live API 또는 승인 데이터 상태가 아닙니다.</p></section>`;
+  }
+  if (datasetExplorer.status === "error") {
+    return `<section class="section card dataset-explorer" id="dataset-explorer" aria-busy="false"><p class="eyebrow">CANONICAL DATA ERROR</p><h2>합성 데이터 탐색기를 표시할 수 없습니다</h2><p>${escapeHtml(datasetExplorer.error)}</p>${notice("불러오기 또는 JSON 해석에 실패했습니다. 이 상태를 Live API, 생성 완료 또는 승인 학습 데이터로 해석하지 않습니다.", "danger")}<div class="actions">${button("다시 불러오기", "retry-dataset-explorer", "secondary")}</div></section>`;
+  }
+
+  const { coverage, observations, queue } = datasetExplorer.data;
+  const fieldId = canonicalFieldId();
+  const fieldRecords = observations.records.filter(record => record.field === fieldId);
+  const scenarioIds = [...new Set(fieldRecords.map(record => record.scenarioId))].sort();
+  const issueCodes = [...new Set(fieldRecords.flatMap(record => record.issueCodes || []))].sort();
+  const selectedScenario = scenarioIds.includes(datasetExplorer.filters.scenarioId) ? datasetExplorer.filters.scenarioId : "all";
+  const selectedIssue = issueCodes.includes(datasetExplorer.filters.issueCode) ? datasetExplorer.filters.issueCode : "all";
+  const filtered = filterDatasetObservations(observations.records, {
+    field: fieldId,
+    scenarioId: selectedScenario,
+    issueCode: selectedIssue,
+  });
+  const page = paginateDatasetObservations(filtered, datasetExplorer.filters.page, DATASET_PAGE_SIZE);
+  datasetExplorer.filters.page = page.page;
+  const fieldSummary = coverage.fieldCoverage.find(entry => entry.field === fieldId);
+  const roleHasDatasetNavigation = (navByRole[state.role] || []).some(([route]) => route === "dataset");
+  const rows = page.items.map(record => `<tr>
+    <td data-label="관찰 ID"><code>${escapeHtml(record.id)}</code></td>
+    <td data-label="시나리오"><strong>${escapeHtml(record.scenarioId)}</strong><br><small>${escapeHtml(record.taskType)}</small></td>
+    <td data-label="품질"><strong>${escapeHtml(record.expectedQualityLabel)}</strong><br><small>${escapeHtml((record.issueCodes || []).join(", "))}</small></td>
+    <td data-label="사람 검수">${escapeHtml(record.humanReviewDisposition)}</td>
+    <td data-label="출처·상태">${escapeHtml(record.sourceType)}<br><small>${escapeHtml(record.status)}</small></td>
+  </tr>`).join("");
+  const downloads = DATASET_ARTIFACTS.map(({ path, label }) => `<a class="button secondary dataset-download" href="${path}" download>${escapeHtml(label)} 다운로드</a>`).join("");
+
+  return `<section class="section dataset-explorer" id="dataset-explorer" aria-busy="false">
+    <div class="section-heading"><div><p class="eyebrow">CANONICAL SYNTHETIC DATA</p><h2>결정적 합성 데이터 탐색기</h2></div><p>현재 현장: ${escapeHtml(fields[state.field].name)} · 읽기 전용</p></div>
+    ${!roleHasDatasetNavigation ? notice("현재 역할의 기본 탐색에는 데이터셋 메뉴가 없습니다. 이 deep link는 공개 합성 메타데이터를 읽기 전용으로만 보여 주며 승인·게시 권한을 추가하지 않습니다.", "warning") : ""}
+    <div class="grid four dataset-metrics">
+      <article class="card compact metric"><span>합성 관찰값</span><strong>${escapeHtml(coverage.canonicalCounts.observations)}</strong><small>canonical 전체 · 현재 필드 ${escapeHtml(fieldSummary?.observationCount ?? 0)}</small></article>
+      <article class="card compact metric"><span>시나리오</span><strong>${escapeHtml(coverage.canonicalCounts.scenarios)}</strong><small>두 현장 전체 · 현재 필드 ${escapeHtml(fieldSummary?.scenarioCount ?? 0)}</small></article>
+      <article class="card compact metric"><span>완전 provenance 이미지</span><strong>${escapeHtml(coverage.canonicalCounts.imageGenerationCompletions)}</strong><small>사람이 prototype 용도로 확인</small></article>
+      <article class="card compact metric"><span>생성 전 이미지 슬롯</span><strong>${escapeHtml(coverage.plannedImageCoverage.plannedNotGeneratedCount)}</strong><small>planned-not-generated</small></article>
+    </div>
+    <div class="grid main-side dataset-boundary-grid">
+      <article class="card compact"><p class="eyebrow">SOURCE · STATUS · RIGHTS</p><dl class="definition-list"><dt>출처</dt><dd>${escapeHtml(coverage.sourceType)}</dd><dt>상태</dt><dd>${escapeHtml(coverage.status)}</dd><dt>권리</dt><dd>${escapeHtml(coverage.rights?.status)}</dd><dt>이미지 queue</dt><dd>${escapeHtml(queue.generatedItemCount)} generated · ${escapeHtml(queue.plannedItemCount)} planned</dd></dl><p class="dataset-boundary-copy">${escapeHtml(coverage.usageBoundary)}</p></article>
+      <aside class="card compact tint"><p class="eyebrow">CANONICAL DOWNLOADS</p><h3>합성·prototype JSON</h3><p>브라우저와 같은 origin의 정적 원본 파일입니다. 서버 export, 영구 저장 또는 Live API가 아닙니다.</p><div class="dataset-downloads">${downloads}</div></aside>
+    </div>
+    <article class="card dataset-records">
+      <div class="dataset-filter-bar">
+        <label class="field">시나리오<select id="dataset-scenario-filter"><option value="all">현재 필드 전체</option>${scenarioIds.map(id => `<option value="${escapeHtml(id)}" ${id === selectedScenario ? "selected" : ""}>${escapeHtml(id)}</option>`).join("")}</select></label>
+        <label class="field">품질·issue<select id="dataset-issue-filter"><option value="all">모든 품질 상태</option>${issueCodes.map(code => `<option value="${escapeHtml(code)}" ${code === selectedIssue ? "selected" : ""}>${escapeHtml(code)}</option>`).join("")}</select></label>
+        <div class="dataset-filter-summary"><span>현재 필드 ${escapeHtml(fieldRecords.length)}건</span><strong>필터 결과 ${escapeHtml(filtered.length)}건</strong></div>
+      </div>
+      ${filtered.length ? `<div class="data-table-wrap"><table class="data-table dataset-observation-table"><thead><tr><th>관찰 ID</th><th>시나리오</th><th>품질·issue</th><th>사람 검수</th><th>출처·상태</th></tr></thead><tbody>${rows}</tbody></table></div><div class="dataset-pagination"><span>${page.page}/${page.totalPages} 페이지 · 최대 ${page.pageSize}건 표시</span><div class="actions">${button("이전", "dataset-page-prev", "secondary", page.page <= 1 ? "disabled" : "")}${button("다음", "dataset-page-next", "secondary", page.page >= page.totalPages ? "disabled" : "")}</div></div>` : `<div class="empty dataset-empty"><div><strong>선택한 조건에 맞는 합성 관찰값이 없습니다.</strong><span>시나리오 또는 issue 필터를 바꿔 주세요. 빈 상태는 수집 완료나 승인 상태가 아닙니다.</span></div></div>`}
+    </article>
+  </section>`;
+}
+
 function renderDataset() {
   const d = current().dataset;
   const canPublish = state.role === "coordinator" && current().review.status === "approved" && d.status !== "published";
@@ -351,6 +494,7 @@ function renderDataset() {
     <div class="data-table-wrap"><table class="data-table"><thead><tr><th>데이터</th><th>출처 라벨</th><th>사람 검수</th><th>권리 경계</th></tr></thead><tbody><tr><td data-label="데이터">${escapeHtml(field().data)}</td><td data-label="출처 라벨">AI-generated synthetic example</td><td data-label="사람 검수">${reviewLabel(current().review.status)}</td><td data-label="권리 경계">제품 흐름 시연용 · 실제 현장/청년 수행/학습 승인 데이터 아님</td></tr></tbody></table></div>
     <div class="actions">${canPublish ? button("검수 결과로 버전 게시", "publish-dataset", "primary") : ""}${canRequest ? button("데모 접근 신청", "request-access", "primary") : ""}${state.role === "coordinator" && d.access === "requested" ? button("브라우저 접근 기록 승인", "grant-access", "secondary") : ""}</div></section>
     <aside class="card"><p class="eyebrow">PROVENANCE</p><h2>버전 계보</h2><ol class="lineage"><li><b>1</b><div><strong>과제 범위</strong><span>${field().taskId} · ${escapeHtml(field().scope)}</span></div></li><li><b>2</b><div><strong>수집 기록</strong><span>${current().collection.records}개 · ${statusLabel(current().collection.status)}</span></div></li><li><b>3</b><div><strong>사람 검수</strong><span>${reviewLabel(current().review.status)}</span></div></li><li><b>4</b><div><strong>이용 접근</strong><span>${accessLabel(d.access)}</span></div></li></ol></aside></div>
+    ${renderDatasetExplorer()}
     <section class="section"><div class="section-heading"><div><p class="eyebrow">INTEGRATION LABELS</p><h2>외부 카탈로그 상태</h2></div><p>어떤 외부 데이터도 이 데모에 가져오지 않았습니다.</p></div><div class="grid three">${[["KAMP AI","External catalog link"],["AI Hub","External catalog link"],["공공데이터포털","External catalog link"]].map(([name,label]) => `<article class="card compact"><div class="card-top"><h3>${name}</h3>${badge(label)}</div><p>공식 출처의 이용 조건 확인과 별도 도입 결정이 필요합니다. Live API가 아닙니다.</p></article>`).join("")}</div></section>`;
 }
 
@@ -390,6 +534,7 @@ function render() {
   $("#view").innerHTML = renderers[viewId]();
   document.title = `${$("h1")?.textContent || "NAEIL"} · NAEIL`;
   closeMenu();
+  if (viewId === "dataset") void loadDatasetExplorer();
 }
 
 function navigate(viewId) {
@@ -429,10 +574,13 @@ function resetDownstream() {
   f.dataset = defaultFieldState().dataset;
 }
 
+if (BROWSER_READY) {
 document.addEventListener("change", async event => {
   if (event.target.id === "field-select") {
     state.field = event.target.value;
     previewUrl = "";
+    datasetExplorer.filters.scenarioId = "all";
+    datasetExplorer.filters.page = 1;
     if (!roleAllowed(state.role)) {
       state.role = "coordinator";
       showToast("소상공인 MVP에는 현장 적용 전문가 역할이 없어 운영 코디네이터로 전환했습니다.");
@@ -445,6 +593,16 @@ document.addEventListener("change", async event => {
     save();
     navigate(starts[state.role]);
     showToast(`${roles[state.role].name} 시작 화면으로 이동했습니다.`);
+  }
+  if (event.target.id === "dataset-scenario-filter") {
+    datasetExplorer.filters.scenarioId = event.target.value;
+    datasetExplorer.filters.page = 1;
+    render();
+  }
+  if (event.target.id === "dataset-issue-filter") {
+    datasetExplorer.filters.issueCode = event.target.value;
+    datasetExplorer.filters.page = 1;
+    render();
   }
   if (event.target.matches("[data-gate]")) {
     const key = event.target.dataset.gate;
@@ -483,6 +641,17 @@ document.addEventListener("click", async event => {
   const action = event.target.closest("[data-action]")?.dataset.action;
   if (!action) return;
   const f = current();
+  if (action === "retry-dataset-explorer") {
+    datasetExplorer.status = "idle";
+    datasetExplorer.error = "";
+    void loadDatasetExplorer();
+    return;
+  }
+  if (action === "dataset-page-prev" || action === "dataset-page-next") {
+    datasetExplorer.filters.page += action === "dataset-page-next" ? 1 : -1;
+    render();
+    return;
+  }
   if (action === "confirm-request") showToast("과제 범위를 브라우저 데모 상태로 확인했습니다.");
   if (action === "use-synthetic") {
     imageDataByField[state.field] = "";
@@ -575,3 +744,4 @@ window.addEventListener("hashchange", () => { render(); $("#main").focus({ preve
 if (!roleAllowed(state.role)) state.role = "coordinator";
 if (!location.hash) location.hash = starts[state.role];
 else render();
+}

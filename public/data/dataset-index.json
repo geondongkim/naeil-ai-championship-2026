@@ -1,0 +1,401 @@
+{
+  "schemaVersion": "1.0.0",
+  "indexId": "naeil-public-dataset-index-v1",
+  "version": "1.0.0",
+  "seed": "naeil-synthetic-observations-v1",
+  "sourceType": "AI-generated synthetic example",
+  "status": "deterministic-public-data-index",
+  "hashAlgorithm": "sha256",
+  "hashScope": "exact UTF-8 file bytes including trailing newline",
+  "artifactCount": 14,
+  "selfIntegrity": {
+    "status": "unavailable-self-reference",
+    "reason": "dataset-index.json cannot embed a stable hash or byte length of itself without changing those bytes"
+  },
+  "rights": {
+    "status": "clean-room-deterministic-discovery-metadata",
+    "thirdPartyMediaUsed": false,
+    "codeLicenseApplies": false
+  },
+  "usageBoundary": "현재 저장소의 결정적 합성·제안·계획 메타데이터 범위만 집계하며 실제 사람, 실제 현장 수집, 승인 학습 데이터, 교육·자격·고용·고객·파트너·수익 성과를 증명하지 않음",
+  "createdBySyntheticGenerator": {
+    "script": "scripts/generate-synthetic-dataset.mjs",
+    "seed": "naeil-synthetic-observations-v1",
+    "generatorVersion": "1.0.0",
+    "deterministic": true
+  },
+  "artifacts": [
+    {
+      "id": "artifact-catalog",
+      "artifactId": "artifact-catalog",
+      "filePath": "public/data/catalog.json",
+      "schemaVersion": "1.0.0",
+      "recordType": "synthetic-scenario-catalog-entry",
+      "recordCount": 12,
+      "sourceType": "AI-generated synthetic example",
+      "status": "catalog-records-retain-individual-source-status",
+      "rights": {
+        "status": "record-level-rights-preserved",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "각 catalog record의 sourceType·status·rights·usage boundary를 유지하며 외부 후보는 Live API가 아님",
+      "relatedArtifactIds": [
+        "artifact-synthetic-observations",
+        "artifact-evaluation-cases",
+        "artifact-training-catalog",
+        "artifact-role-task-matrix",
+        "artifact-image-generation-queue"
+      ],
+      "sha256": "d619483bb1f0e32d9cf09fd44bdaf6c1c90426b682bb63a26f8001bab884d155",
+      "byteLength": 24231,
+      "version": "1.0.0"
+    },
+    {
+      "id": "artifact-quality-taxonomy",
+      "artifactId": "artifact-quality-taxonomy",
+      "filePath": "public/data/quality-taxonomy.json",
+      "schemaVersion": "1.0.0",
+      "recordType": "quality-issue-code",
+      "recordCount": 8,
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-evaluation-contract",
+      "rights": {
+        "status": "clean-room-synthetic-metadata-project-use-only",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "프로토타입 검증용 AI 생성 합성 관찰값이며 실제 청년 수집 또는 청년 수행, 파트너 현장 데이터, 승인 학습 데이터 또는 고용 성과가 아님",
+      "relatedArtifactIds": [
+        "artifact-synthetic-observations",
+        "artifact-review-events",
+        "artifact-recollection-tasks",
+        "artifact-evaluation-cases",
+        "artifact-image-generation-queue"
+      ],
+      "sha256": "191093f65680eed96ffeb14f43952f4a0d77d599ca5b9ed56f6e7ea31ddc3bec",
+      "byteLength": 5757,
+      "version": "1.0.0"
+    },
+    {
+      "id": "artifact-synthetic-observations",
+      "artifactId": "artifact-synthetic-observations",
+      "filePath": "public/data/synthetic-observations.json",
+      "schemaVersion": "1.0.0",
+      "recordType": "synthetic-observation",
+      "recordCount": 120,
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-not-collected-not-training-approved",
+      "rights": {
+        "status": "mixed-project-use-asset-and-clean-room-metadata",
+        "assetRightsRef": "public/assets/asset-manifest.json",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "프로토타입 검증용 AI 생성 합성 관찰값이며 실제 청년 수집 또는 청년 수행, 파트너 현장 데이터, 승인 학습 데이터 또는 고용 성과가 아님",
+      "relatedArtifactIds": [
+        "artifact-catalog",
+        "artifact-quality-taxonomy",
+        "artifact-review-events",
+        "artifact-recollection-tasks",
+        "artifact-evaluation-cases",
+        "artifact-career-evidence",
+        "artifact-image-generation-queue"
+      ],
+      "sha256": "db9242eb701496df6533819d0e5acf74f944c7d59124ae348a4f7fb848de8882",
+      "byteLength": 367265,
+      "version": "1.0.0"
+    },
+    {
+      "id": "artifact-review-events",
+      "artifactId": "artifact-review-events",
+      "filePath": "public/data/review-events.json",
+      "schemaVersion": "1.0.0",
+      "recordType": "synthetic-lifecycle-review-event",
+      "recordCount": 240,
+      "sourceType": "AI-generated synthetic example",
+      "status": "deterministic-synthetic-lifecycle-events",
+      "rights": {
+        "status": "inherits-synthetic-observation-rights",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "프로토타입 검증용 AI 생성 합성 관찰값이며 실제 청년 수집 또는 청년 수행, 파트너 현장 데이터, 승인 학습 데이터 또는 고용 성과가 아님",
+      "relatedArtifactIds": [
+        "artifact-synthetic-observations",
+        "artifact-recollection-tasks",
+        "artifact-evaluation-cases",
+        "artifact-career-evidence"
+      ],
+      "sha256": "0622dc7e00ab1954d950b68a087726409316c967e392d6cb0892176042a072ae",
+      "byteLength": 304329,
+      "version": "1.0.0"
+    },
+    {
+      "id": "artifact-recollection-tasks",
+      "artifactId": "artifact-recollection-tasks",
+      "filePath": "public/data/recollection-tasks.json",
+      "schemaVersion": "1.0.0",
+      "recordType": "synthetic-recollection-task",
+      "recordCount": 96,
+      "sourceType": "AI-generated synthetic example",
+      "status": "deterministic-synthetic-recollection-plans",
+      "rights": {
+        "status": "inherits-synthetic-observation-rights",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "프로토타입 검증용 AI 생성 합성 관찰값이며 실제 청년 수집 또는 청년 수행, 파트너 현장 데이터, 승인 학습 데이터 또는 고용 성과가 아님",
+      "relatedArtifactIds": [
+        "artifact-synthetic-observations",
+        "artifact-review-events",
+        "artifact-evaluation-cases",
+        "artifact-career-evidence",
+        "artifact-image-generation-queue"
+      ],
+      "sha256": "2696879c0f58b24984668fe314f84066dfb9abbb15488fd42e5570f9ae444c2d",
+      "byteLength": 215992,
+      "version": "1.0.0"
+    },
+    {
+      "id": "artifact-evaluation-cases",
+      "artifactId": "artifact-evaluation-cases",
+      "filePath": "public/data/evaluation-cases.json",
+      "schemaVersion": "1.0.0",
+      "recordType": "metadata-only-synthetic-evaluation-case",
+      "recordCount": 96,
+      "sourceType": "AI-generated synthetic example",
+      "status": "deterministic-evaluation-contract-not-model-run",
+      "rights": {
+        "status": "clean-room-metadata-project-use",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "metadata-only 합성 평가 계약이며 이미지 데이터, 실제 모델 실행, 실제 사용자·현장 수집, 승인 학습 데이터, 정확도·점수·성능 측정 또는 고용 성과가 아님",
+      "relatedArtifactIds": [
+        "artifact-catalog",
+        "artifact-quality-taxonomy",
+        "artifact-synthetic-observations",
+        "artifact-review-events",
+        "artifact-recollection-tasks"
+      ],
+      "sha256": "490fc67f8a529b339f50c7f7dc067c8c154bf5efbac1fe2eb55275c974a22e71",
+      "byteLength": 262051,
+      "version": "1.0.0"
+    },
+    {
+      "id": "artifact-training-catalog",
+      "artifactId": "artifact-training-catalog",
+      "filePath": "public/data/training-catalog.json",
+      "schemaVersion": "1.0.0",
+      "recordType": "proposed-training-module",
+      "recordCount": 18,
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-demonstration-curriculum-not-completion",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "relatedArtifactIds": [
+        "artifact-catalog",
+        "artifact-role-task-matrix",
+        "artifact-career-evidence"
+      ],
+      "sha256": "8722003ca711ae977f950eb345571d649ebe9d178c73af9545abc47fad2322b2",
+      "byteLength": 24028,
+      "version": "1.0.0"
+    },
+    {
+      "id": "artifact-role-task-matrix",
+      "artifactId": "artifact-role-task-matrix",
+      "filePath": "public/data/role-task-matrix.json",
+      "schemaVersion": "1.0.0",
+      "recordType": "proposed-role-scenario-mapping",
+      "recordCount": 72,
+      "sourceType": "AI-generated synthetic example",
+      "status": "proposed-role-scenario-matrix",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "relatedArtifactIds": [
+        "artifact-catalog",
+        "artifact-training-catalog",
+        "artifact-career-evidence"
+      ],
+      "sha256": "d7f7117b7a890171ff6646853db6c15dde5920b6dba6bdf232c189ee8fa1d13a",
+      "byteLength": 101247,
+      "version": "1.0.0"
+    },
+    {
+      "id": "artifact-career-evidence",
+      "artifactId": "artifact-career-evidence",
+      "filePath": "public/data/career-evidence.json",
+      "schemaVersion": "1.0.0",
+      "recordType": "synthetic-demonstration-career-evidence",
+      "recordCount": 120,
+      "sourceType": "AI-generated synthetic example",
+      "status": "demonstration-only-career-evidence-not-credential",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "relatedArtifactIds": [
+        "artifact-synthetic-observations",
+        "artifact-review-events",
+        "artifact-recollection-tasks",
+        "artifact-training-catalog",
+        "artifact-role-task-matrix"
+      ],
+      "sha256": "c63f5ac3ba59583828dbb5c5aa7f4cad2e6770c2278c8e57de86b09b764654be",
+      "byteLength": 193932,
+      "version": "1.0.0"
+    },
+    {
+      "id": "artifact-image-generation-completions",
+      "artifactId": "artifact-image-generation-completions",
+      "filePath": "public/data/image-generation-completions.json",
+      "schemaVersion": "1.0.0",
+      "recordType": "human-reviewed-image-generation-completion",
+      "recordCount": 8,
+      "sourceType": "AI-generated synthetic example",
+      "status": "canonical-human-reviewed-prototype-completions",
+      "rights": {
+        "status": "project-use-records-only",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "사람이 시각 확인한 AI 생성 합성 prototype illustration 기록이며 실제 수집, 청년 수행, 파트너 현장 자료 또는 승인 학습 데이터가 아님",
+      "relatedArtifactIds": [
+        "artifact-image-generation-queue",
+        "artifact-image-rights-policy"
+      ],
+      "sha256": "9e8a63ba513637846d054c1046186ffb53c8d46630e92759f5ca036dced29430",
+      "byteLength": 33462,
+      "version": "1.0.0"
+    },
+    {
+      "id": "artifact-image-generation-queue",
+      "artifactId": "artifact-image-generation-queue",
+      "filePath": "public/data/image-generation-queue.json",
+      "schemaVersion": "1.0.0",
+      "recordType": "synthetic-image-prompt-slot",
+      "recordCount": 36,
+      "sourceType": "AI-generated synthetic example",
+      "status": "mixed-generated-and-planned-synthetic-images",
+      "rights": {
+        "status": "mixed-pending-generation-and-project-use-granted",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "relatedArtifactIds": [
+        "artifact-catalog",
+        "artifact-quality-taxonomy",
+        "artifact-synthetic-observations",
+        "artifact-recollection-tasks",
+        "artifact-image-generation-completions",
+        "artifact-image-rights-policy"
+      ],
+      "sha256": "0c39096e2128f07b53372a02615e52d79646b71329856e26e58ba4c1d1f66154",
+      "byteLength": 186402,
+      "version": "1.0.0"
+    },
+    {
+      "id": "artifact-image-rights-policy",
+      "artifactId": "artifact-image-rights-policy",
+      "filePath": "public/data/image-rights-policy.json",
+      "schemaVersion": "1.0.0",
+      "recordType": "image-rights-policy-item",
+      "recordCount": 8,
+      "sourceType": "AI-generated synthetic example",
+      "status": "active-policy-for-planned-and-generated-synthetic-images",
+      "rights": {
+        "status": "policy-metadata-clean-room-authored",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "아직 생성되지 않은 합성 이미지 계획이며 실제 현장 수집, 청년 수행, 파트너 사업장 자료, 생성 완료 자산, 권리 승인 자산 또는 승인 학습 데이터가 아님",
+      "relatedArtifactIds": [
+        "artifact-image-generation-completions",
+        "artifact-image-generation-queue"
+      ],
+      "sha256": "dbad3780d59ed2ea3c56e84c510cc20d5e5edbd29fe5c562fa49910cd3aa0413",
+      "byteLength": 5843,
+      "version": "1.0.0"
+    },
+    {
+      "id": "artifact-dataset-coverage",
+      "artifactId": "artifact-dataset-coverage",
+      "filePath": "public/data/dataset-coverage.json",
+      "schemaVersion": "1.0.0",
+      "recordType": "dataset-coverage-dimension",
+      "recordCount": 10,
+      "sourceType": "AI-generated synthetic example",
+      "status": "deterministic-canonical-coverage-not-real-world-performance",
+      "rights": {
+        "status": "clean-room-deterministic-discovery-metadata",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "현재 저장소의 결정적 합성·제안·계획 메타데이터 범위만 집계하며 실제 사람, 실제 현장 수집, 승인 학습 데이터, 교육·자격·고용·고객·파트너·수익 성과를 증명하지 않음",
+      "relatedArtifactIds": [
+        "artifact-catalog",
+        "artifact-quality-taxonomy",
+        "artifact-synthetic-observations",
+        "artifact-review-events",
+        "artifact-recollection-tasks",
+        "artifact-evaluation-cases",
+        "artifact-training-catalog",
+        "artifact-role-task-matrix",
+        "artifact-career-evidence",
+        "artifact-image-generation-completions",
+        "artifact-image-generation-queue",
+        "artifact-image-rights-policy"
+      ],
+      "sha256": "4d5175fa83ee2db04b24b3a7b978dc5158694b4ac96bdcbb5cd17643d8dfb57f",
+      "byteLength": 17385,
+      "version": "1.0.0"
+    },
+    {
+      "id": "artifact-dataset-index",
+      "artifactId": "artifact-dataset-index",
+      "filePath": "public/data/dataset-index.json",
+      "schemaVersion": "1.0.0",
+      "recordType": "dataset-artifact-index-entry",
+      "recordCount": 14,
+      "sourceType": "AI-generated synthetic example",
+      "status": "deterministic-index-self-integrity-unavailable",
+      "rights": {
+        "status": "clean-room-deterministic-discovery-metadata",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "현재 저장소의 결정적 합성·제안·계획 메타데이터 범위만 집계하며 실제 사람, 실제 현장 수집, 승인 학습 데이터, 교육·자격·고용·고객·파트너·수익 성과를 증명하지 않음",
+      "relatedArtifactIds": [
+        "artifact-catalog",
+        "artifact-quality-taxonomy",
+        "artifact-synthetic-observations",
+        "artifact-review-events",
+        "artifact-recollection-tasks",
+        "artifact-evaluation-cases",
+        "artifact-training-catalog",
+        "artifact-role-task-matrix",
+        "artifact-career-evidence",
+        "artifact-image-generation-completions",
+        "artifact-image-generation-queue",
+        "artifact-image-rights-policy",
+        "artifact-dataset-coverage"
+      ],
+      "sha256": "unavailable-self-reference",
+      "byteLength": null,
+      "version": "1.0.0"
+    }
+  ]
+}

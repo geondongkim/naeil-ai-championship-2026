@@ -49,6 +49,14 @@ NAEIL은 제조와 소상공인을 한 제품 안의 두 현장으로 연결합�
 - 교육, 허용 작업, 안전, 독립 검수, 현장 경험, 버전 기여를 제안 직무의 데모 경력 증거로 표시합니다.
 - 제조 현장 적용 전문가 또는 운영 코디네이터는 사고 조건을 데이터셋 버전과 연결하고 범위가 정해진 재수집 과제를 생성할 수 있습니다.
 
+### 결정적 합성 데이터와 읽기 전용 탐색기
+
+현재 로컬 canonical 데이터는 제조 6개·소상공인 6개의 12개 시나리오를 기준으로 구성됩니다. AI 생성 합성 observation 120건, 품질 taxonomy 8개 코드, AI 보조 신호와 독립 사람 검수를 분리한 lifecycle review event 240건, deterministic 재수집 계획 96건을 포함합니다. 또한 제안 직무 학습 모듈 18개, 6개 직무와 12개 시나리오를 잇는 role-task mapping 72건, 실제 사람이 아닌 합성 profile의 demonstration-only 경력 증거 120건, 정확도·성능 측정이 아닌 metadata-only 합성 evaluation case 96건을 제공합니다.
+
+데이터셋 화면은 `dataset-coverage.json`, `synthetic-observations.json`, `image-generation-queue.json`을 same-origin 정적 경로에서만 읽습니다. 현장 전환에 따라 제조 또는 소상공인 범위로 제한하고, 시나리오와 품질 issue 필터를 함께 적용하며, 관찰값을 최대 12건씩 페이지로 나눠 표시합니다. 세 canonical JSON은 일반 다운로드 링크로만 제공하며 백엔드 export, 영구 저장 또는 Live API로 설명하지 않습니다. 로딩·요청/해석 실패·빈 결과 상태 역시 실제 수집 완료나 승인 데이터처럼 보이지 않도록 구분합니다.
+
+이미지 계보에는 완전한 prompt/output/file provenance와 사람이 확인한 prototype-only 경계를 갖춘 생성 이미지 8개가 있습니다. 별도로 이전 partial-provenance 자산 3개를 그대로 구분해 보존하며, queue의 나머지 28개 슬롯은 `planned-not-generated`여서 파일이나 생성 완료 자산으로 간주하지 않습니다.
+
 ### AI 서버 함수
 
 `POST /api/analyze`는 같은 출처의 `application/json` 요청만 허용하고, 크기 제한 안의 JPEG·PNG·WebP data URL과 작업 맥락을 검사합니다. 서버 실행 환경에 `OPENAI_API_KEY`가 있을 때만 OpenAI Responses API를 호출하며, 엄격한 JSON 스키마로 작업 적합성·조명·구도·흐림·개인정보 위험·재수집 지침을 반환합니다. 키가 없으면 외부 호출 없이 503을 반환하고, 성공 응답도 최종 결정 주체를 사람으로 표시합니다.
@@ -57,7 +65,7 @@ NAEIL은 제조와 소상공인을 한 제품 안의 두 현장으로 연결합�
 
 승인된 로컬 서버 키와 `manufacturing-inspection-synthetic.png`를 사용한 실모델 호출에서는 HTTP 200과 모델 `gpt-5-mini-2025-08-07`을 확인했습니다. 해당 한 건의 구조화 응답은 `decisionAuthority=human`, `recommendation=ready_for_human_review`, `task_match/lighting/framing/blur=good`, `privacy_risk=possible`이었습니다.
 
-최종 production alias에서도 합성 이미지 한 건의 `POST /api/analyze`가 HTTP 200을 반환했고, `model=gpt-5-mini-2025-08-07`, `decisionAuthority=human`, `recommendation=ready_for_human_review`, `Cache-Control: no-store`를 확인했습니다. 이 결과는 로컬 및 production 연결과 사람 최종판단 계약에 대한 단일 합성 예시 실행 증거이며, 성능·정확도나 실제 사용자·고용 성과의 측정 결과가 아닙니다.
+마지막으로 확인한 production alias에서도 합성 이미지 한 건의 `POST /api/analyze`가 HTTP 200을 반환했고, `model=gpt-5-mini-2025-08-07`, `decisionAuthority=human`, `recommendation=ready_for_human_review`, `Cache-Control: no-store`를 확인했습니다. 이 결과는 당시 로컬 및 production 연결과 사람 최종판단 계약에 대한 단일 합성 예시 실행 증거이며, 최신 로컬 데이터·탐색기의 배포 여부, 성능·정확도나 실제 사용자·고용 성과의 측정 결과가 아닙니다.
 
 ### 제출 대표 화면
 
@@ -69,11 +77,11 @@ NAEIL은 제조와 소상공인을 한 제품 안의 두 현장으로 연결합�
 4. [소상공인 홈](../assets/submission/wanted-ai-championship-2026/04-small-business-home.png)
 5. [청년 경력 증거](../assets/submission/wanted-ai-championship-2026/05-youth-career-evidence.png)
 
-### 빌드와 production 검증
+### 현재 로컬 검증과 마지막 production snapshot
 
-`npm run build`는 명시적 공개 허용목록과 자산 매니페스트에 포함된 합성 이미지 3개만 `dist`에 복사하고 파일별 SHA-256 보고서를 만듭니다. 테스트는 문서·테스트·스크립트·환경파일이 배포 산출물에 섞이지 않는지 확인합니다. `npm run deploy:prepare`는 전체 검증 뒤 공개 파일, `api/analyze.mjs`, 최소 `package.json`, `vercel.json`만 임시 배포 소스에 모으며 그 명령 자체는 배포하지 않습니다.
+현재 로컬의 `npm run build`는 명시적 공개 허용목록 32개 파일을 `dist`에 복사하고 파일별 SHA-256 보고서를 만듭니다. 여기에는 canonical JSON과 자산 매니페스트에 등록된 완전 provenance 이미지 8개 및 이전 partial-provenance 이미지 3개가 포함됩니다. `npm run check`는 이 빌드 뒤 Node 테스트 90/90을 통과했으며 문서·테스트·스크립트·환경파일이 배포 산출물에 섞이지 않는지, canonical 참조·해시·결정성, 탐색기 경로·필터·페이지·다운로드 경계를 확인합니다. `npm run deploy:prepare`는 전체 검증 뒤 공개 파일, `api/analyze.mjs`, 최소 `package.json`, `vercel.json`만 임시 배포 소스에 모으며 그 명령 자체는 배포하지 않습니다.
 
-이 준비 결과의 14개 허용목록 파일을 Vercel production에 배포했습니다. 최종 alias에서 `/`, `/app.mjs`, `/assets/synthetic-workcell.svg`는 모두 HTTP 200이었고, `GET /api/analyze`는 의도한 HTTP 405와 `Allow: POST`, `Cache-Control: no-store`를 반환했습니다. Chromium 검증은 1440×810 제조·운영 코디네이터와 390×844 소상공인·데이터 오퍼레이터에서 진행했으며, 두 경로 모두 `scrollWidth=innerWidth`, `workcellLoaded=true`, 콘솔 오류·경고 0건이었습니다.
+마지막으로 기록된 이전 production snapshot은 당시 준비 결과의 14개 허용목록 파일을 Vercel에 배포한 상태입니다. 그 시점의 alias에서 `/`, `/app.mjs`, `/assets/synthetic-workcell.svg`는 모두 HTTP 200이었고, `GET /api/analyze`는 의도한 HTTP 405와 `Allow: POST`, `Cache-Control: no-store`를 반환했습니다. Chromium 검증은 1440×810 제조·운영 코디네이터와 390×844 소상공인·데이터 오퍼레이터에서 진행했으며, 두 경로 모두 `scrollWidth=innerWidth`, `workcellLoaded=true`, 콘솔 오류·경고 0건이었습니다. 이 역사적 14-file snapshot과 현재 로컬 32-file 빌드는 별개이며, 현재 production 반영 상태는 배포 뒤 공개 alias에서 독립적으로 확인해야 합니다.
 
 ### 구현하지 않은 범위
 
@@ -83,7 +91,9 @@ NAEIL은 제조와 소상공인을 한 제품 안의 두 현장으로 연결합�
 
 | 항목 | 표시 상태 | 현재 의미 |
 |---|---|---|
-| 제조·소상공인 예시 | AI-generated synthetic example | 카탈로그 시나리오와 연결된 합성 이미지 3개가 있으며 실제 현장 수집물·청년 작업·승인 학습 데이터가 아님 |
+| 제조·소상공인 canonical 메타데이터 | AI-generated synthetic example | 12개 시나리오와 120개 observation 및 연결된 review·재수집·직무·평가 기록이며 실제 현장 수집물·청년 작업·승인 학습 데이터가 아님 |
+| 생성 완료 이미지 | AI-generated synthetic example | 완전 provenance prototype 8개와 이전 partial-provenance 자산 3개이며 실제 현장·파트너 자료가 아님 |
+| 이미지 생성 계획 | AI-generated synthetic example | 28개 `planned-not-generated` 슬롯으로, 생성 완료 파일이나 승인 학습 데이터가 아님 |
 | KAMP AI | External catalog link | 공식 카탈로그 후보이며 데이터/API 미연결 |
 | AI Hub | External catalog link | 공식 카탈로그 후보이며 다운로드·API 미연결 |
 | data.go.kr | External catalog link | 공식 카탈로그 후보이며 서비스키/API 미사용 |
@@ -92,7 +102,7 @@ NAEIL은 제조와 소상공인을 한 제품 안의 두 현장으로 연결합�
 
 ## 이미지와 권리
 
-현재 공개 자산 매니페스트에는 제조 검사, 제과점 진열, 카페 컵 정리를 묘사한 클린룸 imagegen 합성 이미지 3개가 있습니다. 각 파일에 OpenAI built-in imagegen 세션 ID와 generator output ID, 생성 의도 요약, SHA-256, 크기, 합성 경계, 프로젝트 사용 권한을 기록했습니다. 원문 프롬프트 전체와 그 해시는 보관되지 않았다는 한계도 함께 표시합니다. 합성 이미지는 실제 현장·청년 수행·파트너 제공·학습 승인 자료처럼 보이게 설명하지 않습니다.
+현재 공개 자산 매니페스트에는 클린룸 합성 이미지 11개가 있습니다. 그중 새로 생성한 8개는 exact prompt와 그 해시, OpenAI built-in imagegen 세션·output ID, 파일 SHA-256·byte length·dimensions, 사람의 prototype 용도 검수, 프로젝트 사용 권한을 completion ledger와 함께 기록한 complete provenance 자산입니다. 이전의 제조 검사·제과점 진열·카페 컵 정리 자산 3개는 exact prompt 전체가 보관되지 않은 partial provenance로 정직하게 구분합니다. queue의 다른 28개 슬롯은 계획일 뿐 생성 완료로 표시하지 않으며, 어떤 합성 이미지도 실제 현장·청년 수행·파트너 제공·학습 승인 자료처럼 설명하지 않습니다.
 
 루트 MIT 라이선스는 이 저장소에서 새로 작성한 소프트웨어 코드와 테스트에만 적용됩니다. 문서, 데이터, 프롬프트, 래스터 이미지와 기타 미디어는 자동으로 MIT 범위에 포함되지 않으며, 자산 매니페스트의 개별 허가가 우선합니다.
 
@@ -105,5 +115,7 @@ NAEIL은 제조와 소상공인을 한 제품 안의 두 현장으로 연결합�
 ```sh
 npm run check
 ```
+
+현재 로컬 확인 결과는 32개 허용목록 빌드 파일과 Node 테스트 90/90 통과입니다. 이 수치는 마지막 production snapshot의 14개 파일과 구분되며, 공개 서비스의 현재 상태는 배포 뒤 별도로 확인해야 합니다.
 
 최종 제출 전에는 공개 URL의 현재 상태, 자산별 권리, 비밀정보·개인정보 부재, 제출 폼의 공개 범위를 사람이 다시 확인해야 합니다.

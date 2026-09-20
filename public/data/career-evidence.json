@@ -1,0 +1,4355 @@
+{
+  "schemaVersion": "1.0.0",
+  "datasetId": "naeil-synthetic-career-evidence-v1",
+  "version": "1.0.0",
+  "seed": "naeil-synthetic-observations-v1",
+  "sourceObservationDatasetRef": "public/data/synthetic-observations.json",
+  "reviewEventsRef": "public/data/review-events.json",
+  "recollectionTasksRef": "public/data/recollection-tasks.json",
+  "trainingCatalogRef": "public/data/training-catalog.json",
+  "roleTaskMatrixRef": "public/data/role-task-matrix.json",
+  "sourceType": "AI-generated synthetic example",
+  "status": "demonstration-only-career-evidence-not-credential",
+  "evidenceCount": 120,
+  "syntheticProfileCount": 6,
+  "verificationBoundary": {
+    "syntheticProfilesAreRealPeople": false,
+    "collectorMayVerifyOwnEvidence": false,
+    "aiMayApproveEvidence": false,
+    "independentHumanVerifierRequired": true
+  },
+  "rights": {
+    "status": "clean-room-synthetic-demonstration-record",
+    "thirdPartyMediaUsed": false,
+    "codeLicenseApplies": false
+  },
+  "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+  "createdBySyntheticGenerator": {
+    "script": "scripts/generate-synthetic-dataset.mjs",
+    "seed": "naeil-synthetic-observations-v1",
+    "generatorVersion": "1.0.0",
+    "deterministic": true
+  },
+  "evidence": [
+    {
+      "evidenceId": "evidence-mfg-001-001",
+      "syntheticProfileId": "synthetic-profile-001",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "sourceObservationId": "obs-mfg-001-001",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-001-001",
+      "linkedReviewEventId": "event-human-mfg-001-001",
+      "recollectionTaskId": null,
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-001-component-surface",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "evidenceType": "coordination-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-001-002",
+      "syntheticProfileId": "synthetic-profile-002",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "sourceObservationId": "obs-mfg-001-002",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-001-002",
+      "linkedReviewEventId": "event-human-mfg-001-002",
+      "recollectionTaskId": "recollect-mfg-001-002",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-001-component-surface",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "evidenceType": "synthetic-capture-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-001-003",
+      "syntheticProfileId": "synthetic-profile-003",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "sourceObservationId": "obs-mfg-001-003",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-001-003",
+      "linkedReviewEventId": "event-human-mfg-001-003",
+      "recollectionTaskId": "recollect-mfg-001-003",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-001-component-surface",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "evidenceType": "independent-review-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-001-004",
+      "syntheticProfileId": "synthetic-profile-004",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "sourceObservationId": "obs-mfg-001-004",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-001-004",
+      "linkedReviewEventId": "event-human-mfg-001-004",
+      "recollectionTaskId": "recollect-mfg-001-004",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-001-component-surface",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "evidenceType": "rights-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-001-005",
+      "syntheticProfileId": "synthetic-profile-005",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "sourceObservationId": "obs-mfg-001-005",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-001-005",
+      "linkedReviewEventId": "event-human-mfg-001-005",
+      "recollectionTaskId": "recollect-mfg-001-005",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-001-component-surface",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "evidenceType": "controlled-context-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-001-006",
+      "syntheticProfileId": "synthetic-profile-006",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "sourceObservationId": "obs-mfg-001-006",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-001-006",
+      "linkedReviewEventId": "event-human-mfg-001-006",
+      "recollectionTaskId": "recollect-mfg-001-006",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-001-component-surface",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "evidenceType": "recollection-planning-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-001-007",
+      "syntheticProfileId": "synthetic-profile-001",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "sourceObservationId": "obs-mfg-001-007",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-001-007",
+      "linkedReviewEventId": "event-human-mfg-001-007",
+      "recollectionTaskId": "recollect-mfg-001-007",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-001-component-surface",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "evidenceType": "coordination-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-001-008",
+      "syntheticProfileId": "synthetic-profile-002",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "sourceObservationId": "obs-mfg-001-008",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-001-008",
+      "linkedReviewEventId": "event-human-mfg-001-008",
+      "recollectionTaskId": "recollect-mfg-001-008",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-001-component-surface",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "evidenceType": "synthetic-capture-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-001-009",
+      "syntheticProfileId": "synthetic-profile-003",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "sourceObservationId": "obs-mfg-001-009",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-001-009",
+      "linkedReviewEventId": "event-human-mfg-001-009",
+      "recollectionTaskId": "recollect-mfg-001-009",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-001-component-surface",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "evidenceType": "independent-review-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-001-010",
+      "syntheticProfileId": "synthetic-profile-004",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "sourceObservationId": "obs-mfg-001-010",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-001-010",
+      "linkedReviewEventId": "event-human-mfg-001-010",
+      "recollectionTaskId": null,
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-001-component-surface",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "evidenceType": "rights-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-002-001",
+      "syntheticProfileId": "synthetic-profile-005",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "sourceObservationId": "obs-mfg-002-001",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-002-001",
+      "linkedReviewEventId": "event-human-mfg-002-001",
+      "recollectionTaskId": null,
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "evidenceType": "controlled-context-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-002-002",
+      "syntheticProfileId": "synthetic-profile-006",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "sourceObservationId": "obs-mfg-002-002",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-002-002",
+      "linkedReviewEventId": "event-human-mfg-002-002",
+      "recollectionTaskId": "recollect-mfg-002-002",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "evidenceType": "recollection-planning-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-002-003",
+      "syntheticProfileId": "synthetic-profile-001",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "sourceObservationId": "obs-mfg-002-003",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-002-003",
+      "linkedReviewEventId": "event-human-mfg-002-003",
+      "recollectionTaskId": "recollect-mfg-002-003",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "evidenceType": "coordination-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-002-004",
+      "syntheticProfileId": "synthetic-profile-002",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "sourceObservationId": "obs-mfg-002-004",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-002-004",
+      "linkedReviewEventId": "event-human-mfg-002-004",
+      "recollectionTaskId": "recollect-mfg-002-004",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "evidenceType": "synthetic-capture-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-002-005",
+      "syntheticProfileId": "synthetic-profile-003",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "sourceObservationId": "obs-mfg-002-005",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-002-005",
+      "linkedReviewEventId": "event-human-mfg-002-005",
+      "recollectionTaskId": "recollect-mfg-002-005",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "evidenceType": "independent-review-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-002-006",
+      "syntheticProfileId": "synthetic-profile-004",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "sourceObservationId": "obs-mfg-002-006",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-002-006",
+      "linkedReviewEventId": "event-human-mfg-002-006",
+      "recollectionTaskId": "recollect-mfg-002-006",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "evidenceType": "rights-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-002-007",
+      "syntheticProfileId": "synthetic-profile-005",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "sourceObservationId": "obs-mfg-002-007",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-002-007",
+      "linkedReviewEventId": "event-human-mfg-002-007",
+      "recollectionTaskId": "recollect-mfg-002-007",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "evidenceType": "controlled-context-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-002-008",
+      "syntheticProfileId": "synthetic-profile-006",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "sourceObservationId": "obs-mfg-002-008",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-002-008",
+      "linkedReviewEventId": "event-human-mfg-002-008",
+      "recollectionTaskId": "recollect-mfg-002-008",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "evidenceType": "recollection-planning-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-002-009",
+      "syntheticProfileId": "synthetic-profile-001",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "sourceObservationId": "obs-mfg-002-009",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-002-009",
+      "linkedReviewEventId": "event-human-mfg-002-009",
+      "recollectionTaskId": "recollect-mfg-002-009",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "evidenceType": "coordination-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-002-010",
+      "syntheticProfileId": "synthetic-profile-002",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "sourceObservationId": "obs-mfg-002-010",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-002-010",
+      "linkedReviewEventId": "event-human-mfg-002-010",
+      "recollectionTaskId": null,
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "evidenceType": "synthetic-capture-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-003-001",
+      "syntheticProfileId": "synthetic-profile-003",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "sourceObservationId": "obs-mfg-003-001",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-003-001",
+      "linkedReviewEventId": "event-human-mfg-003-001",
+      "recollectionTaskId": null,
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "evidenceType": "independent-review-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-003-002",
+      "syntheticProfileId": "synthetic-profile-004",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "sourceObservationId": "obs-mfg-003-002",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-003-002",
+      "linkedReviewEventId": "event-human-mfg-003-002",
+      "recollectionTaskId": "recollect-mfg-003-002",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "evidenceType": "rights-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-003-003",
+      "syntheticProfileId": "synthetic-profile-005",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "sourceObservationId": "obs-mfg-003-003",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-003-003",
+      "linkedReviewEventId": "event-human-mfg-003-003",
+      "recollectionTaskId": "recollect-mfg-003-003",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "evidenceType": "controlled-context-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-003-004",
+      "syntheticProfileId": "synthetic-profile-006",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "sourceObservationId": "obs-mfg-003-004",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-003-004",
+      "linkedReviewEventId": "event-human-mfg-003-004",
+      "recollectionTaskId": "recollect-mfg-003-004",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "evidenceType": "recollection-planning-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-003-005",
+      "syntheticProfileId": "synthetic-profile-001",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "sourceObservationId": "obs-mfg-003-005",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-003-005",
+      "linkedReviewEventId": "event-human-mfg-003-005",
+      "recollectionTaskId": "recollect-mfg-003-005",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "evidenceType": "coordination-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-003-006",
+      "syntheticProfileId": "synthetic-profile-002",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "sourceObservationId": "obs-mfg-003-006",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-003-006",
+      "linkedReviewEventId": "event-human-mfg-003-006",
+      "recollectionTaskId": "recollect-mfg-003-006",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "evidenceType": "synthetic-capture-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-003-007",
+      "syntheticProfileId": "synthetic-profile-003",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "sourceObservationId": "obs-mfg-003-007",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-003-007",
+      "linkedReviewEventId": "event-human-mfg-003-007",
+      "recollectionTaskId": "recollect-mfg-003-007",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "evidenceType": "independent-review-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-003-008",
+      "syntheticProfileId": "synthetic-profile-004",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "sourceObservationId": "obs-mfg-003-008",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-003-008",
+      "linkedReviewEventId": "event-human-mfg-003-008",
+      "recollectionTaskId": "recollect-mfg-003-008",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "evidenceType": "rights-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-003-009",
+      "syntheticProfileId": "synthetic-profile-005",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "sourceObservationId": "obs-mfg-003-009",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-003-009",
+      "linkedReviewEventId": "event-human-mfg-003-009",
+      "recollectionTaskId": "recollect-mfg-003-009",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "evidenceType": "controlled-context-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-003-010",
+      "syntheticProfileId": "synthetic-profile-006",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "sourceObservationId": "obs-mfg-003-010",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-003-010",
+      "linkedReviewEventId": "event-human-mfg-003-010",
+      "recollectionTaskId": null,
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "evidenceType": "recollection-planning-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-004-001",
+      "syntheticProfileId": "synthetic-profile-001",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "sourceObservationId": "obs-mfg-004-001",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-004-001",
+      "linkedReviewEventId": "event-human-mfg-004-001",
+      "recollectionTaskId": null,
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "evidenceType": "coordination-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-004-002",
+      "syntheticProfileId": "synthetic-profile-002",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "sourceObservationId": "obs-mfg-004-002",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-004-002",
+      "linkedReviewEventId": "event-human-mfg-004-002",
+      "recollectionTaskId": "recollect-mfg-004-002",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "evidenceType": "synthetic-capture-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-004-003",
+      "syntheticProfileId": "synthetic-profile-003",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "sourceObservationId": "obs-mfg-004-003",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-004-003",
+      "linkedReviewEventId": "event-human-mfg-004-003",
+      "recollectionTaskId": "recollect-mfg-004-003",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "evidenceType": "independent-review-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-004-004",
+      "syntheticProfileId": "synthetic-profile-004",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "sourceObservationId": "obs-mfg-004-004",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-004-004",
+      "linkedReviewEventId": "event-human-mfg-004-004",
+      "recollectionTaskId": "recollect-mfg-004-004",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "evidenceType": "rights-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-004-005",
+      "syntheticProfileId": "synthetic-profile-005",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "sourceObservationId": "obs-mfg-004-005",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-004-005",
+      "linkedReviewEventId": "event-human-mfg-004-005",
+      "recollectionTaskId": "recollect-mfg-004-005",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "evidenceType": "controlled-context-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-004-006",
+      "syntheticProfileId": "synthetic-profile-006",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "sourceObservationId": "obs-mfg-004-006",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-004-006",
+      "linkedReviewEventId": "event-human-mfg-004-006",
+      "recollectionTaskId": "recollect-mfg-004-006",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "evidenceType": "recollection-planning-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-004-007",
+      "syntheticProfileId": "synthetic-profile-001",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "sourceObservationId": "obs-mfg-004-007",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-004-007",
+      "linkedReviewEventId": "event-human-mfg-004-007",
+      "recollectionTaskId": "recollect-mfg-004-007",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "evidenceType": "coordination-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-004-008",
+      "syntheticProfileId": "synthetic-profile-002",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "sourceObservationId": "obs-mfg-004-008",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-004-008",
+      "linkedReviewEventId": "event-human-mfg-004-008",
+      "recollectionTaskId": "recollect-mfg-004-008",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "evidenceType": "synthetic-capture-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-004-009",
+      "syntheticProfileId": "synthetic-profile-003",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "sourceObservationId": "obs-mfg-004-009",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-004-009",
+      "linkedReviewEventId": "event-human-mfg-004-009",
+      "recollectionTaskId": "recollect-mfg-004-009",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "evidenceType": "independent-review-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-004-010",
+      "syntheticProfileId": "synthetic-profile-004",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "sourceObservationId": "obs-mfg-004-010",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-004-010",
+      "linkedReviewEventId": "event-human-mfg-004-010",
+      "recollectionTaskId": null,
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "evidenceType": "rights-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-005-001",
+      "syntheticProfileId": "synthetic-profile-005",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "sourceObservationId": "obs-mfg-005-001",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-005-001",
+      "linkedReviewEventId": "event-human-mfg-005-001",
+      "recollectionTaskId": null,
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-005-bin-label",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "evidenceType": "controlled-context-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-005-002",
+      "syntheticProfileId": "synthetic-profile-006",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "sourceObservationId": "obs-mfg-005-002",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-005-002",
+      "linkedReviewEventId": "event-human-mfg-005-002",
+      "recollectionTaskId": "recollect-mfg-005-002",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-005-bin-label",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "evidenceType": "recollection-planning-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-005-003",
+      "syntheticProfileId": "synthetic-profile-001",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "sourceObservationId": "obs-mfg-005-003",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-005-003",
+      "linkedReviewEventId": "event-human-mfg-005-003",
+      "recollectionTaskId": "recollect-mfg-005-003",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-005-bin-label",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "evidenceType": "coordination-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-005-004",
+      "syntheticProfileId": "synthetic-profile-002",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "sourceObservationId": "obs-mfg-005-004",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-005-004",
+      "linkedReviewEventId": "event-human-mfg-005-004",
+      "recollectionTaskId": "recollect-mfg-005-004",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-005-bin-label",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "evidenceType": "synthetic-capture-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-005-005",
+      "syntheticProfileId": "synthetic-profile-003",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "sourceObservationId": "obs-mfg-005-005",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-005-005",
+      "linkedReviewEventId": "event-human-mfg-005-005",
+      "recollectionTaskId": "recollect-mfg-005-005",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-005-bin-label",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "evidenceType": "independent-review-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-005-006",
+      "syntheticProfileId": "synthetic-profile-004",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "sourceObservationId": "obs-mfg-005-006",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-005-006",
+      "linkedReviewEventId": "event-human-mfg-005-006",
+      "recollectionTaskId": "recollect-mfg-005-006",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-005-bin-label",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "evidenceType": "rights-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-005-007",
+      "syntheticProfileId": "synthetic-profile-005",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "sourceObservationId": "obs-mfg-005-007",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-005-007",
+      "linkedReviewEventId": "event-human-mfg-005-007",
+      "recollectionTaskId": "recollect-mfg-005-007",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-005-bin-label",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "evidenceType": "controlled-context-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-005-008",
+      "syntheticProfileId": "synthetic-profile-006",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "sourceObservationId": "obs-mfg-005-008",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-005-008",
+      "linkedReviewEventId": "event-human-mfg-005-008",
+      "recollectionTaskId": "recollect-mfg-005-008",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-005-bin-label",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "evidenceType": "recollection-planning-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-005-009",
+      "syntheticProfileId": "synthetic-profile-001",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "sourceObservationId": "obs-mfg-005-009",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-005-009",
+      "linkedReviewEventId": "event-human-mfg-005-009",
+      "recollectionTaskId": "recollect-mfg-005-009",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-005-bin-label",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "evidenceType": "coordination-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-005-010",
+      "syntheticProfileId": "synthetic-profile-002",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "sourceObservationId": "obs-mfg-005-010",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-005-010",
+      "linkedReviewEventId": "event-human-mfg-005-010",
+      "recollectionTaskId": null,
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-005-bin-label",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "evidenceType": "synthetic-capture-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-006-001",
+      "syntheticProfileId": "synthetic-profile-003",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "sourceObservationId": "obs-mfg-006-001",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-006-001",
+      "linkedReviewEventId": "event-human-mfg-006-001",
+      "recollectionTaskId": null,
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-006-cobot-clearance",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "evidenceType": "independent-review-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-006-002",
+      "syntheticProfileId": "synthetic-profile-004",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "sourceObservationId": "obs-mfg-006-002",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-006-002",
+      "linkedReviewEventId": "event-human-mfg-006-002",
+      "recollectionTaskId": "recollect-mfg-006-002",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-006-cobot-clearance",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "evidenceType": "rights-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-006-003",
+      "syntheticProfileId": "synthetic-profile-005",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "sourceObservationId": "obs-mfg-006-003",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-006-003",
+      "linkedReviewEventId": "event-human-mfg-006-003",
+      "recollectionTaskId": "recollect-mfg-006-003",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-006-cobot-clearance",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "evidenceType": "controlled-context-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-006-004",
+      "syntheticProfileId": "synthetic-profile-006",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "sourceObservationId": "obs-mfg-006-004",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-006-004",
+      "linkedReviewEventId": "event-human-mfg-006-004",
+      "recollectionTaskId": "recollect-mfg-006-004",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-006-cobot-clearance",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "evidenceType": "recollection-planning-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-006-005",
+      "syntheticProfileId": "synthetic-profile-001",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "sourceObservationId": "obs-mfg-006-005",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-006-005",
+      "linkedReviewEventId": "event-human-mfg-006-005",
+      "recollectionTaskId": "recollect-mfg-006-005",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-006-cobot-clearance",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "evidenceType": "coordination-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-006-006",
+      "syntheticProfileId": "synthetic-profile-002",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "sourceObservationId": "obs-mfg-006-006",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-006-006",
+      "linkedReviewEventId": "event-human-mfg-006-006",
+      "recollectionTaskId": "recollect-mfg-006-006",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-006-cobot-clearance",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "evidenceType": "synthetic-capture-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-006-007",
+      "syntheticProfileId": "synthetic-profile-003",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "sourceObservationId": "obs-mfg-006-007",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-006-007",
+      "linkedReviewEventId": "event-human-mfg-006-007",
+      "recollectionTaskId": "recollect-mfg-006-007",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-006-cobot-clearance",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "evidenceType": "independent-review-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-006-008",
+      "syntheticProfileId": "synthetic-profile-004",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "sourceObservationId": "obs-mfg-006-008",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-006-008",
+      "linkedReviewEventId": "event-human-mfg-006-008",
+      "recollectionTaskId": "recollect-mfg-006-008",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-006-cobot-clearance",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "evidenceType": "rights-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-006-009",
+      "syntheticProfileId": "synthetic-profile-005",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "sourceObservationId": "obs-mfg-006-009",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-006-009",
+      "linkedReviewEventId": "event-human-mfg-006-009",
+      "recollectionTaskId": "recollect-mfg-006-009",
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-006-cobot-clearance",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "evidenceType": "controlled-context-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-mfg-006-010",
+      "syntheticProfileId": "synthetic-profile-006",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "sourceObservationId": "obs-mfg-006-010",
+      "linkedAssistiveSignalEventId": "event-ai-mfg-006-010",
+      "linkedReviewEventId": "event-human-mfg-006-010",
+      "recollectionTaskId": null,
+      "field": "manufacturing",
+      "scenarioId": "syn-mfg-006-cobot-clearance",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "evidenceType": "recollection-planning-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-007-001",
+      "syntheticProfileId": "synthetic-profile-001",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "sourceObservationId": "obs-smb-007-001",
+      "linkedAssistiveSignalEventId": "event-ai-smb-007-001",
+      "linkedReviewEventId": "event-human-smb-007-001",
+      "recollectionTaskId": null,
+      "field": "small-business",
+      "scenarioId": "syn-smb-001-bakery-shelf",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "evidenceType": "coordination-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-007-002",
+      "syntheticProfileId": "synthetic-profile-002",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "sourceObservationId": "obs-smb-007-002",
+      "linkedAssistiveSignalEventId": "event-ai-smb-007-002",
+      "linkedReviewEventId": "event-human-smb-007-002",
+      "recollectionTaskId": "recollect-smb-007-002",
+      "field": "small-business",
+      "scenarioId": "syn-smb-001-bakery-shelf",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "evidenceType": "synthetic-capture-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-007-003",
+      "syntheticProfileId": "synthetic-profile-003",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "sourceObservationId": "obs-smb-007-003",
+      "linkedAssistiveSignalEventId": "event-ai-smb-007-003",
+      "linkedReviewEventId": "event-human-smb-007-003",
+      "recollectionTaskId": "recollect-smb-007-003",
+      "field": "small-business",
+      "scenarioId": "syn-smb-001-bakery-shelf",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "evidenceType": "independent-review-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-007-004",
+      "syntheticProfileId": "synthetic-profile-004",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "sourceObservationId": "obs-smb-007-004",
+      "linkedAssistiveSignalEventId": "event-ai-smb-007-004",
+      "linkedReviewEventId": "event-human-smb-007-004",
+      "recollectionTaskId": "recollect-smb-007-004",
+      "field": "small-business",
+      "scenarioId": "syn-smb-001-bakery-shelf",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "evidenceType": "rights-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-007-005",
+      "syntheticProfileId": "synthetic-profile-005",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "sourceObservationId": "obs-smb-007-005",
+      "linkedAssistiveSignalEventId": "event-ai-smb-007-005",
+      "linkedReviewEventId": "event-human-smb-007-005",
+      "recollectionTaskId": "recollect-smb-007-005",
+      "field": "small-business",
+      "scenarioId": "syn-smb-001-bakery-shelf",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "evidenceType": "controlled-context-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-007-006",
+      "syntheticProfileId": "synthetic-profile-006",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "sourceObservationId": "obs-smb-007-006",
+      "linkedAssistiveSignalEventId": "event-ai-smb-007-006",
+      "linkedReviewEventId": "event-human-smb-007-006",
+      "recollectionTaskId": "recollect-smb-007-006",
+      "field": "small-business",
+      "scenarioId": "syn-smb-001-bakery-shelf",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "evidenceType": "recollection-planning-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-007-007",
+      "syntheticProfileId": "synthetic-profile-001",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "sourceObservationId": "obs-smb-007-007",
+      "linkedAssistiveSignalEventId": "event-ai-smb-007-007",
+      "linkedReviewEventId": "event-human-smb-007-007",
+      "recollectionTaskId": "recollect-smb-007-007",
+      "field": "small-business",
+      "scenarioId": "syn-smb-001-bakery-shelf",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "evidenceType": "coordination-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-007-008",
+      "syntheticProfileId": "synthetic-profile-002",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "sourceObservationId": "obs-smb-007-008",
+      "linkedAssistiveSignalEventId": "event-ai-smb-007-008",
+      "linkedReviewEventId": "event-human-smb-007-008",
+      "recollectionTaskId": "recollect-smb-007-008",
+      "field": "small-business",
+      "scenarioId": "syn-smb-001-bakery-shelf",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "evidenceType": "synthetic-capture-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-007-009",
+      "syntheticProfileId": "synthetic-profile-003",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "sourceObservationId": "obs-smb-007-009",
+      "linkedAssistiveSignalEventId": "event-ai-smb-007-009",
+      "linkedReviewEventId": "event-human-smb-007-009",
+      "recollectionTaskId": "recollect-smb-007-009",
+      "field": "small-business",
+      "scenarioId": "syn-smb-001-bakery-shelf",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "evidenceType": "independent-review-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-007-010",
+      "syntheticProfileId": "synthetic-profile-004",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "sourceObservationId": "obs-smb-007-010",
+      "linkedAssistiveSignalEventId": "event-ai-smb-007-010",
+      "linkedReviewEventId": "event-human-smb-007-010",
+      "recollectionTaskId": null,
+      "field": "small-business",
+      "scenarioId": "syn-smb-001-bakery-shelf",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "evidenceType": "rights-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-008-001",
+      "syntheticProfileId": "synthetic-profile-005",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "sourceObservationId": "obs-smb-008-001",
+      "linkedAssistiveSignalEventId": "event-ai-smb-008-001",
+      "linkedReviewEventId": "event-human-smb-008-001",
+      "recollectionTaskId": null,
+      "field": "small-business",
+      "scenarioId": "syn-smb-002-cafe-tray",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "evidenceType": "controlled-context-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-008-002",
+      "syntheticProfileId": "synthetic-profile-006",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "sourceObservationId": "obs-smb-008-002",
+      "linkedAssistiveSignalEventId": "event-ai-smb-008-002",
+      "linkedReviewEventId": "event-human-smb-008-002",
+      "recollectionTaskId": "recollect-smb-008-002",
+      "field": "small-business",
+      "scenarioId": "syn-smb-002-cafe-tray",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "evidenceType": "recollection-planning-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-008-003",
+      "syntheticProfileId": "synthetic-profile-001",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "sourceObservationId": "obs-smb-008-003",
+      "linkedAssistiveSignalEventId": "event-ai-smb-008-003",
+      "linkedReviewEventId": "event-human-smb-008-003",
+      "recollectionTaskId": "recollect-smb-008-003",
+      "field": "small-business",
+      "scenarioId": "syn-smb-002-cafe-tray",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "evidenceType": "coordination-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-008-004",
+      "syntheticProfileId": "synthetic-profile-002",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "sourceObservationId": "obs-smb-008-004",
+      "linkedAssistiveSignalEventId": "event-ai-smb-008-004",
+      "linkedReviewEventId": "event-human-smb-008-004",
+      "recollectionTaskId": "recollect-smb-008-004",
+      "field": "small-business",
+      "scenarioId": "syn-smb-002-cafe-tray",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "evidenceType": "synthetic-capture-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-008-005",
+      "syntheticProfileId": "synthetic-profile-003",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "sourceObservationId": "obs-smb-008-005",
+      "linkedAssistiveSignalEventId": "event-ai-smb-008-005",
+      "linkedReviewEventId": "event-human-smb-008-005",
+      "recollectionTaskId": "recollect-smb-008-005",
+      "field": "small-business",
+      "scenarioId": "syn-smb-002-cafe-tray",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "evidenceType": "independent-review-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-008-006",
+      "syntheticProfileId": "synthetic-profile-004",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "sourceObservationId": "obs-smb-008-006",
+      "linkedAssistiveSignalEventId": "event-ai-smb-008-006",
+      "linkedReviewEventId": "event-human-smb-008-006",
+      "recollectionTaskId": "recollect-smb-008-006",
+      "field": "small-business",
+      "scenarioId": "syn-smb-002-cafe-tray",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "evidenceType": "rights-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-008-007",
+      "syntheticProfileId": "synthetic-profile-005",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "sourceObservationId": "obs-smb-008-007",
+      "linkedAssistiveSignalEventId": "event-ai-smb-008-007",
+      "linkedReviewEventId": "event-human-smb-008-007",
+      "recollectionTaskId": "recollect-smb-008-007",
+      "field": "small-business",
+      "scenarioId": "syn-smb-002-cafe-tray",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "evidenceType": "controlled-context-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-008-008",
+      "syntheticProfileId": "synthetic-profile-006",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "sourceObservationId": "obs-smb-008-008",
+      "linkedAssistiveSignalEventId": "event-ai-smb-008-008",
+      "linkedReviewEventId": "event-human-smb-008-008",
+      "recollectionTaskId": "recollect-smb-008-008",
+      "field": "small-business",
+      "scenarioId": "syn-smb-002-cafe-tray",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "evidenceType": "recollection-planning-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-008-009",
+      "syntheticProfileId": "synthetic-profile-001",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "sourceObservationId": "obs-smb-008-009",
+      "linkedAssistiveSignalEventId": "event-ai-smb-008-009",
+      "linkedReviewEventId": "event-human-smb-008-009",
+      "recollectionTaskId": "recollect-smb-008-009",
+      "field": "small-business",
+      "scenarioId": "syn-smb-002-cafe-tray",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "evidenceType": "coordination-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-008-010",
+      "syntheticProfileId": "synthetic-profile-002",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "sourceObservationId": "obs-smb-008-010",
+      "linkedAssistiveSignalEventId": "event-ai-smb-008-010",
+      "linkedReviewEventId": "event-human-smb-008-010",
+      "recollectionTaskId": null,
+      "field": "small-business",
+      "scenarioId": "syn-smb-002-cafe-tray",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "evidenceType": "synthetic-capture-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-009-001",
+      "syntheticProfileId": "synthetic-profile-003",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "sourceObservationId": "obs-smb-009-001",
+      "linkedAssistiveSignalEventId": "event-ai-smb-009-001",
+      "linkedReviewEventId": "event-human-smb-009-001",
+      "recollectionTaskId": null,
+      "field": "small-business",
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "evidenceType": "independent-review-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-009-002",
+      "syntheticProfileId": "synthetic-profile-004",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "sourceObservationId": "obs-smb-009-002",
+      "linkedAssistiveSignalEventId": "event-ai-smb-009-002",
+      "linkedReviewEventId": "event-human-smb-009-002",
+      "recollectionTaskId": "recollect-smb-009-002",
+      "field": "small-business",
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "evidenceType": "rights-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-009-003",
+      "syntheticProfileId": "synthetic-profile-005",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "sourceObservationId": "obs-smb-009-003",
+      "linkedAssistiveSignalEventId": "event-ai-smb-009-003",
+      "linkedReviewEventId": "event-human-smb-009-003",
+      "recollectionTaskId": "recollect-smb-009-003",
+      "field": "small-business",
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "evidenceType": "controlled-context-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-009-004",
+      "syntheticProfileId": "synthetic-profile-006",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "sourceObservationId": "obs-smb-009-004",
+      "linkedAssistiveSignalEventId": "event-ai-smb-009-004",
+      "linkedReviewEventId": "event-human-smb-009-004",
+      "recollectionTaskId": "recollect-smb-009-004",
+      "field": "small-business",
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "evidenceType": "recollection-planning-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-009-005",
+      "syntheticProfileId": "synthetic-profile-001",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "sourceObservationId": "obs-smb-009-005",
+      "linkedAssistiveSignalEventId": "event-ai-smb-009-005",
+      "linkedReviewEventId": "event-human-smb-009-005",
+      "recollectionTaskId": "recollect-smb-009-005",
+      "field": "small-business",
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "evidenceType": "coordination-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-009-006",
+      "syntheticProfileId": "synthetic-profile-002",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "sourceObservationId": "obs-smb-009-006",
+      "linkedAssistiveSignalEventId": "event-ai-smb-009-006",
+      "linkedReviewEventId": "event-human-smb-009-006",
+      "recollectionTaskId": "recollect-smb-009-006",
+      "field": "small-business",
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "evidenceType": "synthetic-capture-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-009-007",
+      "syntheticProfileId": "synthetic-profile-003",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "sourceObservationId": "obs-smb-009-007",
+      "linkedAssistiveSignalEventId": "event-ai-smb-009-007",
+      "linkedReviewEventId": "event-human-smb-009-007",
+      "recollectionTaskId": "recollect-smb-009-007",
+      "field": "small-business",
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "evidenceType": "independent-review-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-009-008",
+      "syntheticProfileId": "synthetic-profile-004",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "sourceObservationId": "obs-smb-009-008",
+      "linkedAssistiveSignalEventId": "event-ai-smb-009-008",
+      "linkedReviewEventId": "event-human-smb-009-008",
+      "recollectionTaskId": "recollect-smb-009-008",
+      "field": "small-business",
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "evidenceType": "rights-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-009-009",
+      "syntheticProfileId": "synthetic-profile-005",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "sourceObservationId": "obs-smb-009-009",
+      "linkedAssistiveSignalEventId": "event-ai-smb-009-009",
+      "linkedReviewEventId": "event-human-smb-009-009",
+      "recollectionTaskId": "recollect-smb-009-009",
+      "field": "small-business",
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "evidenceType": "controlled-context-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-009-010",
+      "syntheticProfileId": "synthetic-profile-006",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "sourceObservationId": "obs-smb-009-010",
+      "linkedAssistiveSignalEventId": "event-ai-smb-009-010",
+      "linkedReviewEventId": "event-human-smb-009-010",
+      "recollectionTaskId": null,
+      "field": "small-business",
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "evidenceType": "recollection-planning-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-010-001",
+      "syntheticProfileId": "synthetic-profile-001",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "sourceObservationId": "obs-smb-010-001",
+      "linkedAssistiveSignalEventId": "event-ai-smb-010-001",
+      "linkedReviewEventId": "event-human-smb-010-001",
+      "recollectionTaskId": null,
+      "field": "small-business",
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "evidenceType": "coordination-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-010-002",
+      "syntheticProfileId": "synthetic-profile-002",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "sourceObservationId": "obs-smb-010-002",
+      "linkedAssistiveSignalEventId": "event-ai-smb-010-002",
+      "linkedReviewEventId": "event-human-smb-010-002",
+      "recollectionTaskId": "recollect-smb-010-002",
+      "field": "small-business",
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "evidenceType": "synthetic-capture-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-010-003",
+      "syntheticProfileId": "synthetic-profile-003",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "sourceObservationId": "obs-smb-010-003",
+      "linkedAssistiveSignalEventId": "event-ai-smb-010-003",
+      "linkedReviewEventId": "event-human-smb-010-003",
+      "recollectionTaskId": "recollect-smb-010-003",
+      "field": "small-business",
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "evidenceType": "independent-review-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-010-004",
+      "syntheticProfileId": "synthetic-profile-004",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "sourceObservationId": "obs-smb-010-004",
+      "linkedAssistiveSignalEventId": "event-ai-smb-010-004",
+      "linkedReviewEventId": "event-human-smb-010-004",
+      "recollectionTaskId": "recollect-smb-010-004",
+      "field": "small-business",
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "evidenceType": "rights-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-010-005",
+      "syntheticProfileId": "synthetic-profile-005",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "sourceObservationId": "obs-smb-010-005",
+      "linkedAssistiveSignalEventId": "event-ai-smb-010-005",
+      "linkedReviewEventId": "event-human-smb-010-005",
+      "recollectionTaskId": "recollect-smb-010-005",
+      "field": "small-business",
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "evidenceType": "controlled-context-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-010-006",
+      "syntheticProfileId": "synthetic-profile-006",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "sourceObservationId": "obs-smb-010-006",
+      "linkedAssistiveSignalEventId": "event-ai-smb-010-006",
+      "linkedReviewEventId": "event-human-smb-010-006",
+      "recollectionTaskId": "recollect-smb-010-006",
+      "field": "small-business",
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "evidenceType": "recollection-planning-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-010-007",
+      "syntheticProfileId": "synthetic-profile-001",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "sourceObservationId": "obs-smb-010-007",
+      "linkedAssistiveSignalEventId": "event-ai-smb-010-007",
+      "linkedReviewEventId": "event-human-smb-010-007",
+      "recollectionTaskId": "recollect-smb-010-007",
+      "field": "small-business",
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "evidenceType": "coordination-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-010-008",
+      "syntheticProfileId": "synthetic-profile-002",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "sourceObservationId": "obs-smb-010-008",
+      "linkedAssistiveSignalEventId": "event-ai-smb-010-008",
+      "linkedReviewEventId": "event-human-smb-010-008",
+      "recollectionTaskId": "recollect-smb-010-008",
+      "field": "small-business",
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "evidenceType": "synthetic-capture-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-010-009",
+      "syntheticProfileId": "synthetic-profile-003",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "sourceObservationId": "obs-smb-010-009",
+      "linkedAssistiveSignalEventId": "event-ai-smb-010-009",
+      "linkedReviewEventId": "event-human-smb-010-009",
+      "recollectionTaskId": "recollect-smb-010-009",
+      "field": "small-business",
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "evidenceType": "independent-review-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-010-010",
+      "syntheticProfileId": "synthetic-profile-004",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "sourceObservationId": "obs-smb-010-010",
+      "linkedAssistiveSignalEventId": "event-ai-smb-010-010",
+      "linkedReviewEventId": "event-human-smb-010-010",
+      "recollectionTaskId": null,
+      "field": "small-business",
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "evidenceType": "rights-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-011-001",
+      "syntheticProfileId": "synthetic-profile-005",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "sourceObservationId": "obs-smb-011-001",
+      "linkedAssistiveSignalEventId": "event-ai-smb-011-001",
+      "linkedReviewEventId": "event-human-smb-011-001",
+      "recollectionTaskId": null,
+      "field": "small-business",
+      "scenarioId": "syn-smb-005-shelf-label",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "evidenceType": "controlled-context-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-011-002",
+      "syntheticProfileId": "synthetic-profile-006",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "sourceObservationId": "obs-smb-011-002",
+      "linkedAssistiveSignalEventId": "event-ai-smb-011-002",
+      "linkedReviewEventId": "event-human-smb-011-002",
+      "recollectionTaskId": "recollect-smb-011-002",
+      "field": "small-business",
+      "scenarioId": "syn-smb-005-shelf-label",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "evidenceType": "recollection-planning-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-011-003",
+      "syntheticProfileId": "synthetic-profile-001",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "sourceObservationId": "obs-smb-011-003",
+      "linkedAssistiveSignalEventId": "event-ai-smb-011-003",
+      "linkedReviewEventId": "event-human-smb-011-003",
+      "recollectionTaskId": "recollect-smb-011-003",
+      "field": "small-business",
+      "scenarioId": "syn-smb-005-shelf-label",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "evidenceType": "coordination-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-011-004",
+      "syntheticProfileId": "synthetic-profile-002",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "sourceObservationId": "obs-smb-011-004",
+      "linkedAssistiveSignalEventId": "event-ai-smb-011-004",
+      "linkedReviewEventId": "event-human-smb-011-004",
+      "recollectionTaskId": "recollect-smb-011-004",
+      "field": "small-business",
+      "scenarioId": "syn-smb-005-shelf-label",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "evidenceType": "synthetic-capture-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-011-005",
+      "syntheticProfileId": "synthetic-profile-003",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "sourceObservationId": "obs-smb-011-005",
+      "linkedAssistiveSignalEventId": "event-ai-smb-011-005",
+      "linkedReviewEventId": "event-human-smb-011-005",
+      "recollectionTaskId": "recollect-smb-011-005",
+      "field": "small-business",
+      "scenarioId": "syn-smb-005-shelf-label",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "evidenceType": "independent-review-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-011-006",
+      "syntheticProfileId": "synthetic-profile-004",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "sourceObservationId": "obs-smb-011-006",
+      "linkedAssistiveSignalEventId": "event-ai-smb-011-006",
+      "linkedReviewEventId": "event-human-smb-011-006",
+      "recollectionTaskId": "recollect-smb-011-006",
+      "field": "small-business",
+      "scenarioId": "syn-smb-005-shelf-label",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "evidenceType": "rights-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-011-007",
+      "syntheticProfileId": "synthetic-profile-005",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "sourceObservationId": "obs-smb-011-007",
+      "linkedAssistiveSignalEventId": "event-ai-smb-011-007",
+      "linkedReviewEventId": "event-human-smb-011-007",
+      "recollectionTaskId": "recollect-smb-011-007",
+      "field": "small-business",
+      "scenarioId": "syn-smb-005-shelf-label",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "evidenceType": "controlled-context-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-011-008",
+      "syntheticProfileId": "synthetic-profile-006",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "sourceObservationId": "obs-smb-011-008",
+      "linkedAssistiveSignalEventId": "event-ai-smb-011-008",
+      "linkedReviewEventId": "event-human-smb-011-008",
+      "recollectionTaskId": "recollect-smb-011-008",
+      "field": "small-business",
+      "scenarioId": "syn-smb-005-shelf-label",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "evidenceType": "recollection-planning-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-011-009",
+      "syntheticProfileId": "synthetic-profile-001",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "sourceObservationId": "obs-smb-011-009",
+      "linkedAssistiveSignalEventId": "event-ai-smb-011-009",
+      "linkedReviewEventId": "event-human-smb-011-009",
+      "recollectionTaskId": "recollect-smb-011-009",
+      "field": "small-business",
+      "scenarioId": "syn-smb-005-shelf-label",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "evidenceType": "coordination-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-011-010",
+      "syntheticProfileId": "synthetic-profile-002",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "sourceObservationId": "obs-smb-011-010",
+      "linkedAssistiveSignalEventId": "event-ai-smb-011-010",
+      "linkedReviewEventId": "event-human-smb-011-010",
+      "recollectionTaskId": null,
+      "field": "small-business",
+      "scenarioId": "syn-smb-005-shelf-label",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "evidenceType": "synthetic-capture-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-012-001",
+      "syntheticProfileId": "synthetic-profile-003",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "sourceObservationId": "obs-smb-012-001",
+      "linkedAssistiveSignalEventId": "event-ai-smb-012-001",
+      "linkedReviewEventId": "event-human-smb-012-001",
+      "recollectionTaskId": null,
+      "field": "small-business",
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "evidenceType": "independent-review-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-012-002",
+      "syntheticProfileId": "synthetic-profile-004",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "sourceObservationId": "obs-smb-012-002",
+      "linkedAssistiveSignalEventId": "event-ai-smb-012-002",
+      "linkedReviewEventId": "event-human-smb-012-002",
+      "recollectionTaskId": "recollect-smb-012-002",
+      "field": "small-business",
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "evidenceType": "rights-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-012-003",
+      "syntheticProfileId": "synthetic-profile-005",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "sourceObservationId": "obs-smb-012-003",
+      "linkedAssistiveSignalEventId": "event-ai-smb-012-003",
+      "linkedReviewEventId": "event-human-smb-012-003",
+      "recollectionTaskId": "recollect-smb-012-003",
+      "field": "small-business",
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "evidenceType": "controlled-context-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-012-004",
+      "syntheticProfileId": "synthetic-profile-006",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "sourceObservationId": "obs-smb-012-004",
+      "linkedAssistiveSignalEventId": "event-ai-smb-012-004",
+      "linkedReviewEventId": "event-human-smb-012-004",
+      "recollectionTaskId": "recollect-smb-012-004",
+      "field": "small-business",
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "evidenceType": "recollection-planning-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-012-005",
+      "syntheticProfileId": "synthetic-profile-001",
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "sourceObservationId": "obs-smb-012-005",
+      "linkedAssistiveSignalEventId": "event-ai-smb-012-005",
+      "linkedReviewEventId": "event-human-smb-012-005",
+      "recollectionTaskId": "recollect-smb-012-005",
+      "field": "small-business",
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-scope",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-001-consent-coordination",
+        "training-002-scope-boundaries",
+        "training-003-compensation-awareness"
+      ],
+      "evidenceType": "coordination-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-012-006",
+      "syntheticProfileId": "synthetic-profile-002",
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "sourceObservationId": "obs-smb-012-006",
+      "linkedAssistiveSignalEventId": "event-ai-smb-012-006",
+      "linkedReviewEventId": "event-human-smb-012-006",
+      "recollectionTaskId": "recollect-smb-012-006",
+      "field": "small-business",
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-scope",
+        "competency-compensation",
+        "competency-quality",
+        "competency-safety"
+      ],
+      "trainingModuleIds": [
+        "training-004-five-gate-readiness",
+        "training-005-capture-quality",
+        "training-006-safety-stop"
+      ],
+      "evidenceType": "synthetic-capture-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-012-007",
+      "syntheticProfileId": "synthetic-profile-003",
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "sourceObservationId": "obs-smb-012-007",
+      "linkedAssistiveSignalEventId": "event-ai-smb-012-007",
+      "linkedReviewEventId": "event-human-smb-012-007",
+      "recollectionTaskId": "recollect-smb-012-007",
+      "field": "small-business",
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "competencyCodes": [
+        "competency-independent-review",
+        "competency-quality",
+        "competency-safety",
+        "competency-recollection"
+      ],
+      "trainingModuleIds": [
+        "training-007-review-separation",
+        "training-008-quality-taxonomy",
+        "training-009-recollection-reason"
+      ],
+      "evidenceType": "independent-review-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-012-008",
+      "syntheticProfileId": "synthetic-profile-004",
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "sourceObservationId": "obs-smb-012-008",
+      "linkedAssistiveSignalEventId": "event-ai-smb-012-008",
+      "linkedReviewEventId": "event-human-smb-012-008",
+      "recollectionTaskId": "recollect-smb-012-008",
+      "field": "small-business",
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "competencyCodes": [
+        "competency-consent",
+        "competency-rights",
+        "competency-independent-review"
+      ],
+      "trainingModuleIds": [
+        "training-010-consent-usage",
+        "training-011-license-boundary",
+        "training-012-access-retention"
+      ],
+      "evidenceType": "rights-boundary-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-012-009",
+      "syntheticProfileId": "synthetic-profile-005",
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "sourceObservationId": "obs-smb-012-009",
+      "linkedAssistiveSignalEventId": "event-ai-smb-012-009",
+      "linkedReviewEventId": "event-human-smb-012-009",
+      "recollectionTaskId": "recollect-smb-012-009",
+      "field": "small-business",
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "competencyCodes": [
+        "competency-scope",
+        "competency-safety",
+        "competency-quality",
+        "competency-recollection",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-013-controlled-handoff",
+        "training-014-incident-quality-link",
+        "training-015-version-rights-check"
+      ],
+      "evidenceType": "controlled-context-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    },
+    {
+      "evidenceId": "evidence-smb-012-010",
+      "syntheticProfileId": "synthetic-profile-006",
+      "proposedRoleId": "occ-006-recollection-operator",
+      "sourceObservationId": "obs-smb-012-010",
+      "linkedAssistiveSignalEventId": "event-ai-smb-012-010",
+      "linkedReviewEventId": "event-human-smb-012-010",
+      "recollectionTaskId": null,
+      "field": "small-business",
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "competencyCodes": [
+        "competency-recollection",
+        "competency-scope",
+        "competency-consent",
+        "competency-safety",
+        "competency-compensation",
+        "competency-independent-review",
+        "competency-rights"
+      ],
+      "trainingModuleIds": [
+        "training-016-issue-scoping",
+        "training-017-gate-reconfirmation",
+        "training-018-retry-lineage"
+      ],
+      "evidenceType": "recollection-planning-demonstration",
+      "verificationStatus": "demonstration-only-reviewed-not-training-completion",
+      "verifierRole": "independent-career-evidence-reviewer",
+      "decisionAuthority": "human",
+      "rights": {
+        "status": "clean-room-synthetic-demonstration-record",
+        "thirdPartyMediaUsed": false,
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "비식별 합성 프로필의 demonstration-only 기록이며 실제 사람, 청년 활동, 교육 수료, 자격, 채용, 임금, 고용 성과, 고객, 파트너 또는 결제를 증명하지 않음",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-demonstration-not-employment-or-credential",
+      "version": "1.0.0"
+    }
+  ]
+}

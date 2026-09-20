@@ -1,0 +1,522 @@
+{
+  "schemaVersion": "1.0.0",
+  "ledgerId": "naeil-synthetic-image-generation-completions-v1",
+  "version": "1.0.0",
+  "sourceType": "AI-generated synthetic example",
+  "status": "canonical-human-reviewed-prototype-completions",
+  "completionCount": 8,
+  "imageGenerationQueueRef": "public/data/image-generation-queue.json",
+  "assetManifestRef": "public/assets/asset-manifest.json",
+  "rights": {
+    "status": "project-use-records-only",
+    "thirdPartyMediaUsed": false,
+    "codeLicenseApplies": false
+  },
+  "usageBoundary": "사람이 시각 확인한 AI 생성 합성 prototype illustration 기록이며 실제 수집, 청년 수행, 파트너 현장 자료 또는 승인 학습 데이터가 아님",
+  "completions": [
+    {
+      "completionId": "completion-mfg-001-component-surface-baseline-accepted-v1",
+      "assetId": "asset-mfg-001-component-surface-baseline-accepted",
+      "promptId": "imgprompt-mfg-001-component-surface-baseline-accepted",
+      "scenarioId": "syn-mfg-001-component-surface",
+      "field": "manufacturing",
+      "variationType": "baseline-accepted",
+      "filePath": "public/assets/generated/syn-mfg-001-component-surface-baseline-accepted.png",
+      "mediaType": "image/png",
+      "tool": "OpenAI image_gen",
+      "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+      "generatorOutputId": "exec-2653c066-dc75-4163-8119-26ea186c70b8.png",
+      "exactPrompt": "Use case: photorealistic-natural\nAsset type: NAEIL synthetic dataset representative image\nPrimary request: Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 소형 가공 부품 표면 상태 예시; task type: component-surface-inspection.\nScene/backdrop: generic unbranded indoor inspection workbench that cannot identify any real place\nSubject: only synthetic machined metal components, with component surfaces and edges as the clear inspection area\nStyle/medium: polished realistic industrial photography, clearly staged as a synthetic demonstration\nComposition/framing: wide 16:9 landscape, sharp complete inspection area, no cropping of primary parts\nLighting/mood: even neutral inspection lighting, safe and orderly\nConstraints: baseline accepted-quality frame; no visible safety risk; synthetic candidate for independent human review, not approved data; no people, faces, hands, body parts, logos, branding, readable text, letters, numbers, store names, contact details, addresses, maps, coordinates, private location clues, license plates, identity documents, recognizable real premises, watermarks, or signatures; do not depict actual youth work or a real partner site\nAvoid: clutter, blur, occlusion, duplicate objects that confuse inspection, out-of-scope background",
+      "promptSha256": "fbb1fdaf96a455bb7e8c8b78dcc69a8e3055fe8dc57b3ea722cabdd16f2dfce3",
+      "file": {
+        "sha256": "d05625cad53b626bbd87b48eb06ce377ca92de92424b63de2592868d6da2a562",
+        "byteLength": 1792417,
+        "pixelWidth": 1672,
+        "pixelHeight": 941
+      },
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      },
+      "rights": {
+        "status": "project-use-granted",
+        "basis": "clean-room imagegen output with exact prompt, generator IDs, file integrity, and human visual review recorded",
+        "permittedUses": [
+          "NAEIL prototype illustration",
+          "NAEIL competition-submission illustration"
+        ],
+        "prohibitedUses": [
+          "claiming real field collection",
+          "claiming youth work or partner-site data",
+          "claiming approved model-training data",
+          "identifying or representing a real person, customer, or business site"
+        ],
+        "codeLicenseApplies": false
+      },
+      "syntheticBoundary": {
+        "notFieldCollection": true,
+        "notYouthWork": true,
+        "notPartnerData": true,
+        "notApprovedTrainingData": true
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "generated-human-reviewed-for-prototype-use",
+      "usageBoundary": "prototype illustration 용도로만 사람 검수되었으며 실제 수집, 청년 수행, 파트너 현장 자료 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "completionId": "completion-mfg-002-fastener-tray-baseline-accepted-v1",
+      "assetId": "asset-mfg-002-fastener-tray-baseline-accepted",
+      "assetTitle": "체결부품 트레이 배열 baseline 합성 대표 이미지",
+      "promptId": "imgprompt-mfg-002-fastener-tray-baseline-accepted",
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "field": "manufacturing",
+      "variationType": "baseline-accepted",
+      "filePath": "public/assets/generated/syn-mfg-002-fastener-tray-baseline-accepted.png",
+      "mediaType": "image/png",
+      "tool": "OpenAI image_gen",
+      "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+      "generatorOutputId": "exec-6a006a34-ef4e-4792-948f-5f762304e5fc.png",
+      "exactPrompt": "Use case: photorealistic-natural\nAsset type: NAEIL synthetic dataset representative image\nPrimary request: Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 체결부품 트레이 배열 예시; task type: fastener-tray-arrangement.\nScene/backdrop: generic unbranded indoor inspection workbench that cannot identify any real place\nSubject: only a synthetic modular tray of generic bolts, nuts, washers, and fasteners, with tray compartments and orderly part arrangement as the clear inspection area\nStyle/medium: polished realistic industrial photography, clearly staged as a synthetic demonstration\nComposition/framing: wide 16:9 landscape, top-down three-quarter view, sharp complete tray, every primary compartment visible\nLighting/mood: even neutral inspection lighting, safe and orderly\nConstraints: baseline accepted-quality frame; no visible safety risk; synthetic candidate for independent human review, not approved data; no people, faces, hands, body parts, logos, branding, readable text, letters, numbers, store names, contact details, addresses, maps, coordinates, private location clues, license plates, identity documents, recognizable real premises, watermarks, or signatures; do not depict actual youth work or a real partner site\nAvoid: clutter, blur, occlusion, missing tray edges, mixed unrelated objects, out-of-scope background",
+      "promptSha256": "a3b7a0495ab8fb0f5f171046e952a253c0dd9d4e3b2730ed78db60cea492528a",
+      "file": {
+        "sha256": "583e1bf0d3a5493d70831947c18f6c98e02c464a7d23e7021c9524aefd9a43a9",
+        "byteLength": 2340409,
+        "pixelWidth": 1672,
+        "pixelHeight": 941
+      },
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      },
+      "rights": {
+        "status": "project-use-granted",
+        "basis": "clean-room imagegen output with exact prompt, generator IDs, file integrity, and human visual review recorded",
+        "permittedUses": [
+          "NAEIL prototype illustration",
+          "NAEIL competition-submission illustration"
+        ],
+        "prohibitedUses": [
+          "claiming real field collection",
+          "claiming youth work or partner-site data",
+          "claiming approved model-training data",
+          "identifying or representing a real person, customer, or business site"
+        ],
+        "codeLicenseApplies": false
+      },
+      "syntheticBoundary": {
+        "notFieldCollection": true,
+        "notYouthWork": true,
+        "notPartnerData": true,
+        "notApprovedTrainingData": true
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "generated-human-reviewed-for-prototype-use",
+      "usageBoundary": "prototype illustration 용도로만 사람 검수되었으며 실제 수집, 청년 수행, 파트너 현장 자료 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "completionId": "completion-mfg-003-safety-zone-baseline-accepted-v1",
+      "assetId": "asset-mfg-003-safety-zone-baseline-accepted",
+      "assetTitle": "안전구역 바닥 표시 baseline 합성 대표 이미지",
+      "promptId": "imgprompt-mfg-003-safety-zone-baseline-accepted",
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "field": "manufacturing",
+      "variationType": "baseline-accepted",
+      "filePath": "public/assets/generated/syn-mfg-003-safety-zone-baseline-accepted.png",
+      "mediaType": "image/png",
+      "tool": "OpenAI image_gen",
+      "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+      "generatorOutputId": "exec-e0cf027b-90c3-461b-a5bf-1e74f4df0ce1.png",
+      "exactPrompt": "Use case: photorealistic-natural\nAsset type: NAEIL synthetic dataset representative image\nPrimary request: Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 안전구역 바닥 표시 예시; task type: safety-zone-marking-check.\nScene/backdrop: generic unbranded indoor industrial aisle that cannot identify any real place\nSubject: only synthetic floor safety-zone markings, aisle boundaries, and a clear empty walkway, with the boundary geometry as the inspection area\nStyle/medium: polished realistic industrial photography, clearly staged as a synthetic demonstration\nComposition/framing: wide 16:9 landscape, low three-quarter perspective, full path and boundary markings visible without cropping\nLighting/mood: even neutral indoor lighting, clean and safe\nConstraints: baseline accepted-quality frame; no visible hazard or obstruction; synthetic candidate for independent human review, not approved data; no people, faces, hands, body parts, logos, branding, readable text, letters, numbers, store names, contact details, addresses, maps, coordinates, private location clues, license plates, identity documents, recognizable real premises, watermarks, or signatures; do not depict actual youth work or a real partner site\nAvoid: emergency signage with text, arrows containing labels, clutter, blur, occlusion, blocked walkway, real company colors or branding",
+      "promptSha256": "484b18822d089f8e3fc4c7395b8615f356d96cb413129abbc81ac07ffac6bce2",
+      "file": {
+        "sha256": "0b76fd9f8410f59296b315e2e7fd3b931029b7decf5658da675ef092e28be225",
+        "byteLength": 1904266,
+        "pixelWidth": 1672,
+        "pixelHeight": 941
+      },
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      },
+      "rights": {
+        "status": "project-use-granted",
+        "basis": "clean-room imagegen output with exact prompt, generator IDs, file integrity, and human visual review recorded",
+        "permittedUses": [
+          "NAEIL prototype illustration",
+          "NAEIL competition-submission illustration"
+        ],
+        "prohibitedUses": [
+          "claiming real field collection",
+          "claiming youth work or partner-site data",
+          "claiming approved model-training data",
+          "identifying or representing a real person, customer, or business site"
+        ],
+        "codeLicenseApplies": false
+      },
+      "syntheticBoundary": {
+        "notFieldCollection": true,
+        "notYouthWork": true,
+        "notPartnerData": true,
+        "notApprovedTrainingData": true
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "generated-human-reviewed-for-prototype-use",
+      "usageBoundary": "prototype illustration 용도로만 사람 검수되었으며 실제 수집, 청년 수행, 파트너 현장 자료 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "completionId": "completion-smb-003-produce-weighing-baseline-accepted-v1",
+      "assetId": "asset-smb-003-produce-weighing-baseline-accepted",
+      "assetTitle": "청과물 계량 작업 baseline 합성 대표 이미지",
+      "promptId": "imgprompt-smb-003-produce-weighing-baseline-accepted",
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "field": "small-business",
+      "variationType": "baseline-accepted",
+      "filePath": "public/assets/generated/syn-smb-003-produce-weighing-baseline-accepted.png",
+      "mediaType": "image/png",
+      "tool": "OpenAI image_gen",
+      "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+      "generatorOutputId": "exec-dd5ebc61-72eb-492e-b2dd-fb9b6267aeec.png",
+      "exactPrompt": "Use case: photorealistic-natural\nAsset type: NAEIL synthetic dataset representative image\nPrimary request: Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 청과물 계량 작업 예시; task type: produce-weighing-check.\nScene/backdrop: generic unbranded indoor produce work counter that cannot identify any real place\nSubject: only synthetic apples and citrus arranged around a plain digital scale, with the weighing plate and neutral display state as the clear inspection area\nStyle/medium: polished realistic small-business photography, clearly staged as a synthetic demonstration\nComposition/framing: wide 16:9 landscape, three-quarter tabletop view, full scale and produce groups visible without cropping\nLighting/mood: soft even daylight-balanced lighting, clean and orderly\nConstraints: baseline accepted-quality frame; display may be blank or abstract non-readable segments only; no visible safety risk; synthetic candidate for independent human review, not approved data; no people, faces, hands, body parts, logos, branding, readable text, letters, numbers, price labels, store names, contact details, addresses, maps, coordinates, private location clues, recognizable real premises, watermarks, or signatures; do not depict actual youth work or a real partner site\nAvoid: real branded packaging, price signage, clutter, blur, occlusion, spoiled produce, identifiable storefronts",
+      "promptSha256": "1a2afa81abee36a3c7303aafc76ed58e15fa79c173fb547f000a2a0d6ed18f32",
+      "file": {
+        "sha256": "6e34ec21ba506e2bc2d0d2e249c76277e763563dc6f38ce2d571c1cbf1c70168",
+        "byteLength": 2012846,
+        "pixelWidth": 1672,
+        "pixelHeight": 941
+      },
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      },
+      "rights": {
+        "status": "project-use-granted",
+        "basis": "clean-room imagegen output with exact prompt, generator IDs, file integrity, and human visual review recorded",
+        "permittedUses": [
+          "NAEIL prototype illustration",
+          "NAEIL competition-submission illustration"
+        ],
+        "prohibitedUses": [
+          "claiming real field collection",
+          "claiming youth work or partner-site data",
+          "claiming approved model-training data",
+          "identifying or representing a real person, customer, or business site"
+        ],
+        "codeLicenseApplies": false
+      },
+      "syntheticBoundary": {
+        "notFieldCollection": true,
+        "notYouthWork": true,
+        "notPartnerData": true,
+        "notApprovedTrainingData": true
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "generated-human-reviewed-for-prototype-use",
+      "usageBoundary": "prototype illustration 용도로만 사람 검수되었으며 실제 수집, 청년 수행, 파트너 현장 자료 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "completionId": "completion-smb-004-florist-wrapping-baseline-accepted-v1",
+      "assetId": "asset-smb-004-florist-wrapping-baseline-accepted",
+      "assetTitle": "꽃집 포장 단계 baseline 합성 대표 이미지",
+      "promptId": "imgprompt-smb-004-florist-wrapping-baseline-accepted",
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "field": "small-business",
+      "variationType": "baseline-accepted",
+      "filePath": "public/assets/generated/syn-smb-004-florist-wrapping-baseline-accepted.png",
+      "mediaType": "image/png",
+      "tool": "OpenAI image_gen",
+      "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+      "generatorOutputId": "exec-c91b04ca-59f4-4ee3-adc3-9a173e27fcdb.png",
+      "exactPrompt": "Use case: photorealistic-natural\nAsset type: NAEIL synthetic dataset representative image\nPrimary request: Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 꽃집 포장 단계 예시; task type: florist-wrapping-stage-check.\nScene/backdrop: generic unbranded indoor florist worktable that cannot identify any real place\nSubject: only a synthetic bouquet in progress, neutral wrapping paper, ribbon, and safe blunt floral tools arranged to show folding and tying stages\nStyle/medium: polished realistic small-business photography, clearly staged as a synthetic demonstration\nComposition/framing: wide 16:9 landscape, three-quarter tabletop view, full bouquet and wrapping folds visible without cropping\nLighting/mood: soft even daylight-balanced lighting, clean and orderly\nConstraints: baseline accepted-quality frame; no visible safety risk; synthetic candidate for independent human review, not approved data; no people, faces, hands, body parts, logos, branding, readable text, letters, numbers, price labels, store names, contact details, addresses, private location clues, recognizable real premises, watermarks, or signatures; do not depict actual youth work or a real partner site\nAvoid: branded paper, printed ribbons, greeting cards with text, clutter, blur, occlusion, identifiable storefronts",
+      "promptSha256": "c486c0c21633faa407f441b90dd8b86a011fa440fdc1a4d9d1ecacfcb2b1ef9d",
+      "file": {
+        "sha256": "553871d54ec3d44e3968c2ec6816555dacd44836ead159a321a5c69a43c65f1a",
+        "byteLength": 2267940,
+        "pixelWidth": 1672,
+        "pixelHeight": 941
+      },
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "stationaryBluntFloralToolsOnly": true,
+          "prototypeIllustrationSuitable": true
+        }
+      },
+      "rights": {
+        "status": "project-use-granted",
+        "basis": "clean-room imagegen output with exact prompt, generator IDs, file integrity, and human visual review recorded",
+        "permittedUses": [
+          "NAEIL prototype illustration",
+          "NAEIL competition-submission illustration"
+        ],
+        "prohibitedUses": [
+          "claiming real field collection",
+          "claiming youth work or partner-site data",
+          "claiming approved model-training data",
+          "identifying or representing a real person, customer, or business site"
+        ],
+        "codeLicenseApplies": false
+      },
+      "syntheticBoundary": {
+        "notFieldCollection": true,
+        "notYouthWork": true,
+        "notPartnerData": true,
+        "notApprovedTrainingData": true
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "generated-human-reviewed-for-prototype-use",
+      "usageBoundary": "prototype illustration 용도로만 사람 검수되었으며 실제 수집, 청년 수행, 파트너 현장 자료, 안전 인증 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "completionId": "completion-smb-006-ingredient-bin-baseline-accepted-v1",
+      "assetId": "asset-smb-006-ingredient-bin-baseline-accepted",
+      "assetTitle": "주방 재료통 분류 baseline 합성 대표 이미지",
+      "promptId": "imgprompt-smb-006-ingredient-bin-baseline-accepted",
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "field": "small-business",
+      "variationType": "baseline-accepted",
+      "filePath": "public/assets/generated/syn-smb-006-ingredient-bin-baseline-accepted.png",
+      "mediaType": "image/png",
+      "tool": "OpenAI image_gen",
+      "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+      "generatorOutputId": "exec-066c7c42-1471-4426-a29d-6c50059def4a.png",
+      "exactPrompt": "Use case: photorealistic-natural\nAsset type: NAEIL synthetic dataset representative image\nPrimary request: Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: small-business; scenario: 주방 재료통 분류 예시; task type: ingredient-bin-sorting.\nScene/backdrop: generic unbranded commercial kitchen prep shelf that cannot identify any real place\nSubject: only transparent and stainless ingredient bins containing visually distinct dry ingredients, arranged in a clean grid with color-coded blank geometric markers and no words\nStyle/medium: polished realistic small-business photography, clearly staged as a synthetic demonstration\nComposition/framing: wide 16:9 landscape, frontal three-quarter view, all primary bins and their arrangement fully visible\nLighting/mood: even neutral food-prep lighting, clean and orderly\nConstraints: baseline accepted-quality frame; all containers closed or safely covered; no visible safety risk; synthetic candidate for independent human review, not approved data; no people, faces, hands, body parts, logos, branding, readable text, letters, numbers, labels, store names, contact details, addresses, private location clues, recognizable real premises, watermarks, or signatures; do not depict actual youth work or a real partner site\nAvoid: handwritten labels, branded packaging, allergen claims, spoiled ingredients, clutter, blur, occlusion, identifiable restaurant interiors",
+      "promptSha256": "64642e5f354547b7936ddd29fe08933fcc27a3b5915d049598ba82e21db41be8",
+      "file": {
+        "sha256": "0f7bb7cddc0c497042d861d9e714f291795e967b9608c2db5a6dfe0bcbd2d844",
+        "byteLength": 2751818,
+        "pixelWidth": 1672,
+        "pixelHeight": 941
+      },
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      },
+      "rights": {
+        "status": "project-use-granted",
+        "basis": "clean-room imagegen output with exact prompt, generator IDs, file integrity, and human visual review recorded",
+        "permittedUses": [
+          "NAEIL prototype illustration",
+          "NAEIL competition-submission illustration"
+        ],
+        "prohibitedUses": [
+          "claiming real field collection",
+          "claiming youth work or partner-site data",
+          "claiming approved model-training data",
+          "identifying or representing a real person, customer, or business site"
+        ],
+        "codeLicenseApplies": false
+      },
+      "syntheticBoundary": {
+        "notFieldCollection": true,
+        "notYouthWork": true,
+        "notPartnerData": true,
+        "notApprovedTrainingData": true
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "generated-human-reviewed-for-prototype-use",
+      "usageBoundary": "prototype illustration 용도로만 사람 검수되었으며 실제 수집, 청년 수행, 파트너 현장 자료 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "completionId": "completion-mfg-004-packaging-check-baseline-accepted-v1",
+      "assetId": "asset-mfg-004-packaging-check-baseline-accepted",
+      "assetTitle": "부품 포장 상태 확인 baseline 합성 대표 이미지",
+      "promptId": "imgprompt-mfg-004-packaging-check-baseline-accepted",
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "field": "manufacturing",
+      "variationType": "baseline-accepted",
+      "filePath": "public/assets/generated/syn-mfg-004-packaging-check-baseline-accepted.png",
+      "mediaType": "image/png",
+      "tool": "OpenAI image_gen",
+      "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+      "generatorOutputId": "exec-ff3f473b-4aca-42c8-983f-54fc7eb03615.png",
+      "exactPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 부품 포장 상태 확인 예시; task type: component-packaging-check. Show only 합성 부품 포장, with 밀봉부와 완충재 배치 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Render a sharp, evenly lit, complete, unique, in-scope baseline frame with no visible safety risk; it remains a synthetic candidate for independent human review, not approved data. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "promptSha256": "f6743023b5add6a47c9c9e18d26edd1b86918d4787ac37ca3b06b82c457963fe",
+      "file": {
+        "sha256": "d832d0e5f779921436021a814cfc556c5bcb2d3378749339a7031ae162373b44",
+        "byteLength": 2547600,
+        "pixelWidth": 1672,
+        "pixelHeight": 941
+      },
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      },
+      "rights": {
+        "status": "project-use-granted",
+        "basis": "clean-room imagegen output with exact prompt, generator IDs, file integrity, and human visual review recorded",
+        "permittedUses": [
+          "NAEIL prototype illustration",
+          "NAEIL competition-submission illustration"
+        ],
+        "prohibitedUses": [
+          "claiming real field collection",
+          "claiming youth work or partner-site data",
+          "claiming approved model-training data",
+          "identifying or representing a real person, customer, or business site"
+        ],
+        "codeLicenseApplies": false
+      },
+      "syntheticBoundary": {
+        "notFieldCollection": true,
+        "notYouthWork": true,
+        "notPartnerData": true,
+        "notApprovedTrainingData": true
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "generated-human-reviewed-for-prototype-use",
+      "usageBoundary": "prototype illustration 용도로만 사람 검수되었으며 실제 수집, 청년 수행, 파트너 현장 자료, 승인 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    },
+    {
+      "completionId": "completion-mfg-005-bin-label-baseline-accepted-v1",
+      "assetId": "asset-mfg-005-bin-label-baseline-accepted",
+      "assetTitle": "부품 보관함 라벨 정합 baseline 합성 대표 이미지",
+      "promptId": "imgprompt-mfg-005-bin-label-baseline-accepted",
+      "scenarioId": "syn-mfg-005-bin-label",
+      "field": "manufacturing",
+      "variationType": "baseline-accepted",
+      "filePath": "public/assets/generated/syn-mfg-005-bin-label-baseline-accepted.png",
+      "mediaType": "image/png",
+      "tool": "OpenAI image_gen",
+      "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+      "generatorOutputId": "exec-c52fe9c6-c5c4-49a2-905e-dbc8081e917a.png",
+      "exactPrompt": "Create a clean-room, photorealistic but unmistakably synthetic 16:9 object-only demonstration image for NAEIL. Field context: manufacturing; scenario: 부품 보관함 라벨 정합 예시; task type: parts-bin-label-verification. Show only 합성 부품 보관함, with 보관함 위치와 비식별 범주 라벨 as the clear inspection area, in a generic unbranded interior that cannot identify any real place. Render a sharp, evenly lit, complete, unique, in-scope baseline frame with no visible safety risk; it remains a synthetic candidate for independent human review, not approved data. No people, faces, hands, logos, readable text, private location clues, or recognizable real business exterior. Do not depict actual youth work or a real partner site.",
+      "promptSha256": "4e62144865e40f31575b378f25a6b3e24fab6d1e11583358cc1bfbe27d2ad538",
+      "file": {
+        "sha256": "9796442ed142f32f3ddaaf760ddce80758433c07838e953c0288146d4c5e6f51",
+        "byteLength": 1909981,
+        "pixelWidth": 1672,
+        "pixelHeight": 941
+      },
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      },
+      "rights": {
+        "status": "project-use-granted",
+        "basis": "clean-room imagegen output with exact prompt, generator IDs, file integrity, and human visual review recorded",
+        "permittedUses": [
+          "NAEIL prototype illustration",
+          "NAEIL competition-submission illustration"
+        ],
+        "prohibitedUses": [
+          "claiming real field collection",
+          "claiming youth work or partner-site data",
+          "claiming approved model-training data",
+          "identifying or representing a real person, customer, or business site"
+        ],
+        "codeLicenseApplies": false
+      },
+      "syntheticBoundary": {
+        "notFieldCollection": true,
+        "notYouthWork": true,
+        "notPartnerData": true,
+        "notApprovedTrainingData": true
+      },
+      "sourceType": "AI-generated synthetic example",
+      "status": "generated-human-reviewed-for-prototype-use",
+      "usageBoundary": "prototype illustration 용도로만 사람 검수되었으며 실제 수집, 청년 수행, 파트너 현장 자료, 승인 또는 승인 학습 데이터가 아님",
+      "version": "1.0.0"
+    }
+  ]
+}

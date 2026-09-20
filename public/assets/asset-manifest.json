@@ -221,6 +221,575 @@
         "notPartnerData": true,
         "notApprovedTrainingData": true
       }
+    },
+    {
+      "id": "asset-mfg-001-component-surface-baseline-accepted",
+      "field": "manufacturing",
+      "title": "가공 부품 표면 상태 baseline 합성 대표 이미지",
+      "filePath": "public/assets/generated/syn-mfg-001-component-surface-baseline-accepted.png",
+      "mediaType": "image/png",
+      "sourceType": "AI-generated synthetic example",
+      "provenanceCompleteness": "complete-exact-prompt-generator-file-and-human-review",
+      "completionLedgerRef": "public/data/image-generation-completions.json#completion-mfg-001-component-surface-baseline-accepted-v1",
+      "promptId": "imgprompt-mfg-001-component-surface-baseline-accepted",
+      "generation": {
+        "tool": "OpenAI image_gen",
+        "sessionType": "local-imagegen-session",
+        "localSourceId": "exec-2653c066-dc75-4163-8119-26ea186c70b8.png",
+        "localSourceStatus": "recorded-in-completion-ledger",
+        "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+        "generatorOutputId": "exec-2653c066-dc75-4163-8119-26ea186c70b8.png",
+        "generatedLocally": true,
+        "attestationBasis": "canonical completion ledger with exact prompt, generator identifiers, file integrity, and human visual review"
+      },
+      "prompt": {
+        "status": "recorded",
+        "sha256": "fbb1fdaf96a455bb7e8c8b78dcc69a8e3055fe8dc57b3ea722cabdd16f2dfce3",
+        "exactPromptRef": "public/data/image-generation-completions.json#completion-mfg-001-component-surface-baseline-accepted-v1.exactPrompt",
+        "containsNoPersonalData": "confirmed-by-human-visual-review",
+        "containsNoPrivateSiteDetails": "confirmed-by-human-visual-review"
+      },
+      "file": {
+        "sha256": "d05625cad53b626bbd87b48eb06ce377ca92de92424b63de2592868d6da2a562",
+        "byteLength": 1792417,
+        "pixelWidth": 1672,
+        "pixelHeight": 941
+      },
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      },
+      "rights": {
+        "status": "project-use-granted",
+        "basis": "clean-room imagegen output with exact prompt, generator IDs, file integrity, and human visual review recorded",
+        "permittedUses": [
+          "NAEIL prototype illustration",
+          "NAEIL competition-submission illustration"
+        ],
+        "prohibitedUses": [
+          "claiming real field collection",
+          "claiming youth work or partner-site data",
+          "claiming approved model-training data",
+          "identifying or representing a real person, customer, or business site"
+        ],
+        "codeLicenseApplies": false
+      },
+      "syntheticBoundary": {
+        "notFieldCollection": true,
+        "notYouthWork": true,
+        "notPartnerData": true,
+        "notApprovedTrainingData": true
+      }
+    },
+    {
+      "id": "asset-mfg-002-fastener-tray-baseline-accepted",
+      "field": "manufacturing",
+      "title": "체결부품 트레이 배열 baseline 합성 대표 이미지",
+      "filePath": "public/assets/generated/syn-mfg-002-fastener-tray-baseline-accepted.png",
+      "mediaType": "image/png",
+      "sourceType": "AI-generated synthetic example",
+      "provenanceCompleteness": "complete-exact-prompt-generator-file-and-human-review",
+      "completionLedgerRef": "public/data/image-generation-completions.json#completion-mfg-002-fastener-tray-baseline-accepted-v1",
+      "promptId": "imgprompt-mfg-002-fastener-tray-baseline-accepted",
+      "generation": {
+        "tool": "OpenAI image_gen",
+        "sessionType": "local-imagegen-session",
+        "localSourceId": "exec-6a006a34-ef4e-4792-948f-5f762304e5fc.png",
+        "localSourceStatus": "recorded-in-completion-ledger",
+        "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+        "generatorOutputId": "exec-6a006a34-ef4e-4792-948f-5f762304e5fc.png",
+        "generatedLocally": true,
+        "attestationBasis": "canonical completion ledger with exact prompt, generator identifiers, file integrity, and human visual review"
+      },
+      "prompt": {
+        "status": "recorded",
+        "sha256": "a3b7a0495ab8fb0f5f171046e952a253c0dd9d4e3b2730ed78db60cea492528a",
+        "exactPromptRef": "public/data/image-generation-completions.json#completion-mfg-002-fastener-tray-baseline-accepted-v1.exactPrompt",
+        "containsNoPersonalData": "confirmed-by-human-visual-review",
+        "containsNoPrivateSiteDetails": "confirmed-by-human-visual-review"
+      },
+      "file": {
+        "sha256": "583e1bf0d3a5493d70831947c18f6c98e02c464a7d23e7021c9524aefd9a43a9",
+        "byteLength": 2340409,
+        "pixelWidth": 1672,
+        "pixelHeight": 941
+      },
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      },
+      "rights": {
+        "status": "project-use-granted",
+        "basis": "clean-room imagegen output with exact prompt, generator IDs, file integrity, and human visual review recorded",
+        "permittedUses": [
+          "NAEIL prototype illustration",
+          "NAEIL competition-submission illustration"
+        ],
+        "prohibitedUses": [
+          "claiming real field collection",
+          "claiming youth work or partner-site data",
+          "claiming approved model-training data",
+          "identifying or representing a real person, customer, or business site"
+        ],
+        "codeLicenseApplies": false
+      },
+      "syntheticBoundary": {
+        "notFieldCollection": true,
+        "notYouthWork": true,
+        "notPartnerData": true,
+        "notApprovedTrainingData": true
+      }
+    },
+    {
+      "id": "asset-mfg-003-safety-zone-baseline-accepted",
+      "field": "manufacturing",
+      "title": "안전구역 바닥 표시 baseline 합성 대표 이미지",
+      "filePath": "public/assets/generated/syn-mfg-003-safety-zone-baseline-accepted.png",
+      "mediaType": "image/png",
+      "sourceType": "AI-generated synthetic example",
+      "provenanceCompleteness": "complete-exact-prompt-generator-file-and-human-review",
+      "completionLedgerRef": "public/data/image-generation-completions.json#completion-mfg-003-safety-zone-baseline-accepted-v1",
+      "promptId": "imgprompt-mfg-003-safety-zone-baseline-accepted",
+      "generation": {
+        "tool": "OpenAI image_gen",
+        "sessionType": "local-imagegen-session",
+        "localSourceId": "exec-e0cf027b-90c3-461b-a5bf-1e74f4df0ce1.png",
+        "localSourceStatus": "recorded-in-completion-ledger",
+        "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+        "generatorOutputId": "exec-e0cf027b-90c3-461b-a5bf-1e74f4df0ce1.png",
+        "generatedLocally": true,
+        "attestationBasis": "canonical completion ledger with exact prompt, generator identifiers, file integrity, and human visual review"
+      },
+      "prompt": {
+        "status": "recorded",
+        "sha256": "484b18822d089f8e3fc4c7395b8615f356d96cb413129abbc81ac07ffac6bce2",
+        "exactPromptRef": "public/data/image-generation-completions.json#completion-mfg-003-safety-zone-baseline-accepted-v1.exactPrompt",
+        "containsNoPersonalData": "confirmed-by-human-visual-review",
+        "containsNoPrivateSiteDetails": "confirmed-by-human-visual-review"
+      },
+      "file": {
+        "sha256": "0b76fd9f8410f59296b315e2e7fd3b931029b7decf5658da675ef092e28be225",
+        "byteLength": 1904266,
+        "pixelWidth": 1672,
+        "pixelHeight": 941
+      },
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      },
+      "rights": {
+        "status": "project-use-granted",
+        "basis": "clean-room imagegen output with exact prompt, generator IDs, file integrity, and human visual review recorded",
+        "permittedUses": [
+          "NAEIL prototype illustration",
+          "NAEIL competition-submission illustration"
+        ],
+        "prohibitedUses": [
+          "claiming real field collection",
+          "claiming youth work or partner-site data",
+          "claiming approved model-training data",
+          "identifying or representing a real person, customer, or business site"
+        ],
+        "codeLicenseApplies": false
+      },
+      "syntheticBoundary": {
+        "notFieldCollection": true,
+        "notYouthWork": true,
+        "notPartnerData": true,
+        "notApprovedTrainingData": true
+      }
+    },
+    {
+      "id": "asset-smb-003-produce-weighing-baseline-accepted",
+      "field": "small-business",
+      "title": "청과물 계량 작업 baseline 합성 대표 이미지",
+      "filePath": "public/assets/generated/syn-smb-003-produce-weighing-baseline-accepted.png",
+      "mediaType": "image/png",
+      "sourceType": "AI-generated synthetic example",
+      "provenanceCompleteness": "complete-exact-prompt-generator-file-and-human-review",
+      "completionLedgerRef": "public/data/image-generation-completions.json#completion-smb-003-produce-weighing-baseline-accepted-v1",
+      "promptId": "imgprompt-smb-003-produce-weighing-baseline-accepted",
+      "generation": {
+        "tool": "OpenAI image_gen",
+        "sessionType": "local-imagegen-session",
+        "localSourceId": "exec-dd5ebc61-72eb-492e-b2dd-fb9b6267aeec.png",
+        "localSourceStatus": "recorded-in-completion-ledger",
+        "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+        "generatorOutputId": "exec-dd5ebc61-72eb-492e-b2dd-fb9b6267aeec.png",
+        "generatedLocally": true,
+        "attestationBasis": "canonical completion ledger with exact prompt, generator identifiers, file integrity, and human visual review"
+      },
+      "prompt": {
+        "status": "recorded",
+        "sha256": "1a2afa81abee36a3c7303aafc76ed58e15fa79c173fb547f000a2a0d6ed18f32",
+        "exactPromptRef": "public/data/image-generation-completions.json#completion-smb-003-produce-weighing-baseline-accepted-v1.exactPrompt",
+        "containsNoPersonalData": "confirmed-by-human-visual-review",
+        "containsNoPrivateSiteDetails": "confirmed-by-human-visual-review"
+      },
+      "file": {
+        "sha256": "6e34ec21ba506e2bc2d0d2e249c76277e763563dc6f38ce2d571c1cbf1c70168",
+        "byteLength": 2012846,
+        "pixelWidth": 1672,
+        "pixelHeight": 941
+      },
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      },
+      "rights": {
+        "status": "project-use-granted",
+        "basis": "clean-room imagegen output with exact prompt, generator IDs, file integrity, and human visual review recorded",
+        "permittedUses": [
+          "NAEIL prototype illustration",
+          "NAEIL competition-submission illustration"
+        ],
+        "prohibitedUses": [
+          "claiming real field collection",
+          "claiming youth work or partner-site data",
+          "claiming approved model-training data",
+          "identifying or representing a real person, customer, or business site"
+        ],
+        "codeLicenseApplies": false
+      },
+      "syntheticBoundary": {
+        "notFieldCollection": true,
+        "notYouthWork": true,
+        "notPartnerData": true,
+        "notApprovedTrainingData": true
+      }
+    },
+    {
+      "id": "asset-smb-004-florist-wrapping-baseline-accepted",
+      "field": "small-business",
+      "title": "꽃집 포장 단계 baseline 합성 대표 이미지",
+      "filePath": "public/assets/generated/syn-smb-004-florist-wrapping-baseline-accepted.png",
+      "mediaType": "image/png",
+      "sourceType": "AI-generated synthetic example",
+      "provenanceCompleteness": "complete-exact-prompt-generator-file-and-human-review",
+      "completionLedgerRef": "public/data/image-generation-completions.json#completion-smb-004-florist-wrapping-baseline-accepted-v1",
+      "promptId": "imgprompt-smb-004-florist-wrapping-baseline-accepted",
+      "generation": {
+        "tool": "OpenAI image_gen",
+        "sessionType": "local-imagegen-session",
+        "localSourceId": "exec-c91b04ca-59f4-4ee3-adc3-9a173e27fcdb.png",
+        "localSourceStatus": "recorded-in-completion-ledger",
+        "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+        "generatorOutputId": "exec-c91b04ca-59f4-4ee3-adc3-9a173e27fcdb.png",
+        "generatedLocally": true,
+        "attestationBasis": "canonical completion ledger with exact prompt, generator identifiers, file integrity, and human visual review"
+      },
+      "prompt": {
+        "status": "recorded",
+        "sha256": "c486c0c21633faa407f441b90dd8b86a011fa440fdc1a4d9d1ecacfcb2b1ef9d",
+        "exactPromptRef": "public/data/image-generation-completions.json#completion-smb-004-florist-wrapping-baseline-accepted-v1.exactPrompt",
+        "containsNoPersonalData": "confirmed-by-human-visual-review",
+        "containsNoPrivateSiteDetails": "confirmed-by-human-visual-review"
+      },
+      "file": {
+        "sha256": "553871d54ec3d44e3968c2ec6816555dacd44836ead159a321a5c69a43c65f1a",
+        "byteLength": 2267940,
+        "pixelWidth": 1672,
+        "pixelHeight": 941
+      },
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "stationaryBluntFloralToolsOnly": true,
+          "prototypeIllustrationSuitable": true
+        }
+      },
+      "rights": {
+        "status": "project-use-granted",
+        "basis": "clean-room imagegen output with exact prompt, generator IDs, file integrity, and human visual review recorded",
+        "permittedUses": [
+          "NAEIL prototype illustration",
+          "NAEIL competition-submission illustration"
+        ],
+        "prohibitedUses": [
+          "claiming real field collection",
+          "claiming youth work or partner-site data",
+          "claiming approved model-training data",
+          "identifying or representing a real person, customer, or business site"
+        ],
+        "codeLicenseApplies": false
+      },
+      "syntheticBoundary": {
+        "notFieldCollection": true,
+        "notYouthWork": true,
+        "notPartnerData": true,
+        "notApprovedTrainingData": true
+      }
+    },
+    {
+      "id": "asset-smb-006-ingredient-bin-baseline-accepted",
+      "field": "small-business",
+      "title": "주방 재료통 분류 baseline 합성 대표 이미지",
+      "filePath": "public/assets/generated/syn-smb-006-ingredient-bin-baseline-accepted.png",
+      "mediaType": "image/png",
+      "sourceType": "AI-generated synthetic example",
+      "provenanceCompleteness": "complete-exact-prompt-generator-file-and-human-review",
+      "completionLedgerRef": "public/data/image-generation-completions.json#completion-smb-006-ingredient-bin-baseline-accepted-v1",
+      "promptId": "imgprompt-smb-006-ingredient-bin-baseline-accepted",
+      "generation": {
+        "tool": "OpenAI image_gen",
+        "sessionType": "local-imagegen-session",
+        "localSourceId": "exec-066c7c42-1471-4426-a29d-6c50059def4a.png",
+        "localSourceStatus": "recorded-in-completion-ledger",
+        "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+        "generatorOutputId": "exec-066c7c42-1471-4426-a29d-6c50059def4a.png",
+        "generatedLocally": true,
+        "attestationBasis": "canonical completion ledger with exact prompt, generator identifiers, file integrity, and human visual review"
+      },
+      "prompt": {
+        "status": "recorded",
+        "sha256": "64642e5f354547b7936ddd29fe08933fcc27a3b5915d049598ba82e21db41be8",
+        "exactPromptRef": "public/data/image-generation-completions.json#completion-smb-006-ingredient-bin-baseline-accepted-v1.exactPrompt",
+        "containsNoPersonalData": "confirmed-by-human-visual-review",
+        "containsNoPrivateSiteDetails": "confirmed-by-human-visual-review"
+      },
+      "file": {
+        "sha256": "0f7bb7cddc0c497042d861d9e714f291795e967b9608c2db5a6dfe0bcbd2d844",
+        "byteLength": 2751818,
+        "pixelWidth": 1672,
+        "pixelHeight": 941
+      },
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      },
+      "rights": {
+        "status": "project-use-granted",
+        "basis": "clean-room imagegen output with exact prompt, generator IDs, file integrity, and human visual review recorded",
+        "permittedUses": [
+          "NAEIL prototype illustration",
+          "NAEIL competition-submission illustration"
+        ],
+        "prohibitedUses": [
+          "claiming real field collection",
+          "claiming youth work or partner-site data",
+          "claiming approved model-training data",
+          "identifying or representing a real person, customer, or business site"
+        ],
+        "codeLicenseApplies": false
+      },
+      "syntheticBoundary": {
+        "notFieldCollection": true,
+        "notYouthWork": true,
+        "notPartnerData": true,
+        "notApprovedTrainingData": true
+      }
+    },
+    {
+      "id": "asset-mfg-004-packaging-check-baseline-accepted",
+      "field": "manufacturing",
+      "title": "부품 포장 상태 확인 baseline 합성 대표 이미지",
+      "filePath": "public/assets/generated/syn-mfg-004-packaging-check-baseline-accepted.png",
+      "mediaType": "image/png",
+      "sourceType": "AI-generated synthetic example",
+      "provenanceCompleteness": "complete-exact-prompt-generator-file-and-human-review",
+      "completionLedgerRef": "public/data/image-generation-completions.json#completion-mfg-004-packaging-check-baseline-accepted-v1",
+      "promptId": "imgprompt-mfg-004-packaging-check-baseline-accepted",
+      "generation": {
+        "tool": "OpenAI image_gen",
+        "sessionType": "local-imagegen-session",
+        "localSourceId": "exec-ff3f473b-4aca-42c8-983f-54fc7eb03615.png",
+        "localSourceStatus": "recorded-in-completion-ledger",
+        "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+        "generatorOutputId": "exec-ff3f473b-4aca-42c8-983f-54fc7eb03615.png",
+        "generatedLocally": true,
+        "attestationBasis": "canonical completion ledger with exact prompt, generator identifiers, file integrity, and human visual review"
+      },
+      "prompt": {
+        "status": "recorded",
+        "sha256": "f6743023b5add6a47c9c9e18d26edd1b86918d4787ac37ca3b06b82c457963fe",
+        "exactPromptRef": "public/data/image-generation-completions.json#completion-mfg-004-packaging-check-baseline-accepted-v1.exactPrompt",
+        "containsNoPersonalData": "confirmed-by-human-visual-review",
+        "containsNoPrivateSiteDetails": "confirmed-by-human-visual-review"
+      },
+      "file": {
+        "sha256": "d832d0e5f779921436021a814cfc556c5bcb2d3378749339a7031ae162373b44",
+        "byteLength": 2547600,
+        "pixelWidth": 1672,
+        "pixelHeight": 941
+      },
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      },
+      "rights": {
+        "status": "project-use-granted",
+        "basis": "clean-room imagegen output with exact prompt, generator IDs, file integrity, and human visual review recorded",
+        "permittedUses": [
+          "NAEIL prototype illustration",
+          "NAEIL competition-submission illustration"
+        ],
+        "prohibitedUses": [
+          "claiming real field collection",
+          "claiming youth work or partner-site data",
+          "claiming approved model-training data",
+          "identifying or representing a real person, customer, or business site"
+        ],
+        "codeLicenseApplies": false
+      },
+      "syntheticBoundary": {
+        "notFieldCollection": true,
+        "notYouthWork": true,
+        "notPartnerData": true,
+        "notApprovedTrainingData": true
+      }
+    },
+    {
+      "id": "asset-mfg-005-bin-label-baseline-accepted",
+      "field": "manufacturing",
+      "title": "부품 보관함 라벨 정합 baseline 합성 대표 이미지",
+      "filePath": "public/assets/generated/syn-mfg-005-bin-label-baseline-accepted.png",
+      "mediaType": "image/png",
+      "sourceType": "AI-generated synthetic example",
+      "provenanceCompleteness": "complete-exact-prompt-generator-file-and-human-review",
+      "completionLedgerRef": "public/data/image-generation-completions.json#completion-mfg-005-bin-label-baseline-accepted-v1",
+      "promptId": "imgprompt-mfg-005-bin-label-baseline-accepted",
+      "generation": {
+        "tool": "OpenAI image_gen",
+        "sessionType": "local-imagegen-session",
+        "localSourceId": "exec-c52fe9c6-c5c4-49a2-905e-dbc8081e917a.png",
+        "localSourceStatus": "recorded-in-completion-ledger",
+        "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+        "generatorOutputId": "exec-c52fe9c6-c5c4-49a2-905e-dbc8081e917a.png",
+        "generatedLocally": true,
+        "attestationBasis": "canonical completion ledger with exact prompt, generator identifiers, file integrity, and human visual review"
+      },
+      "prompt": {
+        "status": "recorded",
+        "sha256": "4e62144865e40f31575b378f25a6b3e24fab6d1e11583358cc1bfbe27d2ad538",
+        "exactPromptRef": "public/data/image-generation-completions.json#completion-mfg-005-bin-label-baseline-accepted-v1.exactPrompt",
+        "containsNoPersonalData": "confirmed-by-human-visual-review",
+        "containsNoPrivateSiteDetails": "confirmed-by-human-visual-review"
+      },
+      "file": {
+        "sha256": "9796442ed142f32f3ddaaf760ddce80758433c07838e953c0288146d4c5e6f51",
+        "byteLength": 1909981,
+        "pixelWidth": 1672,
+        "pixelHeight": 941
+      },
+      "humanReview": {
+        "status": "passed-for-prototype-illustration",
+        "reviewerRole": "human-coordinator-visual-review",
+        "decisionAuthority": "human",
+        "evidenceBasis": "coordinator visual inspection of the generated PNG",
+        "checklist": {
+          "containsNoPeople": true,
+          "containsNoFaces": true,
+          "containsNoHands": true,
+          "containsNoLogos": true,
+          "containsNoReadableText": true,
+          "containsNoPersonalData": true,
+          "containsNoPrivateSiteDetails": true,
+          "prototypeIllustrationSuitable": true
+        }
+      },
+      "rights": {
+        "status": "project-use-granted",
+        "basis": "clean-room imagegen output with exact prompt, generator IDs, file integrity, and human visual review recorded",
+        "permittedUses": [
+          "NAEIL prototype illustration",
+          "NAEIL competition-submission illustration"
+        ],
+        "prohibitedUses": [
+          "claiming real field collection",
+          "claiming youth work or partner-site data",
+          "claiming approved model-training data",
+          "identifying or representing a real person, customer, or business site"
+        ],
+        "codeLicenseApplies": false
+      },
+      "syntheticBoundary": {
+        "notFieldCollection": true,
+        "notYouthWork": true,
+        "notPartnerData": true,
+        "notApprovedTrainingData": true
+      }
     }
   ]
 }

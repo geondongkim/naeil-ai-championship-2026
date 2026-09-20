@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1.0.0",
+  "taxonomyId": "naeil-synthetic-quality-taxonomy-v1",
+  "version": "1.0.0",
+  "status": "synthetic-evaluation-contract",
+  "sourceType": "AI-generated synthetic example",
+  "collectorSelfApprovalAllowed": false,
+  "decisionBoundary": "모든 라벨은 합성 예상값이며 AI나 수집자가 승인하지 않고 독립적인 사람이 최종 판단함",
+  "qualityLabels": [
+    {
+      "id": "usable",
+      "meaning": "명시된 관찰 기준상 사용 가능 후보이나 독립 사람 검수가 필요함"
+    },
+    {
+      "id": "review-required",
+      "meaning": "중복 또는 라벨 정합 등 사람의 맥락 판단이 필요함"
+    },
+    {
+      "id": "recollection-required",
+      "meaning": "동일 목적의 안전한 재수집이 필요함"
+    },
+    {
+      "id": "rights-blocked",
+      "meaning": "동의 또는 권리 확인 전에는 이용하거나 재수집을 진행할 수 없음"
+    }
+  ],
+  "confidenceBands": [
+    {
+      "id": "high",
+      "meaning": "합성 관찰 속성이 단일 기준과 직접 대응함"
+    },
+    {
+      "id": "medium",
+      "meaning": "복합 조건 또는 시점 차이로 사람 확인이 필요함"
+    },
+    {
+      "id": "low",
+      "meaning": "라벨과 관찰의 불일치로 사람의 맥락 판정이 우선함"
+    }
+  ],
+  "issueCodes": [
+    {
+      "code": "blur",
+      "name": "흐림",
+      "criteria": {
+        "trigger": "대상 경계 또는 상태 근거가 움직임·초점 문제로 판독 불가",
+        "clear": "핵심 경계와 상태가 선명함"
+      },
+      "expectedQualityLabel": "recollection-required",
+      "humanReviewDisposition": "recollection-required-by-independent-reviewer",
+      "recollectionGuidance": "카메라를 고정하고 초점을 대상에 맞춘 뒤 다시 촬영"
+    },
+    {
+      "code": "occlusion",
+      "name": "가림",
+      "criteria": {
+        "trigger": "핵심 대상 또는 판정 영역 일부가 손·도구·용기 등으로 가려짐",
+        "clear": "판정 영역 전체가 보임"
+      },
+      "expectedQualityLabel": "recollection-required",
+      "humanReviewDisposition": "recollection-required-by-independent-reviewer",
+      "recollectionGuidance": "안전하게 가림 요소를 제거하고 동일 범위를 다시 촬영"
+    },
+    {
+      "code": "duplicate",
+      "name": "중복",
+      "criteria": {
+        "trigger": "동일 시나리오의 기존 관찰과 구도·대상 상태가 실질적으로 같음",
+        "clear": "새 상태나 필요한 시점 차이가 확인됨"
+      },
+      "expectedQualityLabel": "review-required",
+      "humanReviewDisposition": "independent-human-review-required",
+      "recollectionGuidance": "사람 검수자가 중복 여부를 확인하고 필요한 경우 다른 상태를 수집"
+    },
+    {
+      "code": "out-of-scope",
+      "name": "범위 이탈",
+      "criteria": {
+        "trigger": "승인된 작업 대상 밖의 배경·행동·정보가 포함됨",
+        "clear": "승인된 대상과 구역만 포함됨"
+      },
+      "expectedQualityLabel": "recollection-required",
+      "humanReviewDisposition": "recollection-required-by-independent-reviewer",
+      "recollectionGuidance": "허용 작업 범위만 포함하도록 구도와 작업 경계를 다시 설정"
+    },
+    {
+      "code": "safety-risk",
+      "name": "안전 위험",
+      "criteria": {
+        "trigger": "접근 금지, 보호조치 누락 또는 위험 동작이 합성 관찰에 표현됨",
+        "clear": "안전 조건이 충족된 범위만 표현됨"
+      },
+      "expectedQualityLabel": "recollection-required",
+      "humanReviewDisposition": "recollection-required-by-independent-reviewer",
+      "recollectionGuidance": "수집보다 안전 조치를 우선하고 안전 담당 확인 후 새 세션으로 시작"
+    },
+    {
+      "code": "consent-rights-unconfirmed",
+      "name": "동의·권리 미확인",
+      "criteria": {
+        "trigger": "등가 실제 수집에서 현장 동의 또는 이용 권리 기록을 확인할 수 없음",
+        "clear": "동의와 권리 범위가 기록으로 확인됨"
+      },
+      "expectedQualityLabel": "rights-blocked",
+      "humanReviewDisposition": "blocked-pending-rights-review",
+      "recollectionGuidance": "동의와 권리 범위를 확인하기 전 이용과 수집을 중단하고 확인 후 새 세션 생성"
+    },
+    {
+      "code": "label-mismatch",
+      "name": "라벨 불일치",
+      "criteria": {
+        "trigger": "관찰된 대상·상태가 지정 taskType 또는 기대 라벨과 맞지 않음",
+        "clear": "대상·상태·taskType이 일치함"
+      },
+      "expectedQualityLabel": "review-required",
+      "humanReviewDisposition": "independent-human-review-required",
+      "recollectionGuidance": "사람 검수자가 라벨 수정과 재수집 중 적절한 조치를 결정"
+    },
+    {
+      "code": "normal",
+      "name": "정상",
+      "criteria": {
+        "trigger": "위 문제 코드가 없고 대상·범위·안전·권리·라벨 기준이 합성 속성상 일치함",
+        "clear": "문제 코드가 하나라도 관찰되면 normal을 함께 사용하지 않음"
+      },
+      "expectedQualityLabel": "usable",
+      "humanReviewDisposition": "independent-human-review-required",
+      "recollectionGuidance": null
+    }
+  ],
+  "rights": {
+    "status": "clean-room-synthetic-metadata-project-use-only",
+    "thirdPartyMediaUsed": false,
+    "codeLicenseApplies": false
+  },
+  "usageBoundary": "프로토타입 검증용 AI 생성 합성 관찰값이며 실제 청년 수집 또는 청년 수행, 파트너 현장 데이터, 승인 학습 데이터 또는 고용 성과가 아님"
+}

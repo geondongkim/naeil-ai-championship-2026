@@ -8,15 +8,16 @@ NAEIL은 제조와 소상공인을 별도 서비스로 나누지 않고, 하나�
 
 ## 현재 구현
 
-저장소에는 반응형 단일 페이지 UI, 서버 함수, 결정적 데이터 카탈로그, 합성 이미지 3개, 명시적 공개 파일 빌드와 production 배포 검증이 구현되어 있습니다. 공개 서비스는 [https://naeil-ai-championship-2026.vercel.app/](https://naeil-ai-championship-2026.vercel.app/)에서 확인할 수 있습니다.
+저장소의 현재 로컬 구현에는 반응형 단일 페이지 UI, 서버 함수, 결정적 합성 데이터 계보, 읽기 전용 데이터 탐색기, 완전한 provenance를 갖춘 생성 이미지 8개와 이전의 partial-provenance 자산 3개, 명시적 공개 파일 빌드가 포함됩니다. [공개 서비스](https://naeil-ai-championship-2026.vercel.app/) 링크를 제공하지만, 저장소 문서 자체는 특정 커밋의 production 반영 증거가 아니므로 배포 뒤 공개 alias를 별도로 확인해야 합니다.
 
 - 데스크톱 사이드바와 모바일 드로어를 사용하는 반응형 UI
 - 제조 ↔ 소상공인 현장 전환과 역할별 시작 화면·탐색·행동·문구
 - 요청자, 현장 제공자, 데이터 오퍼레이터, 독립 검수자, 운영 코디네이터, 제조 중심 현장 적용 전문가 역할
 - 현장 동의, 교육, 안전, 작업 범위, 보상조건 확인의 다섯 gate
 - 수집 기록 → AI 보조 신호 → 독립 사람 검수 → 권리 표시 데이터셋 버전 → 경력 증거 → 제조 사고·재수집 상태 전이
+- canonical 합성 JSON을 같은 출처에서 읽어 현장·시나리오·품질 issue로 필터링하고 최대 12건씩 보여 주는 읽기 전용 데이터 탐색기와 정적 JSON 다운로드
 - `POST /api/analyze` 이미지 품질 분석 서버 함수
-- 공개 허용목록과 SHA-256 보고서를 사용하는 정적 빌드 및 14개 허용목록 파일의 Vercel production 배포
+- 공개 허용목록과 SHA-256 보고서를 사용하는 정적 빌드
 
 역할 선택은 브라우저 UX 필터이며 인증이나 서버 권한이 아닙니다. 화면 상태는 현장별로 `localStorage`에 분리해 보관하는 데모 기록이고, 영구 서버 저장이나 실제 지급 기록이 아닙니다.
 
@@ -26,11 +27,25 @@ NAEIL은 제조와 소상공인을 별도 서비스로 나누지 않고, 하나�
 
 검증 범위는 층별로 구분합니다. 키가 없는 환경에서는 브라우저가 503을 처리하는 실패 경로를 확인했고, 자동 테스트에서는 mocked upstream으로 엄격한 응답 스키마와 사람 최종판단 경계를 확인했습니다. 별도로 승인된 로컬 서버 키와 `manufacturing-inspection-synthetic.png`를 사용한 실제 호출은 HTTP 200을 받았고, 응답 모델은 `gpt-5-mini-2025-08-07`, `decisionAuthority=human`, `recommendation=ready_for_human_review`, `task_match/lighting/framing/blur=good`, `privacy_risk=possible`이었습니다.
 
-최종 production alias에서도 합성 이미지 한 건을 `POST /api/analyze`로 전송해 HTTP 200, `model=gpt-5-mini-2025-08-07`, `decisionAuthority=human`, `recommendation=ready_for_human_review`, `Cache-Control: no-store`를 확인했습니다. 이는 production 연결과 사람 최종판단 계약을 확인한 한 건의 실행 증거일 뿐, 성능·정확도 측정이나 실제 사용자·고용 성과를 뜻하지 않습니다.
+마지막으로 확인한 production alias에서도 합성 이미지 한 건을 `POST /api/analyze`로 전송해 HTTP 200, `model=gpt-5-mini-2025-08-07`, `decisionAuthority=human`, `recommendation=ready_for_human_review`, `Cache-Control: no-store`를 확인했습니다. 이는 당시 production 연결과 사람 최종판단 계약을 확인한 한 건의 역사적 실행 증거일 뿐, 현재 로컬 배치의 배포 여부, 성능·정확도 측정이나 실제 사용자·고용 성과를 뜻하지 않습니다.
 
-### Production 브라우저 검증
+### 마지막 production 브라우저 검증 snapshot
 
-최종 alias에서 `/`, `/app.mjs`, `/assets/synthetic-workcell.svg`는 모두 HTTP 200을 반환했습니다. `GET /api/analyze`는 의도대로 HTTP 405와 `Allow: POST`, `Cache-Control: no-store`를 반환했습니다. Chromium에서는 1440×810 제조·운영 코디네이터와 390×844 소상공인·데이터 오퍼레이터 경로를 확인했으며, 두 화면 모두 `scrollWidth=innerWidth`, `workcellLoaded=true`, 콘솔 오류·경고 0건이었습니다.
+14개 허용목록 파일을 배포했던 마지막 확인 시점에 `/`, `/app.mjs`, `/assets/synthetic-workcell.svg`는 모두 HTTP 200을 반환했습니다. `GET /api/analyze`는 의도대로 HTTP 405와 `Allow: POST`, `Cache-Control: no-store`를 반환했습니다. Chromium에서는 1440×810 제조·운영 코디네이터와 390×844 소상공인·데이터 오퍼레이터 경로를 확인했으며, 두 화면 모두 `scrollWidth=innerWidth`, `workcellLoaded=true`, 콘솔 오류·경고 0건이었습니다. 이 snapshot은 최신 로컬의 32개 허용목록 파일과 데이터 탐색기가 공개 URL에 반영되었음을 증명하지 않습니다.
+
+### 결정적 합성 데이터와 탐색기
+
+현재 canonical JSON은 제조 6개·소상공인 6개의 12개 시나리오를 기준으로 다음 메타데이터를 제공합니다.
+
+- AI 생성 합성 observation 120건과 품질 taxonomy 8개 코드
+- AI 보조 신호와 독립 사람 검수를 분리한 lifecycle review event 240건
+- 실제 배정이 아닌 deterministic 재수집 계획 96건
+- 제안 직무 학습 모듈 18개와 6개 직무 × 12개 시나리오의 role-task mapping 72건
+- 실제 사람이 아닌 합성 profile에 연결된 demonstration-only 경력 증거 120건
+- 정확도·성능 측정이 아닌 metadata-only 합성 evaluation case 96건
+- 완전 provenance 생성 이미지 8개, 이전 partial-provenance 자산 3개, 아직 생성하지 않은 계획 슬롯 28개
+
+데이터셋 화면의 탐색기는 `dataset-coverage.json`, `synthetic-observations.json`, `image-generation-queue.json`만 same-origin 정적 경로로 읽습니다. 현재 현장 전환에 맞춰 범위를 제한하고 시나리오와 issue 필터를 함께 적용하며, 결과를 최대 12건씩 페이지로 나눠 표시합니다. 세 원본 JSON은 일반 다운로드 링크로 제공되며 서버 export, 영구 저장, Live API, 실제 수집 또는 승인 학습 데이터를 뜻하지 않습니다. 로딩·해석/요청 실패·빈 필터 결과도 각각 명시적으로 표시합니다.
 
 ## 대표 화면
 
@@ -62,7 +77,9 @@ NAEIL은 제조와 소상공인을 별도 서비스로 나누지 않고, 하나�
 ## 데이터와 출처
 
 - [`public/data/catalog.json`](public/data/catalog.json): 합성 시나리오, 제안 직무, 외부 카탈로그 후보
-- [`public/assets/asset-manifest.json`](public/assets/asset-manifest.json): 현재 합성 이미지 3개의 해시·권리 경계와 향후 로컬 imagegen 자산이 따라야 할 출처 기록 규격
+- [`public/data/dataset-index.json`](public/data/dataset-index.json): 공개 데이터 artifact의 해시·크기·관계 색인
+- [`public/data/dataset-coverage.json`](public/data/dataset-coverage.json): field·scenario·quality·role·gate·lifecycle의 canonical 집계와 누락 경계
+- [`public/assets/asset-manifest.json`](public/assets/asset-manifest.json): 완전 provenance 생성 이미지 8개와 이전 partial-provenance 자산 3개의 해시·권리 경계
 
 KAMP AI, AI Hub, data.go.kr은 모두 `External catalog link` 상태의 후보입니다. 데이터 다운로드, 캐시, API 호출, 키 사용이 없으며 `Live API`가 아닙니다. 특정 데이터셋을 도입하기 전에는 공식 제공처에서 이용조건을 별도로 확인해야 합니다.
 
@@ -76,7 +93,7 @@ KAMP AI, AI Hub, data.go.kr은 모두 `External catalog link` 상태의 후보�
 npm run check
 ```
 
-`npm run check`는 공개 허용목록 빌드 후 전체 Node 테스트를 실행합니다. 테스트는 반응형 UI 계약과 상태 전이, API 입력·같은 출처·엄격한 응답 스키마, JSON 결정성, 합성·권리 경계, PII·비밀 패턴 부재, 배포 준비 결과의 허용 파일·해시를 확인합니다. `npm run deploy:prepare`는 이 검증 뒤 정적 공개 파일, 단일 서버 함수, 최소 설정만 별도 임시 디렉터리에 모으며 그 명령 자체는 실제 배포를 수행하지 않습니다. 위 공개 URL의 production 배포와 런타임 검증은 이 준비 단계 이후 별도로 수행했습니다.
+현재 로컬에서 `npm run check`는 공개 허용목록 32개 파일을 빌드한 뒤 Node 테스트 90/90을 통과했습니다. 테스트는 반응형 UI 계약과 상태 전이, 데이터 탐색기의 same-origin 경로·필터·페이지 제한·경계 문구, API 입력·엄격한 응답 스키마, canonical JSON 결정성과 참조 무결성, 합성·권리 경계, PII·비밀 패턴 부재, 빌드 파일·해시를 확인합니다. `npm run deploy:prepare`는 검증 뒤 정적 공개 파일, 단일 서버 함수, 최소 설정만 별도 임시 디렉터리에 모으며 그 명령 자체는 실제 배포를 수행하지 않습니다. 이 로컬 결과와 아래의 역사적 production snapshot은 별도 증거이며, 공개 서비스의 현재 상태는 배포 뒤 독립적으로 확인해야 합니다.
 
 ## 클린룸 작성 범위
 

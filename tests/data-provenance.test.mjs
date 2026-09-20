@@ -36,8 +36,14 @@ test('catalog JSON is deterministic and uses stable unique IDs', async () => {
 
 test('synthetic examples cover both fields without implying collection or approval', async () => {
   const catalog = await readDeterministicJson('public/data/catalog.json');
-  assert.equal(catalog.syntheticExamples.length, 8);
-  assert.deepEqual(new Set(catalog.syntheticExamples.map((item) => item.field)), new Set(['manufacturing', 'small-business']));
+  assert.equal(catalog.syntheticExamples.length, 12);
+  assert.deepEqual(
+    Object.fromEntries(['manufacturing', 'small-business'].map((field) => [
+      field,
+      catalog.syntheticExamples.filter((item) => item.field === field).length,
+    ])),
+    { manufacturing: 6, 'small-business': 6 },
+  );
 
   for (const item of catalog.syntheticExamples) {
     assert.equal(item.sourceType, 'AI-generated synthetic example');
@@ -48,11 +54,14 @@ test('synthetic examples cover both fields without implying collection or approv
     assert.equal(item.rights.codeLicenseApplies, false);
     assert.match(item.usageBoundary, /청년 수행/);
     assert.match(item.usageBoundary, /승인 학습 데이터/);
+    assert.equal(item.observationCount, 10);
+    assert.equal(item.observationDatasetRef, 'public/data/synthetic-observations.json');
+    assert.equal(item.qualityTaxonomyRef, 'public/data/quality-taxonomy.json');
   }
   const linked = catalog.syntheticExamples.filter((item) => item.assetRefs.length > 0);
   const metadataOnly = catalog.syntheticExamples.filter((item) => item.assetRefs.length === 0);
   assert.equal(linked.length, 3);
-  assert.equal(metadataOnly.length, 5);
+  assert.equal(metadataOnly.length, 9);
   assert.ok(linked.every((item) => item.status === 'synthetic-raster-linked-not-collected'));
   assert.ok(linked.every((item) => item.rights.status === 'project-use-only'));
   assert.ok(metadataOnly.every((item) => item.status === 'scenario-metadata-only-no-raster'));
@@ -86,11 +95,11 @@ test('six occupation paths remain proposals rather than employment outcomes', as
   });
 });
 
-test('asset manifest records imagegen files and remains ready for future provenance', async () => {
+test('asset manifest preserves partial provenance and records completed imagegen assets', async () => {
   const manifest = await readDeterministicJson('public/assets/asset-manifest.json');
   const catalog = await readDeterministicJson('public/data/catalog.json');
   assert.equal(manifest.status, 'active-with-synthetic-assets');
-  assert.equal(manifest.assets.length, 3);
+  assert.equal(manifest.assets.length, 11);
   assert.equal(manifest.licenseBoundary.codeLicenseAppliesByDefault, false);
   assert.equal(manifest.licenseBoundary.defaultAssetPermission, 'none');
   assert.equal(manifest.recordContract.sourceTypeValue, 'AI-generated synthetic example');
@@ -104,15 +113,20 @@ test('asset manifest records imagegen files and remains ready for future provena
   );
   const manifestIds = new Set(manifest.assets.map((asset) => asset.id));
   const catalogRefs = catalog.syntheticExamples.flatMap((item) => item.assetRefs);
-  assert.deepEqual(new Set(catalogRefs), manifestIds);
+  assert.ok(catalogRefs.every((assetId) => manifestIds.has(assetId)));
+  const partialAssets = manifest.assets.filter(
+    (asset) => asset.provenanceCompleteness === 'partial-full-prompt-not-recorded',
+  );
+  const completedAssets = manifest.assets.filter(
+    (asset) => asset.provenanceCompleteness === 'complete-exact-prompt-generator-file-and-human-review',
+  );
+  assert.equal(partialAssets.length, 3);
+  assert.equal(completedAssets.length, 8);
   for (const asset of manifest.assets) {
     assert.equal(asset.sourceType, 'AI-generated synthetic example');
     assert.equal(asset.generation.tool, 'OpenAI image_gen');
     assert.equal(asset.generation.sessionType, 'local-imagegen-session');
     assert.equal(asset.generation.generatedLocally, true);
-    assert.equal(asset.generation.localSourceId, null);
-    assert.equal(asset.prompt.status, 'not-recorded');
-    assert.equal(asset.prompt.sha256, null);
     assert.equal(asset.rights.status, 'project-use-granted');
     assert.equal(asset.rights.codeLicenseApplies, false);
     assert.deepEqual(Object.values(asset.syntheticBoundary), [true, true, true, true]);
@@ -122,6 +136,27 @@ test('asset manifest records imagegen files and remains ready for future provena
     assert.equal(bytes.subarray(1, 4).toString(), 'PNG');
     assert.equal(asset.file.pixelWidth, bytes.readUInt32BE(16));
     assert.equal(asset.file.pixelHeight, bytes.readUInt32BE(20));
+  }
+  for (const asset of partialAssets) {
+    assert.equal(asset.generation.localSourceId, null);
+    assert.equal(asset.prompt.status, 'not-recorded');
+    assert.equal(asset.prompt.sha256, null);
+  }
+  const expectedCompletedPrompts = new Map([
+    ['asset-mfg-001-component-surface-baseline-accepted', 'fbb1fdaf96a455bb7e8c8b78dcc69a8e3055fe8dc57b3ea722cabdd16f2dfce3'],
+    ['asset-mfg-002-fastener-tray-baseline-accepted', 'a3b7a0495ab8fb0f5f171046e952a253c0dd9d4e3b2730ed78db60cea492528a'],
+    ['asset-mfg-003-safety-zone-baseline-accepted', '484b18822d089f8e3fc4c7395b8615f356d96cb413129abbc81ac07ffac6bce2'],
+    ['asset-smb-003-produce-weighing-baseline-accepted', '1a2afa81abee36a3c7303aafc76ed58e15fa79c173fb547f000a2a0d6ed18f32'],
+    ['asset-smb-004-florist-wrapping-baseline-accepted', 'c486c0c21633faa407f441b90dd8b86a011fa440fdc1a4d9d1ecacfcb2b1ef9d'],
+    ['asset-smb-006-ingredient-bin-baseline-accepted', '64642e5f354547b7936ddd29fe08933fcc27a3b5915d049598ba82e21db41be8'],
+    ['asset-mfg-004-packaging-check-baseline-accepted', 'f6743023b5add6a47c9c9e18d26edd1b86918d4787ac37ca3b06b82c457963fe'],
+    ['asset-mfg-005-bin-label-baseline-accepted', '4e62144865e40f31575b378f25a6b3e24fab6d1e11583358cc1bfbe27d2ad538'],
+  ]);
+  for (const completed of completedAssets) {
+    assert.equal(completed.prompt.status, 'recorded');
+    assert.equal(completed.prompt.sha256, expectedCompletedPrompts.get(completed.id));
+    assert.equal(completed.humanReview.decisionAuthority, 'human');
+    assert.equal(completed.humanReview.status, 'passed-for-prototype-illustration');
   }
 });
 

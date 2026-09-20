@@ -1,0 +1,535 @@
+{
+  "schemaVersion": "1.0.0",
+  "coverageId": "naeil-synthetic-dataset-coverage-v1",
+  "version": "1.0.0",
+  "seed": "naeil-synthetic-observations-v1",
+  "sourceType": "AI-generated synthetic example",
+  "status": "deterministic-canonical-coverage-not-real-world-performance",
+  "coverageDimensionCount": 10,
+  "canonicalCounts": {
+    "fields": 2,
+    "scenarios": 12,
+    "qualityCodes": 8,
+    "proposedRoles": 6,
+    "readinessGates": 5,
+    "observations": 120,
+    "reviewEvents": 240,
+    "recollectionTasks": 96,
+    "evaluationCases": 96,
+    "trainingModules": 18,
+    "roleTaskMappings": 72,
+    "careerEvidenceRecords": 120,
+    "imageGenerationCompletions": 8,
+    "plannedImageQueueItems": 36
+  },
+  "fieldCoverage": [
+    {
+      "field": "manufacturing",
+      "scenarioCount": 6,
+      "observationCount": 60,
+      "reviewEventCount": 120,
+      "recollectionTaskCount": 48,
+      "evaluationCaseCount": 48,
+      "roleTaskMappingCount": 36,
+      "careerEvidenceCount": 60,
+      "plannedImageSlotCount": 18,
+      "imageGenerationCompletionCount": 5,
+      "generatedQueueOutputCount": 5
+    },
+    {
+      "field": "small-business",
+      "scenarioCount": 6,
+      "observationCount": 60,
+      "reviewEventCount": 120,
+      "recollectionTaskCount": 48,
+      "evaluationCaseCount": 48,
+      "roleTaskMappingCount": 36,
+      "careerEvidenceCount": 60,
+      "plannedImageSlotCount": 18,
+      "imageGenerationCompletionCount": 3,
+      "generatedQueueOutputCount": 3
+    }
+  ],
+  "scenarioCoverage": [
+    {
+      "scenarioId": "syn-mfg-001-component-surface",
+      "field": "manufacturing",
+      "observationCount": 10,
+      "reviewEventCount": 20,
+      "recollectionTaskCount": 8,
+      "evaluationCaseCount": 8,
+      "roleTaskMappingCount": 6,
+      "careerEvidenceCount": 10,
+      "plannedImageSlotCount": 3
+    },
+    {
+      "scenarioId": "syn-mfg-002-fastener-tray",
+      "field": "manufacturing",
+      "observationCount": 10,
+      "reviewEventCount": 20,
+      "recollectionTaskCount": 8,
+      "evaluationCaseCount": 8,
+      "roleTaskMappingCount": 6,
+      "careerEvidenceCount": 10,
+      "plannedImageSlotCount": 3
+    },
+    {
+      "scenarioId": "syn-mfg-003-safety-zone",
+      "field": "manufacturing",
+      "observationCount": 10,
+      "reviewEventCount": 20,
+      "recollectionTaskCount": 8,
+      "evaluationCaseCount": 8,
+      "roleTaskMappingCount": 6,
+      "careerEvidenceCount": 10,
+      "plannedImageSlotCount": 3
+    },
+    {
+      "scenarioId": "syn-mfg-004-packaging-check",
+      "field": "manufacturing",
+      "observationCount": 10,
+      "reviewEventCount": 20,
+      "recollectionTaskCount": 8,
+      "evaluationCaseCount": 8,
+      "roleTaskMappingCount": 6,
+      "careerEvidenceCount": 10,
+      "plannedImageSlotCount": 3
+    },
+    {
+      "scenarioId": "syn-mfg-005-bin-label",
+      "field": "manufacturing",
+      "observationCount": 10,
+      "reviewEventCount": 20,
+      "recollectionTaskCount": 8,
+      "evaluationCaseCount": 8,
+      "roleTaskMappingCount": 6,
+      "careerEvidenceCount": 10,
+      "plannedImageSlotCount": 3
+    },
+    {
+      "scenarioId": "syn-mfg-006-cobot-clearance",
+      "field": "manufacturing",
+      "observationCount": 10,
+      "reviewEventCount": 20,
+      "recollectionTaskCount": 8,
+      "evaluationCaseCount": 8,
+      "roleTaskMappingCount": 6,
+      "careerEvidenceCount": 10,
+      "plannedImageSlotCount": 3
+    },
+    {
+      "scenarioId": "syn-smb-001-bakery-shelf",
+      "field": "small-business",
+      "observationCount": 10,
+      "reviewEventCount": 20,
+      "recollectionTaskCount": 8,
+      "evaluationCaseCount": 8,
+      "roleTaskMappingCount": 6,
+      "careerEvidenceCount": 10,
+      "plannedImageSlotCount": 3
+    },
+    {
+      "scenarioId": "syn-smb-002-cafe-tray",
+      "field": "small-business",
+      "observationCount": 10,
+      "reviewEventCount": 20,
+      "recollectionTaskCount": 8,
+      "evaluationCaseCount": 8,
+      "roleTaskMappingCount": 6,
+      "careerEvidenceCount": 10,
+      "plannedImageSlotCount": 3
+    },
+    {
+      "scenarioId": "syn-smb-003-produce-weighing",
+      "field": "small-business",
+      "observationCount": 10,
+      "reviewEventCount": 20,
+      "recollectionTaskCount": 8,
+      "evaluationCaseCount": 8,
+      "roleTaskMappingCount": 6,
+      "careerEvidenceCount": 10,
+      "plannedImageSlotCount": 3
+    },
+    {
+      "scenarioId": "syn-smb-004-florist-wrapping",
+      "field": "small-business",
+      "observationCount": 10,
+      "reviewEventCount": 20,
+      "recollectionTaskCount": 8,
+      "evaluationCaseCount": 8,
+      "roleTaskMappingCount": 6,
+      "careerEvidenceCount": 10,
+      "plannedImageSlotCount": 3
+    },
+    {
+      "scenarioId": "syn-smb-005-shelf-label",
+      "field": "small-business",
+      "observationCount": 10,
+      "reviewEventCount": 20,
+      "recollectionTaskCount": 8,
+      "evaluationCaseCount": 8,
+      "roleTaskMappingCount": 6,
+      "careerEvidenceCount": 10,
+      "plannedImageSlotCount": 3
+    },
+    {
+      "scenarioId": "syn-smb-006-ingredient-bin",
+      "field": "small-business",
+      "observationCount": 10,
+      "reviewEventCount": 20,
+      "recollectionTaskCount": 8,
+      "evaluationCaseCount": 8,
+      "roleTaskMappingCount": 6,
+      "careerEvidenceCount": 10,
+      "plannedImageSlotCount": 3
+    }
+  ],
+  "qualityCodeCoverage": [
+    {
+      "issueCode": "blur",
+      "observationCount": 24,
+      "reviewEventCount": 48,
+      "recollectionTaskCount": 24,
+      "evaluationCaseCount": 12,
+      "plannedImageSlotCount": 4
+    },
+    {
+      "issueCode": "occlusion",
+      "observationCount": 24,
+      "reviewEventCount": 48,
+      "recollectionTaskCount": 24,
+      "evaluationCaseCount": 12,
+      "plannedImageSlotCount": 4
+    },
+    {
+      "issueCode": "duplicate",
+      "observationCount": 12,
+      "reviewEventCount": 24,
+      "recollectionTaskCount": 12,
+      "evaluationCaseCount": 12,
+      "plannedImageSlotCount": 4
+    },
+    {
+      "issueCode": "out-of-scope",
+      "observationCount": 12,
+      "reviewEventCount": 24,
+      "recollectionTaskCount": 12,
+      "evaluationCaseCount": 12,
+      "plannedImageSlotCount": 4
+    },
+    {
+      "issueCode": "safety-risk",
+      "observationCount": 12,
+      "reviewEventCount": 24,
+      "recollectionTaskCount": 12,
+      "evaluationCaseCount": 12,
+      "plannedImageSlotCount": 4
+    },
+    {
+      "issueCode": "consent-rights-unconfirmed",
+      "observationCount": 12,
+      "reviewEventCount": 24,
+      "recollectionTaskCount": 12,
+      "evaluationCaseCount": 12,
+      "plannedImageSlotCount": 0
+    },
+    {
+      "issueCode": "label-mismatch",
+      "observationCount": 12,
+      "reviewEventCount": 24,
+      "recollectionTaskCount": 12,
+      "evaluationCaseCount": 12,
+      "plannedImageSlotCount": 4
+    },
+    {
+      "issueCode": "normal",
+      "observationCount": 24,
+      "reviewEventCount": 48,
+      "recollectionTaskCount": 0,
+      "evaluationCaseCount": 12,
+      "plannedImageSlotCount": 12
+    }
+  ],
+  "proposedRoleCoverage": [
+    {
+      "proposedRoleId": "occ-001-field-data-coordinator",
+      "status": "proposed-career-path",
+      "trainingModuleCount": 3,
+      "roleTaskMappingCount": 12,
+      "careerEvidenceCount": 20,
+      "outcomeBoundary": "제안 직무이며 고용 또는 배치 성과가 아님"
+    },
+    {
+      "proposedRoleId": "occ-002-physical-ai-data-operator",
+      "status": "proposed-career-path",
+      "trainingModuleCount": 3,
+      "roleTaskMappingCount": 12,
+      "careerEvidenceCount": 20,
+      "outcomeBoundary": "제안 직무이며 고용 또는 배치 성과가 아님"
+    },
+    {
+      "proposedRoleId": "occ-003-quality-safety-reviewer",
+      "status": "proposed-career-path",
+      "trainingModuleCount": 3,
+      "roleTaskMappingCount": 12,
+      "careerEvidenceCount": 20,
+      "outcomeBoundary": "제안 직무이며 고용 또는 배치 성과가 아님"
+    },
+    {
+      "proposedRoleId": "occ-004-data-rights-steward",
+      "status": "proposed-career-path",
+      "trainingModuleCount": 3,
+      "roleTaskMappingCount": 12,
+      "careerEvidenceCount": 20,
+      "outcomeBoundary": "제안 직무이며 고용 또는 배치 성과가 아님"
+    },
+    {
+      "proposedRoleId": "occ-005-field-deployment-specialist",
+      "status": "proposed-career-path",
+      "trainingModuleCount": 3,
+      "roleTaskMappingCount": 12,
+      "careerEvidenceCount": 20,
+      "outcomeBoundary": "제안 직무이며 고용 또는 배치 성과가 아님"
+    },
+    {
+      "proposedRoleId": "occ-006-recollection-operator",
+      "status": "proposed-career-path",
+      "trainingModuleCount": 3,
+      "roleTaskMappingCount": 12,
+      "careerEvidenceCount": 20,
+      "outcomeBoundary": "제안 직무이며 고용 또는 배치 성과가 아님"
+    }
+  ],
+  "readinessGateCoverage": [
+    {
+      "gateId": "gate-001-site-consent",
+      "gateName": "site-consent",
+      "observationApplicabilityCount": 120,
+      "recollectionReconfirmationCount": 96,
+      "completionClaimCount": 0,
+      "boundary": "합성 레코드의 적용 가능성과 재확인 요구만 집계하며 실제 gate 완료를 뜻하지 않음"
+    },
+    {
+      "gateId": "gate-002-training",
+      "gateName": "training",
+      "observationApplicabilityCount": 120,
+      "recollectionReconfirmationCount": 96,
+      "completionClaimCount": 0,
+      "boundary": "합성 레코드의 적용 가능성과 재확인 요구만 집계하며 실제 gate 완료를 뜻하지 않음"
+    },
+    {
+      "gateId": "gate-003-safety",
+      "gateName": "safety",
+      "observationApplicabilityCount": 120,
+      "recollectionReconfirmationCount": 96,
+      "completionClaimCount": 0,
+      "boundary": "합성 레코드의 적용 가능성과 재확인 요구만 집계하며 실제 gate 완료를 뜻하지 않음"
+    },
+    {
+      "gateId": "gate-004-task-scope",
+      "gateName": "task-scope",
+      "observationApplicabilityCount": 120,
+      "recollectionReconfirmationCount": 96,
+      "completionClaimCount": 0,
+      "boundary": "합성 레코드의 적용 가능성과 재확인 요구만 집계하며 실제 gate 완료를 뜻하지 않음"
+    },
+    {
+      "gateId": "gate-005-compensation-acknowledgement",
+      "gateName": "compensation-acknowledgement",
+      "observationApplicabilityCount": 120,
+      "recollectionReconfirmationCount": 96,
+      "completionClaimCount": 0,
+      "boundary": "합성 레코드의 적용 가능성과 재확인 요구만 집계하며 실제 gate 완료를 뜻하지 않음"
+    }
+  ],
+  "lifecycleStageCoverage": [
+    {
+      "stageId": "request",
+      "canonicalCount": 0,
+      "status": "not-represented-as-public-data-record"
+    },
+    {
+      "stageId": "consent-scope-readiness",
+      "canonicalCount": 120,
+      "status": "synthetic-applicability-only-not-completion"
+    },
+    {
+      "stageId": "training-assignment",
+      "canonicalCount": 72,
+      "supportingTrainingModuleCount": 18,
+      "status": "proposed-mapping-not-real-assignment-or-completion"
+    },
+    {
+      "stageId": "collection",
+      "canonicalCount": 120,
+      "status": "synthetic-observations-not-real-collection"
+    },
+    {
+      "stageId": "assistive-ai-signal",
+      "canonicalCount": 120,
+      "status": "synthetic-assistive-events-no-approval-authority"
+    },
+    {
+      "stageId": "independent-human-review",
+      "canonicalCount": 120,
+      "status": "deterministic-synthetic-review-events"
+    },
+    {
+      "stageId": "rights-aware-dataset-version",
+      "canonicalCount": 0,
+      "status": "no-approved-training-dataset-version-record"
+    },
+    {
+      "stageId": "controlled-use",
+      "canonicalCount": 0,
+      "status": "no-real-controlled-use-record"
+    },
+    {
+      "stageId": "incident-recollection",
+      "canonicalCount": 96,
+      "status": "synthetic-recollection-plans-not-field-assignments"
+    }
+  ],
+  "combinationCoverage": [
+    {
+      "combinationId": "scenario-quality-code",
+      "expectedCount": 96,
+      "actualCount": 96,
+      "missingCount": 0,
+      "missingKeys": []
+    },
+    {
+      "combinationId": "proposed-role-scenario",
+      "expectedCount": 72,
+      "actualCount": 72,
+      "missingCount": 0,
+      "missingKeys": []
+    },
+    {
+      "combinationId": "scenario-image-variation",
+      "expectedCount": 36,
+      "actualCount": 36,
+      "missingCount": 0,
+      "missingKeys": []
+    },
+    {
+      "combinationId": "observation-review-event-type",
+      "expectedCount": 240,
+      "actualCount": 240,
+      "missingCount": 0,
+      "missingKeys": []
+    },
+    {
+      "combinationId": "non-normal-observation-recollection",
+      "expectedCount": 96,
+      "actualCount": 96,
+      "missingCount": 0,
+      "missingKeys": []
+    },
+    {
+      "combinationId": "observation-career-evidence",
+      "expectedCount": 120,
+      "actualCount": 120,
+      "missingCount": 0,
+      "missingKeys": []
+    },
+    {
+      "combinationId": "observation-readiness-gate-applicability",
+      "expectedCount": 600,
+      "actualCount": 600,
+      "missingCount": 0,
+      "missingKeys": []
+    },
+    {
+      "combinationId": "scenario-quality-evaluation-case",
+      "expectedCount": 96,
+      "actualCount": 96,
+      "missingCount": 0,
+      "missingKeys": []
+    }
+  ],
+  "missingCoverage": {
+    "missingCombinationCount": 0,
+    "lifecycleStagesWithoutCanonicalRecords": [
+      "request",
+      "rights-aware-dataset-version",
+      "controlled-use"
+    ],
+    "plannedImageSlotsAwaitingGeneration": [
+      "imgprompt-mfg-001-component-surface-visible-issue",
+      "imgprompt-mfg-001-component-surface-corrected-recollection",
+      "imgprompt-mfg-002-fastener-tray-visible-issue",
+      "imgprompt-mfg-002-fastener-tray-corrected-recollection",
+      "imgprompt-mfg-003-safety-zone-visible-issue",
+      "imgprompt-mfg-003-safety-zone-corrected-recollection",
+      "imgprompt-mfg-004-packaging-check-visible-issue",
+      "imgprompt-mfg-004-packaging-check-corrected-recollection",
+      "imgprompt-mfg-005-bin-label-visible-issue",
+      "imgprompt-mfg-005-bin-label-corrected-recollection",
+      "imgprompt-mfg-006-cobot-clearance-baseline-accepted",
+      "imgprompt-mfg-006-cobot-clearance-visible-issue",
+      "imgprompt-mfg-006-cobot-clearance-corrected-recollection",
+      "imgprompt-smb-001-bakery-shelf-baseline-accepted",
+      "imgprompt-smb-001-bakery-shelf-visible-issue",
+      "imgprompt-smb-001-bakery-shelf-corrected-recollection",
+      "imgprompt-smb-002-cafe-tray-baseline-accepted",
+      "imgprompt-smb-002-cafe-tray-visible-issue",
+      "imgprompt-smb-002-cafe-tray-corrected-recollection",
+      "imgprompt-smb-003-produce-weighing-visible-issue",
+      "imgprompt-smb-003-produce-weighing-corrected-recollection",
+      "imgprompt-smb-004-florist-wrapping-visible-issue",
+      "imgprompt-smb-004-florist-wrapping-corrected-recollection",
+      "imgprompt-smb-005-shelf-label-baseline-accepted",
+      "imgprompt-smb-005-shelf-label-visible-issue",
+      "imgprompt-smb-005-shelf-label-corrected-recollection",
+      "imgprompt-smb-006-ingredient-bin-visible-issue",
+      "imgprompt-smb-006-ingredient-bin-corrected-recollection"
+    ]
+  },
+  "plannedImageCoverage": {
+    "plannedSlotCount": 36,
+    "plannedNotGeneratedCount": 28,
+    "generatedQueueOutputCount": 8,
+    "rightsReviewedQueueOutputCount": 8,
+    "completionLedgerCount": 8,
+    "totalManifestAssetCount": 11,
+    "preExistingPartialAssetCount": 3,
+    "completeLedgerAssetCount": 8,
+    "manifestAssetIds": [
+      "asset-mfg-001-inspection",
+      "asset-smb-001-bakery-rack",
+      "asset-smb-002-cup-sorting",
+      "asset-mfg-001-component-surface-baseline-accepted",
+      "asset-mfg-002-fastener-tray-baseline-accepted",
+      "asset-mfg-003-safety-zone-baseline-accepted",
+      "asset-smb-003-produce-weighing-baseline-accepted",
+      "asset-smb-004-florist-wrapping-baseline-accepted",
+      "asset-smb-006-ingredient-bin-baseline-accepted",
+      "asset-mfg-004-packaging-check-baseline-accepted",
+      "asset-mfg-005-bin-label-baseline-accepted"
+    ],
+    "separationBoundary": "queue 36개 중 8개만 completion ledger에 따라 생성·사람 검수·project-use 등록되었고 28개는 생성 전 계획이며, manifest는 기존 partial provenance 3개와 신규 complete provenance 8개를 구분함"
+  },
+  "externalCatalogCoverage": {
+    "candidateCount": 3,
+    "externalCatalogLinkCount": 3,
+    "liveApiCount": 0,
+    "statusCounts": {
+      "candidate-not-connected": 3
+    },
+    "boundary": "외부 후보는 링크이며 실제 원본 다운로드 또는 Live API 연동을 뜻하지 않음"
+  },
+  "rights": {
+    "status": "clean-room-deterministic-discovery-metadata",
+    "thirdPartyMediaUsed": false,
+    "codeLicenseApplies": false
+  },
+  "usageBoundary": "현재 저장소의 결정적 합성·제안·계획 메타데이터 범위만 집계하며 실제 사람, 실제 현장 수집, 승인 학습 데이터, 교육·자격·고용·고객·파트너·수익 성과를 증명하지 않음",
+  "createdBySyntheticGenerator": {
+    "script": "scripts/generate-synthetic-dataset.mjs",
+    "seed": "naeil-synthetic-observations-v1",
+    "generatorVersion": "1.0.0",
+    "deterministic": true,
+    "countsDerivedFromCanonicalArtifacts": true
+  }
+}
