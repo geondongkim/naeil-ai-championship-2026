@@ -1,0 +1,17 @@
+{
+  "name": "naeil-ai-championship-2026",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "NAEIL clean-room field-data operations prototype",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npm run build && node scripts/dev.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "npm run build && npm test",
+    "deploy:prepare": "npm run check && node scripts/prepare-deploy.mjs"
+  }
+}

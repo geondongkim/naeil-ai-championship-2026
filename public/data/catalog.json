@@ -1,0 +1,336 @@
+{
+  "schemaVersion": "1.0.0",
+  "catalogId": "naeil-public-catalog-v1",
+  "product": {
+    "name": "NAEIL",
+    "expandedName": "New AI Employment & Industry Link",
+    "model": "one-product-two-fields",
+    "fields": [
+      "manufacturing",
+      "small-business"
+    ]
+  },
+  "dataLabels": [
+    "Live API",
+    "Approved cached snapshot",
+    "External catalog link",
+    "Licensed reference sample",
+    "AI-generated synthetic example"
+  ],
+  "collectionGates": [
+    {
+      "id": "gate-001-site-consent",
+      "name": "site-consent"
+    },
+    {
+      "id": "gate-002-training",
+      "name": "training"
+    },
+    {
+      "id": "gate-003-safety",
+      "name": "safety"
+    },
+    {
+      "id": "gate-004-task-scope",
+      "name": "task-scope"
+    },
+    {
+      "id": "gate-005-compensation-acknowledgement",
+      "name": "compensation-acknowledgement"
+    }
+  ],
+  "occupationPaths": [
+    {
+      "id": "occ-001-field-data-coordinator",
+      "name": "현장 데이터 코디네이터",
+      "status": "proposed-career-path",
+      "responsibility": "현장과 수집팀 사이에서 범위, 일정, 동의, 제한구역을 조율한다.",
+      "evidence": [
+        "scope-agreement",
+        "site-consent-state",
+        "restricted-zone-record"
+      ],
+      "outcomeBoundary": "제안 직무이며 고용 또는 배치 성과가 아님"
+    },
+    {
+      "id": "occ-002-physical-ai-data-operator",
+      "name": "Physical AI 데이터 오퍼레이터",
+      "status": "proposed-career-path",
+      "responsibility": "교육과 안전 조건을 충족한 뒤 승인된 작업 범위에서 데이터를 수집한다.",
+      "evidence": [
+        "training-record",
+        "authorized-task-type",
+        "collection-session"
+      ],
+      "outcomeBoundary": "제안 직무이며 고용 또는 배치 성과가 아님"
+    },
+    {
+      "id": "occ-003-quality-safety-reviewer",
+      "name": "데이터 품질·안전 검수자",
+      "status": "proposed-career-path",
+      "responsibility": "수집자와 분리된 위치에서 품질, 개인정보, 안전, 재작업 필요성을 판단한다.",
+      "evidence": [
+        "independent-review-decision",
+        "review-reason",
+        "recollection-request"
+      ],
+      "outcomeBoundary": "제안 직무이며 고용 또는 배치 성과가 아님"
+    },
+    {
+      "id": "occ-004-data-rights-steward",
+      "name": "데이터 권리 관리자",
+      "status": "proposed-career-path",
+      "responsibility": "수집 목적, 보존기간, 재사용 허용 범위, 철회 조건을 관리한다.",
+      "evidence": [
+        "permission-version",
+        "access-decision",
+        "retention-rule"
+      ],
+      "outcomeBoundary": "제안 직무이며 고용 또는 배치 성과가 아님"
+    },
+    {
+      "id": "occ-005-field-deployment-specialist",
+      "name": "현장 적용 전문가",
+      "status": "proposed-career-path",
+      "responsibility": "통제된 제조 현장 조건에서 모델과 장비 적용을 확인하고 사고를 기록한다.",
+      "evidence": [
+        "dataset-version",
+        "model-device-version",
+        "incident-link"
+      ],
+      "outcomeBoundary": "제안 직무이며 고용 또는 배치 성과가 아님"
+    },
+    {
+      "id": "occ-006-recollection-operator",
+      "name": "재수집 운영자",
+      "status": "proposed-career-path",
+      "responsibility": "실패, 환경 변화, 드리프트를 범위가 명확한 새 수집 과제로 전환한다.",
+      "evidence": [
+        "failure-to-task-lineage",
+        "recollection-scope",
+        "new-dataset-version"
+      ],
+      "outcomeBoundary": "제안 직무이며 고용 또는 배치 성과가 아님"
+    }
+  ],
+  "syntheticExamples": [
+    {
+      "id": "syn-mfg-001-component-surface",
+      "field": "manufacturing",
+      "title": "소형 가공 부품 표면 상태 예시",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-raster-linked-not-collected",
+      "intendedModality": "image",
+      "assetRefs": [
+        "asset-mfg-001-inspection"
+      ],
+      "collectionState": "not-collected",
+      "trainingApproval": "not-approved",
+      "provenance": {
+        "authorship": "clean-room-authored-synthetic-scenario",
+        "thirdPartyMediaUsed": false
+      },
+      "rights": {
+        "status": "project-use-only",
+        "basis": "클린룸 imagegen 자산이며 세부 권리는 public/assets/asset-manifest.json에서 확인",
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "프로토타입 설명 전용이며 실제 검사 결과, 현장 수집물, 청년 수행, 파트너 데이터, 승인 학습 데이터가 아님"
+    },
+    {
+      "id": "syn-mfg-002-fastener-tray",
+      "field": "manufacturing",
+      "title": "체결부품 트레이 배열 예시",
+      "sourceType": "AI-generated synthetic example",
+      "status": "scenario-metadata-only-no-raster",
+      "intendedModality": "image",
+      "assetRefs": [],
+      "collectionState": "not-collected",
+      "trainingApproval": "not-approved",
+      "provenance": {
+        "authorship": "clean-room-authored-synthetic-scenario",
+        "thirdPartyMediaUsed": false
+      },
+      "rights": {
+        "status": "metadata-only",
+        "basis": "새로 작성한 합성 시나리오 메타데이터이며 래스터 자산이 없음",
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "프로토타입 설명 전용이며 실제 검사 결과, 현장 수집물, 청년 수행, 파트너 데이터, 승인 학습 데이터가 아님"
+    },
+    {
+      "id": "syn-mfg-003-safety-zone",
+      "field": "manufacturing",
+      "title": "안전구역 바닥 표시 예시",
+      "sourceType": "AI-generated synthetic example",
+      "status": "scenario-metadata-only-no-raster",
+      "intendedModality": "image",
+      "assetRefs": [],
+      "collectionState": "not-collected",
+      "trainingApproval": "not-approved",
+      "provenance": {
+        "authorship": "clean-room-authored-synthetic-scenario",
+        "thirdPartyMediaUsed": false
+      },
+      "rights": {
+        "status": "metadata-only",
+        "basis": "새로 작성한 합성 시나리오 메타데이터이며 래스터 자산이 없음",
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "프로토타입 설명 전용이며 실제 안전 판정, 현장 수집물, 청년 수행, 파트너 데이터, 승인 학습 데이터가 아님"
+    },
+    {
+      "id": "syn-mfg-004-packaging-check",
+      "field": "manufacturing",
+      "title": "부품 포장 상태 확인 예시",
+      "sourceType": "AI-generated synthetic example",
+      "status": "scenario-metadata-only-no-raster",
+      "intendedModality": "image",
+      "assetRefs": [],
+      "collectionState": "not-collected",
+      "trainingApproval": "not-approved",
+      "provenance": {
+        "authorship": "clean-room-authored-synthetic-scenario",
+        "thirdPartyMediaUsed": false
+      },
+      "rights": {
+        "status": "metadata-only",
+        "basis": "새로 작성한 합성 시나리오 메타데이터이며 래스터 자산이 없음",
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "프로토타입 설명 전용이며 실제 품질 판정, 현장 수집물, 청년 수행, 파트너 데이터, 승인 학습 데이터가 아님"
+    },
+    {
+      "id": "syn-smb-001-bakery-shelf",
+      "field": "small-business",
+      "title": "제과점 진열대 정리 예시",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-raster-linked-not-collected",
+      "intendedModality": "image",
+      "assetRefs": [
+        "asset-smb-001-bakery-rack"
+      ],
+      "collectionState": "not-collected",
+      "trainingApproval": "not-approved",
+      "provenance": {
+        "authorship": "clean-room-authored-synthetic-scenario",
+        "thirdPartyMediaUsed": false
+      },
+      "rights": {
+        "status": "project-use-only",
+        "basis": "클린룸 imagegen 자산이며 세부 권리는 public/assets/asset-manifest.json에서 확인",
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "프로토타입 설명 전용이며 실제 상점, 청년 수행, 파트너 데이터, 승인 학습 데이터가 아님"
+    },
+    {
+      "id": "syn-smb-002-cafe-tray",
+      "field": "small-business",
+      "title": "카페 빈 컵과 트레이 정리 예시",
+      "sourceType": "AI-generated synthetic example",
+      "status": "synthetic-raster-linked-not-collected",
+      "intendedModality": "image",
+      "assetRefs": [
+        "asset-smb-002-cup-sorting"
+      ],
+      "collectionState": "not-collected",
+      "trainingApproval": "not-approved",
+      "provenance": {
+        "authorship": "clean-room-authored-synthetic-scenario",
+        "thirdPartyMediaUsed": false
+      },
+      "rights": {
+        "status": "project-use-only",
+        "basis": "클린룸 imagegen 자산이며 세부 권리는 public/assets/asset-manifest.json에서 확인",
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "프로토타입 설명 전용이며 실제 상점, 청년 수행, 파트너 데이터, 승인 학습 데이터가 아님"
+    },
+    {
+      "id": "syn-smb-003-produce-weighing",
+      "field": "small-business",
+      "title": "청과물 계량 작업 예시",
+      "sourceType": "AI-generated synthetic example",
+      "status": "scenario-metadata-only-no-raster",
+      "intendedModality": "image",
+      "assetRefs": [],
+      "collectionState": "not-collected",
+      "trainingApproval": "not-approved",
+      "provenance": {
+        "authorship": "clean-room-authored-synthetic-scenario",
+        "thirdPartyMediaUsed": false
+      },
+      "rights": {
+        "status": "metadata-only",
+        "basis": "새로 작성한 합성 시나리오 메타데이터이며 래스터 자산이 없음",
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "프로토타입 설명 전용이며 실제 상점, 청년 수행, 파트너 데이터, 승인 학습 데이터가 아님"
+    },
+    {
+      "id": "syn-smb-004-florist-wrapping",
+      "field": "small-business",
+      "title": "꽃집 포장 단계 예시",
+      "sourceType": "AI-generated synthetic example",
+      "status": "scenario-metadata-only-no-raster",
+      "intendedModality": "image",
+      "assetRefs": [],
+      "collectionState": "not-collected",
+      "trainingApproval": "not-approved",
+      "provenance": {
+        "authorship": "clean-room-authored-synthetic-scenario",
+        "thirdPartyMediaUsed": false
+      },
+      "rights": {
+        "status": "metadata-only",
+        "basis": "새로 작성한 합성 시나리오 메타데이터이며 래스터 자산이 없음",
+        "codeLicenseApplies": false
+      },
+      "usageBoundary": "프로토타입 설명 전용이며 실제 상점, 청년 수행, 파트너 데이터, 승인 학습 데이터가 아님"
+    }
+  ],
+  "externalCatalogCandidates": [
+    {
+      "id": "ext-001-kamp-ai",
+      "field": "manufacturing",
+      "officialCatalogName": "KAMP AI",
+      "officialCatalogUrl": "https://www.kamp-ai.kr/",
+      "sourceType": "External catalog link",
+      "status": "candidate-not-connected",
+      "liveApi": false,
+      "rights": {
+        "status": "dataset-specific-terms-not-reviewed",
+        "requiredAction": "도입할 데이터셋의 공식 이용조건을 개별 확인해야 함"
+      },
+      "usageBoundary": "카탈로그 링크 후보일 뿐 데이터 복사·캐시·API·장치 연동이 없으며 Live API가 아님"
+    },
+    {
+      "id": "ext-002-ai-hub",
+      "field": "shared",
+      "officialCatalogName": "AI Hub",
+      "officialCatalogUrl": "https://www.aihub.or.kr/",
+      "sourceType": "External catalog link",
+      "status": "candidate-not-connected",
+      "liveApi": false,
+      "rights": {
+        "status": "dataset-specific-terms-not-reviewed",
+        "requiredAction": "도입할 데이터셋의 공식 이용조건과 승인 절차를 개별 확인해야 함"
+      },
+      "usageBoundary": "카탈로그 링크 후보일 뿐 다운로드 프록시·데이터 복사·API 연동이 없으며 Live API가 아님"
+    },
+    {
+      "id": "ext-003-data-go-kr",
+      "field": "small-business",
+      "officialCatalogName": "data.go.kr",
+      "officialCatalogUrl": "https://www.data.go.kr/",
+      "sourceType": "External catalog link",
+      "status": "candidate-not-connected",
+      "liveApi": false,
+      "rights": {
+        "status": "dataset-specific-terms-not-reviewed",
+        "requiredAction": "선택할 공공데이터의 이용조건과 서비스키 요구사항을 개별 확인해야 함"
+      },
+      "usageBoundary": "카탈로그 링크 후보일 뿐 서비스키 사용·데이터 호출·캐시가 없으며 Live API가 아님"
+    }
+  ]
+}

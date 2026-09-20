@@ -1,0 +1,226 @@
+{
+  "schemaVersion": "1.0.0",
+  "manifestId": "naeil-public-asset-provenance-v1",
+  "status": "active-with-synthetic-assets",
+  "assetsDirectory": "public/assets/generated",
+  "licenseBoundary": {
+    "codeLicenseAppliesByDefault": false,
+    "defaultAssetPermission": "none",
+    "rule": "래스터 자산은 이 매니페스트의 개별 기록이 명시적으로 허가한 범위에서만 사용할 수 있음"
+  },
+  "recordContract": {
+    "required": [
+      "id",
+      "filePath",
+      "mediaType",
+      "sourceType",
+      "generation",
+      "prompt",
+      "file",
+      "rights",
+      "syntheticBoundary"
+    ],
+    "idPattern": "^asset-(mfg|smb)-[0-9]{3}-[a-z0-9-]+$",
+    "filePathPattern": "^public/assets/generated/[a-z0-9-]+\\.(png|webp)$",
+    "mediaTypeValues": [
+      "image/png",
+      "image/webp"
+    ],
+    "sourceTypeValue": "AI-generated synthetic example",
+    "hashAlgorithm": "sha256",
+    "generationRequired": [
+      "tool",
+      "sessionType",
+      "localSourceId",
+      "generatedLocally"
+    ],
+    "generationRules": {
+      "tool": "imagegen tool name and version when available",
+      "sessionType": "local-imagegen-session",
+      "localSourceId": "non-secret local generation result identifier",
+      "generatedLocally": true
+    },
+    "promptRequired": [
+      "status",
+      "sha256",
+      "containsNoPersonalData",
+      "containsNoPrivateSiteDetails"
+    ],
+    "promptStatusValues": [
+      "recorded",
+      "not-recorded"
+    ],
+    "fileRequired": [
+      "sha256",
+      "byteLength"
+    ],
+    "rightsRequired": [
+      "status",
+      "basis",
+      "permittedUses",
+      "prohibitedUses",
+      "codeLicenseApplies"
+    ],
+    "syntheticBoundaryRequired": [
+      "notFieldCollection",
+      "notYouthWork",
+      "notPartnerData",
+      "notApprovedTrainingData"
+    ]
+  },
+  "assets": [
+    {
+      "id": "asset-mfg-001-inspection",
+      "field": "manufacturing",
+      "title": "가공 부품 촬영 검사 합성 장면",
+      "filePath": "public/assets/manufacturing-inspection-synthetic.png",
+      "mediaType": "image/png",
+      "sourceType": "AI-generated synthetic example",
+      "provenanceCompleteness": "partial-full-prompt-not-recorded",
+      "generation": {
+        "tool": "OpenAI image_gen",
+        "sessionType": "local-imagegen-session",
+        "localSourceId": null,
+        "localSourceStatus": "recorded-in-generator-output-fields",
+        "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+        "generatorOutputId": "exec-8c54e725-c4f9-490b-a138-0d412883581b.png",
+        "generatedLocally": true,
+        "attestationBasis": "clean-room local imagegen output identified by session and output ID; repository file hash verified"
+      },
+      "prompt": {
+        "status": "not-recorded",
+        "sha256": null,
+        "intentSummary": "16:9 제조 검사 장면에서 코봇, 태블릿, 가공 부품을 보여 주며 식별 가능한 얼굴, 로고, 텍스트를 넣지 않는 합성 대표 이미지",
+        "containsNoPersonalData": "not-verified",
+        "containsNoPrivateSiteDetails": "not-verified"
+      },
+      "file": {
+        "sha256": "64c02e96ad11d15a5b7fd7227fc9ed30a9fa4cc809d8b23a75910de43a956483",
+        "byteLength": 1911892,
+        "pixelWidth": 1672,
+        "pixelHeight": 941
+      },
+      "rights": {
+        "status": "project-use-granted",
+        "basis": "clean-room imagegen asset supplied for this repository",
+        "permittedUses": [
+          "NAEIL prototype and competition-submission illustration"
+        ],
+        "prohibitedUses": [
+          "claiming real field collection",
+          "claiming youth work or partner data",
+          "claiming approved model-training data"
+        ],
+        "codeLicenseApplies": false
+      },
+      "syntheticBoundary": {
+        "notFieldCollection": true,
+        "notYouthWork": true,
+        "notPartnerData": true,
+        "notApprovedTrainingData": true
+      }
+    },
+    {
+      "id": "asset-smb-001-bakery-rack",
+      "field": "small-business",
+      "title": "제과점 진열 준비 합성 장면",
+      "filePath": "public/assets/bakery-rack-synthetic.png",
+      "mediaType": "image/png",
+      "sourceType": "AI-generated synthetic example",
+      "provenanceCompleteness": "partial-full-prompt-not-recorded",
+      "generation": {
+        "tool": "OpenAI image_gen",
+        "sessionType": "local-imagegen-session",
+        "localSourceId": null,
+        "localSourceStatus": "recorded-in-generator-output-fields",
+        "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+        "generatorOutputId": "exec-06daf9be-c310-48a9-8c30-040c287f4afb.png",
+        "generatedLocally": true,
+        "attestationBasis": "clean-room local imagegen output identified by session and output ID; repository file hash verified"
+      },
+      "prompt": {
+        "status": "not-recorded",
+        "sha256": null,
+        "intentSummary": "제과점에서 빵 진열 준비 과정을 기록하는 모습을 표현한 합성 수집 장면",
+        "containsNoPersonalData": "not-verified",
+        "containsNoPrivateSiteDetails": "not-verified"
+      },
+      "file": {
+        "sha256": "9395a6a78b4a91e0a317ea7422d858264bc9d2d06958962cc5c42bf8fbbe2141",
+        "byteLength": 2235224,
+        "pixelWidth": 1672,
+        "pixelHeight": 941
+      },
+      "rights": {
+        "status": "project-use-granted",
+        "basis": "clean-room imagegen asset supplied for this repository",
+        "permittedUses": [
+          "NAEIL prototype and competition-submission illustration"
+        ],
+        "prohibitedUses": [
+          "claiming real field collection",
+          "claiming youth work or partner data",
+          "claiming approved model-training data"
+        ],
+        "codeLicenseApplies": false
+      },
+      "syntheticBoundary": {
+        "notFieldCollection": true,
+        "notYouthWork": true,
+        "notPartnerData": true,
+        "notApprovedTrainingData": true
+      }
+    },
+    {
+      "id": "asset-smb-002-cup-sorting",
+      "field": "small-business",
+      "title": "카페 컵과 트레이 정리 합성 장면",
+      "filePath": "public/assets/cafe-cup-sorting-synthetic.png",
+      "mediaType": "image/png",
+      "sourceType": "AI-generated synthetic example",
+      "provenanceCompleteness": "partial-full-prompt-not-recorded",
+      "generation": {
+        "tool": "OpenAI image_gen",
+        "sessionType": "local-imagegen-session",
+        "localSourceId": null,
+        "localSourceStatus": "recorded-in-generator-output-fields",
+        "generatorSessionId": "01a0bc13-8c69-74b2-8077-24eaef0f603e",
+        "generatorOutputId": "exec-bef9ac45-5e00-4c99-9a32-d408be52d341.png",
+        "generatedLocally": true,
+        "attestationBasis": "clean-room local imagegen output identified by session and output ID; repository file hash verified"
+      },
+      "prompt": {
+        "status": "not-recorded",
+        "sha256": null,
+        "intentSummary": "카페에서 컵과 트레이를 정리하는 작업을 기록하는 합성 수집 장면",
+        "containsNoPersonalData": "not-verified",
+        "containsNoPrivateSiteDetails": "not-verified"
+      },
+      "file": {
+        "sha256": "35e0a59000e83e9a4fdc4a2c2324c0d6532ed20757c93a06ae53bfc0bec03cc3",
+        "byteLength": 2211416,
+        "pixelWidth": 1672,
+        "pixelHeight": 941
+      },
+      "rights": {
+        "status": "project-use-granted",
+        "basis": "clean-room imagegen asset supplied for this repository",
+        "permittedUses": [
+          "NAEIL prototype and competition-submission illustration"
+        ],
+        "prohibitedUses": [
+          "claiming real field collection",
+          "claiming youth work or partner data",
+          "claiming approved model-training data"
+        ],
+        "codeLicenseApplies": false
+      },
+      "syntheticBoundary": {
+        "notFieldCollection": true,
+        "notYouthWork": true,
+        "notPartnerData": true,
+        "notApprovedTrainingData": true
+      }
+    }
+  ]
+}

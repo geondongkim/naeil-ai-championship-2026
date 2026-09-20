@@ -1,0 +1,167 @@
+import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
+import { readFile } from 'node:fs/promises';
+import test from 'node:test';
+
+const root = new URL('../', import.meta.url);
+
+async function readText(relativePath) {
+  return readFile(new URL(relativePath, root), 'utf8');
+}
+
+async function readDeterministicJson(relativePath) {
+  const raw = await readText(relativePath);
+  const parsed = JSON.parse(raw);
+  assert.equal(raw, `${JSON.stringify(parsed, null, 2)}\n`, `${relativePath} must use deterministic two-space JSON`);
+  return parsed;
+}
+
+test('catalog JSON is deterministic and uses stable unique IDs', async () => {
+  const catalog = await readDeterministicJson('public/data/catalog.json');
+  assert.equal(catalog.schemaVersion, '1.0.0');
+  assert.equal(catalog.catalogId, 'naeil-public-catalog-v1');
+  assert.equal(catalog.product.model, 'one-product-two-fields');
+  assert.deepEqual(catalog.product.fields, ['manufacturing', 'small-business']);
+
+  const records = [
+    ...catalog.collectionGates,
+    ...catalog.occupationPaths,
+    ...catalog.syntheticExamples,
+    ...catalog.externalCatalogCandidates,
+  ];
+  const ids = records.map((record) => record.id);
+  assert.equal(new Set(ids).size, ids.length);
+  assert.ok(ids.every((id) => /^[a-z]+-[a-z0-9-]+$/.test(id)));
+});
+
+test('synthetic examples cover both fields without implying collection or approval', async () => {
+  const catalog = await readDeterministicJson('public/data/catalog.json');
+  assert.equal(catalog.syntheticExamples.length, 8);
+  assert.deepEqual(new Set(catalog.syntheticExamples.map((item) => item.field)), new Set(['manufacturing', 'small-business']));
+
+  for (const item of catalog.syntheticExamples) {
+    assert.equal(item.sourceType, 'AI-generated synthetic example');
+    assert.equal(item.collectionState, 'not-collected');
+    assert.equal(item.trainingApproval, 'not-approved');
+    assert.equal(item.provenance.authorship, 'clean-room-authored-synthetic-scenario');
+    assert.equal(item.provenance.thirdPartyMediaUsed, false);
+    assert.equal(item.rights.codeLicenseApplies, false);
+    assert.match(item.usageBoundary, /청년 수행/);
+    assert.match(item.usageBoundary, /승인 학습 데이터/);
+  }
+  const linked = catalog.syntheticExamples.filter((item) => item.assetRefs.length > 0);
+  const metadataOnly = catalog.syntheticExamples.filter((item) => item.assetRefs.length === 0);
+  assert.equal(linked.length, 3);
+  assert.equal(metadataOnly.length, 5);
+  assert.ok(linked.every((item) => item.status === 'synthetic-raster-linked-not-collected'));
+  assert.ok(linked.every((item) => item.rights.status === 'project-use-only'));
+  assert.ok(metadataOnly.every((item) => item.status === 'scenario-metadata-only-no-raster'));
+  assert.ok(metadataOnly.every((item) => item.rights.status === 'metadata-only'));
+});
+
+test('external catalogs are truthful disconnected links and never Live APIs', async () => {
+  const catalog = await readDeterministicJson('public/data/catalog.json');
+  assert.deepEqual(
+    catalog.externalCatalogCandidates.map((item) => item.officialCatalogName),
+    ['KAMP AI', 'AI Hub', 'data.go.kr'],
+  );
+  for (const item of catalog.externalCatalogCandidates) {
+    assert.match(item.id, /^ext-00[1-3]-/);
+    assert.equal(item.sourceType, 'External catalog link');
+    assert.equal(item.status, 'candidate-not-connected');
+    assert.equal(item.liveApi, false);
+    assert.equal(item.rights.status, 'dataset-specific-terms-not-reviewed');
+    assert.match(item.usageBoundary, /Live API가 아님/);
+  }
+});
+
+test('six occupation paths remain proposals rather than employment outcomes', async () => {
+  const catalog = await readDeterministicJson('public/data/catalog.json');
+  assert.equal(catalog.occupationPaths.length, 6);
+  catalog.occupationPaths.forEach((path, index) => {
+    assert.match(path.id, new RegExp(`^occ-00${index + 1}-`));
+    assert.equal(path.status, 'proposed-career-path');
+    assert.ok(path.evidence.length >= 3);
+    assert.match(path.outcomeBoundary, /고용 또는 배치 성과가 아님/);
+  });
+});
+
+test('asset manifest records imagegen files and remains ready for future provenance', async () => {
+  const manifest = await readDeterministicJson('public/assets/asset-manifest.json');
+  const catalog = await readDeterministicJson('public/data/catalog.json');
+  assert.equal(manifest.status, 'active-with-synthetic-assets');
+  assert.equal(manifest.assets.length, 3);
+  assert.equal(manifest.licenseBoundary.codeLicenseAppliesByDefault, false);
+  assert.equal(manifest.licenseBoundary.defaultAssetPermission, 'none');
+  assert.equal(manifest.recordContract.sourceTypeValue, 'AI-generated synthetic example');
+  assert.equal(manifest.recordContract.hashAlgorithm, 'sha256');
+  for (const field of ['generation', 'prompt', 'file', 'rights', 'syntheticBoundary']) {
+    assert.ok(manifest.recordContract.required.includes(field));
+  }
+  assert.deepEqual(
+    manifest.recordContract.syntheticBoundaryRequired,
+    ['notFieldCollection', 'notYouthWork', 'notPartnerData', 'notApprovedTrainingData'],
+  );
+  const manifestIds = new Set(manifest.assets.map((asset) => asset.id));
+  const catalogRefs = catalog.syntheticExamples.flatMap((item) => item.assetRefs);
+  assert.deepEqual(new Set(catalogRefs), manifestIds);
+  for (const asset of manifest.assets) {
+    assert.equal(asset.sourceType, 'AI-generated synthetic example');
+    assert.equal(asset.generation.tool, 'OpenAI image_gen');
+    assert.equal(asset.generation.sessionType, 'local-imagegen-session');
+    assert.equal(asset.generation.generatedLocally, true);
+    assert.equal(asset.generation.localSourceId, null);
+    assert.equal(asset.prompt.status, 'not-recorded');
+    assert.equal(asset.prompt.sha256, null);
+    assert.equal(asset.rights.status, 'project-use-granted');
+    assert.equal(asset.rights.codeLicenseApplies, false);
+    assert.deepEqual(Object.values(asset.syntheticBoundary), [true, true, true, true]);
+    const bytes = await readFile(new URL(asset.filePath, root));
+    assert.equal(asset.file.byteLength, bytes.length);
+    assert.equal(asset.file.sha256, createHash('sha256').update(bytes).digest('hex'));
+    assert.equal(bytes.subarray(1, 4).toString(), 'PNG');
+    assert.equal(asset.file.pixelWidth, bytes.readUInt32BE(16));
+    assert.equal(asset.file.pixelHeight, bytes.readUInt32BE(20));
+  }
+});
+
+test('documentation states clean-room, truth, and license boundaries', async () => {
+  const readme = await readText('README.md');
+  const submission = await readText('docs/SUBMISSION.md');
+  const license = await readText('LICENSE');
+  const combined = `${readme}\n${submission}`;
+
+  assert.match(combined, /하나의 현장 데이터 운영 제품|한 제품 안의 두 현장/);
+  assert.match(combined, /다른 저장소의.*복사하지 않았습니다/s);
+  assert.match(combined, /다른 저장소.*이력.*지우거나 대체하지 않습니다/s);
+  assert.match(combined, /Live API[^\n]*아닙니다/);
+  assert.match(combined, /고용 성과가 아닙니다/);
+  assert.match(license, /MIT License/);
+  assert.match(license, /applies only to software source code and automated tests/);
+  assert.match(license, /Raster assets are outside this code license/);
+});
+
+test('owned public files contain no high-confidence secrets or contact PII', async () => {
+  const files = [
+    'README.md',
+    'LICENSE',
+    'docs/SUBMISSION.md',
+    'public/data/catalog.json',
+    'public/assets/asset-manifest.json',
+  ];
+  const secretPattern = /-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|\bsk-[A-Za-z0-9_-]{20,}\b|\bAKIA[0-9A-Z]{16}\b|\bAIza[0-9A-Za-z_-]{30,}\b|\bgh[pousr]_[A-Za-z0-9]{20,}\b|\bxox[baprs]-[A-Za-z0-9-]{10,}\b/g;
+  const emailPattern = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi;
+  const phonePattern = /(?<!\d)01[016789][-.\s]?\d{3,4}[-.\s]?\d{4}(?!\d)/g;
+  const findings = [];
+
+  for (const file of files) {
+    const text = await readText(file);
+    if (secretPattern.test(text)) findings.push({ file, kind: 'secret-pattern' });
+    secretPattern.lastIndex = 0;
+    if (emailPattern.test(text)) findings.push({ file, kind: 'email-pattern' });
+    emailPattern.lastIndex = 0;
+    if (phonePattern.test(text)) findings.push({ file, kind: 'phone-pattern' });
+    phonePattern.lastIndex = 0;
+  }
+  assert.deepEqual(findings, []);
+});
